@@ -1,5 +1,7 @@
 package com.cndsteel.framework.activity;
 
+import com.cndsteel.R;
+
 import android.content.pm.ActivityInfo;
 import android.os.Bundle;
 import android.view.View;
@@ -7,8 +9,6 @@ import android.widget.FrameLayout;
 import android.widget.ImageButton;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
-
-import com.cndsteel.R;
 
 public class FrameActivity extends BaseActivity {
 	

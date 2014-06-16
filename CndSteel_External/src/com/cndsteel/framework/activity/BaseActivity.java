@@ -10,6 +10,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.Toast;
 
+
 import com.cndsteel.R;
 import com.cndsteel.framework.application.BaseApplication;
 
@@ -50,21 +51,21 @@ public class BaseActivity extends Activity {
 		return getApplicationContext();
 	}
 	
-	/** 添加一个启动Activity的方法 **/
+	/** 娣诲姞涓�釜鍚姩Activity鐨勬柟娉�**/
 	protected void startActivity(Class<?> activityClass){
 		Intent intent = new Intent(this,activityClass);
 		super.startActivity(intent);
 	}
 
 	/**
-	 * 加载布局文件
+	 * 鍔犺浇甯冨眬鏂囦欢
 	 */
 	protected View inflateView(int layoutResId){
 		return LayoutInflater.from(getApplicationContext()).inflate(layoutResId, null);
 	}
 	
 	/**
-	 * 显示土司对话框
+	 * 鏄剧ず鍦熷徃瀵硅瘽妗�
 	 */
 	protected void showToast(int resId){
 		Toast.makeText(getApplicationContext(), resId,TOAST_DURATION).show();
@@ -74,7 +75,7 @@ public class BaseActivity extends Activity {
 		Toast.makeText(getApplicationContext(), msg, TOAST_DURATION).show();
 	}
 	
-	/** 创建一般的alertDialog **/
+	/** 鍒涘缓涓�埇鐨刟lertDialog **/
 	protected AlertDialog showAlertDialog(int titleResId,int messageResId,DialogInterface.OnClickListener neutralButtonOnClickListener){
 		AlertDialog.Builder _alertDialogBuilder = new AlertDialog.Builder(this);
 		return _alertDialogBuilder.setTitle(getApplicationContext().getString(titleResId))
