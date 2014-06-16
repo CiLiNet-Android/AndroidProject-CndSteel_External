@@ -25,7 +25,7 @@ public class PullToRefreshListViewHeader extends LinearLayout {
 	private ImageView mArrow = null;
 	private ProgressBar mProgressBar = null;
 	private TextView mRefreshTips = null;
-	//private TextView mRefreshLastTime = null;
+	private TextView mRefreshLastTime = null;
 	private RotateAnimation mRotateUp = null;
 	private RotateAnimation mRotateDown = null;
 	private final static int ROTATE_DURATION = 250;
@@ -49,7 +49,7 @@ public class PullToRefreshListViewHeader extends LinearLayout {
 		mArrow = (ImageView) mHeader.findViewById(R.id.ivArrow);
 		mProgressBar = (ProgressBar) mHeader.findViewById(R.id.pbWaiting);
 		mRefreshTips = (TextView) mHeader.findViewById(R.id.refresh_tips);
-		//mRefreshLastTime = (TextView) mHeader.findViewById(R.id.refresh_last_time);
+		mRefreshLastTime = (TextView) mHeader.findViewById(R.id.refresh_last_time);
 		
 		mRotateUp = new RotateAnimation(0.0f, -180.0f,  
 				Animation.RELATIVE_TO_SELF, 0.5f, 
