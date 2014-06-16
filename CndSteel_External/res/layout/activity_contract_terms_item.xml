@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical" >
+    
+     <!-- 合同号 -->
+    <RelativeLayout
+        style="@style/CommonDataRowStyle"
+        android:background="@color/white_bg" >
+
+        <TextView
+            android:id="@+id/contract_item_Num_title"
+            style="@style/CommonDataRowContentStyle"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:textColor="@color/black"
+            android:text="@string/contract_num" />
+        <TextView
+            android:id="@+id/contract_terms_Num"
+            style="@style/CommonDataRowContentStyle"
+            android:layout_toRightOf="@id/contract_item_Num_title"
+            android:layout_centerVertical="true"
+            android:textColor="@color/black"
+            android:text="25461247896215" />
+
+    </RelativeLayout>
+
+    <!-- 已付款金额 -->
+    <RelativeLayout style="@style/CommonDataRowStyle" >
+
+        <TextView
+            android:id="@+id/contract_terms_leftTop_text"
+            style="@style/CommonDataRowTitleStyle"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:text="@string/contract_amountPaid" />
+
+        <TextView
+            android:id="@+id/contract_terms_amountPaid"
+            style="@style/CommonDataRowContentStyle"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:text="520410" />
+    </RelativeLayout>
+    
+    <!-- 未付款金额 -->
+    <RelativeLayout style="@style/CommonDataRowStyle" >
+
+        <TextView
+            android:id="@+id/contract_terms_leftBottom_text"
+            style="@style/CommonDataRowTitleStyle"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:text="@string/contract_UnpaidAmount" />
+
+        <TextView
+            android:id="@+id/contract_terms_unpaidAmount"
+            style="@style/CommonDataRowContentStyle"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:text="250140" />
+    </RelativeLayout>
+
+</LinearLayout>
