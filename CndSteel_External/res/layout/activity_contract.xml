@@ -4,6 +4,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical" >
     
+    <!-- 合同年月 -->
     <RelativeLayout 
         android:id="@+id/lyot_contractDate"
         style="@style/CommonDataRowStyle">
@@ -30,19 +31,29 @@
             android:background="@drawable/common_spinner_down_arrow"/>
     </RelativeLayout>
     
+    
+    <!-- 合同号 -->
     <RelativeLayout 
         android:id="@+id/lyot_contractNum"
         style="@style/CommonDataRowStyle">
         
         <TextView 
+            android:id="@+id/txtV_left_contractNumber"
             style="@style/CommonDataRowTitleStyle"
             android:layout_alignParentLeft="true"
             android:layout_centerVertical="true"
-            android:text="@string/contract_num"/>
+            android:text="@string/contract_number"/>
         
-        <TextView 
-            android:id="@+id/txtV_contractDate"
-            style="@style/CommonDataRowContentStyle"
+        <EditText 
+            android:id="@+id/txtV_contractNumber"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="18sp"
+            android:textColor="@color/grey"
+            android:layout_toRightOf="@id/txtV_left_contractNumber"
+            android:layout_marginLeft="20dp"
+            android:background="@null"
+            android:gravity="right"
             android:layout_alignParentRight="true"
             android:layout_centerVertical="true"
             android:hint="@string/contract_input_contractNum" />
@@ -50,6 +61,8 @@
         
     </RelativeLayout>
     
+    
+    <!-- 合同状态 -->
     <RelativeLayout 
         android:id="@+id/lyot_contractStatus"
         style="@style/CommonDataRowStyle">
@@ -61,7 +74,7 @@
             android:text="@string/contract_status"/>
         
         <TextView 
-            android:id="@+id/txtV_contractDate"
+            android:id="@+id/txtV_contractStatus"
             style="@style/CommonDataRowContentStyle"
             android:layout_alignParentRight="true"
             android:layout_centerVertical="true"

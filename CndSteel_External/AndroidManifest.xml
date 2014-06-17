@@ -44,10 +44,10 @@
         
         <!-- login -->
         <activity android:name="com.cndsteel.main.activity.LoginActivity">
-            <intent-filter>
+            <!-- <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
+            </intent-filter> -->
         </activity>
         
         <!-- settings -->
@@ -75,10 +75,10 @@
         
         <!-- contract(合同) -->
         <activity android:name="com.cndsteel.contract.activity.ContractActivity">
-         <!--    <intent-filter>
+            <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter> -->
+            </intent-filter>
         </activity>
         <activity android:name="com.cndsteel.contract.activity.ContractQueryResultActivity" >
             <!-- <intent-filter>
@@ -86,13 +86,19 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter> -->
         </activity>
-        <activity android:name="com.cndsteel.contract.activity.ContractTerms">
+        <activity android:name="com.cndsteel.contract.activity.ContractTermsActivity">
             <!-- <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter> -->
         </activity>
-        <activity android:name="com.cndsteel.contract.activity.ContractTermsDetail">
+        <activity android:name="com.cndsteel.contract.activity.ContractTermsDetailActivity">
+            <!-- <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter> -->
+        </activity>
+        <activity android:name="com.cndsteel.contract.activity.ContractDetailActivity">
             <!-- <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
