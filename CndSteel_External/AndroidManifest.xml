@@ -60,12 +60,18 @@
         
         <!-- 计划 -->
         <activity android:name="com.cndsteel.plan.activity.PlanQueryActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name="com.cndsteel.plan.activity.PlanQueryResultListActivity">
             <!-- <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter> -->
         </activity>
-        <activity android:name="com.cndsteel.plan.activity.PlanQueryResultListActivity">
+        <activity android:name="com.cndsteel.plan.activity.PlanDetailActivity">
             <!-- <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
@@ -75,10 +81,10 @@
         
         <!-- contract(合同) -->
         <activity android:name="com.cndsteel.contract.activity.ContractActivity">
-            <intent-filter>
+            <!-- <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
+            </intent-filter> -->
         </activity>
         <activity android:name="com.cndsteel.contract.activity.ContractQueryResultActivity" >
             <!-- <intent-filter>

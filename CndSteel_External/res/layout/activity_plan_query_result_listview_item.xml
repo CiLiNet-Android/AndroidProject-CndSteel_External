@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical" >
+
+    <!-- 年月 -->
+    <RelativeLayout
+        style="@style/CommonDataRowStyle"
+        android:background="@color/white_bg" >
+
+        <TextView
+            android:id="@+id/contract_item_Num_title"
+            style="@style/CommonDataRowContentStyle"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:textColor="@color/black"
+            android:text="@string/plan_year_month" />
+        <TextView
+            android:id="@+id/plan_year_month"
+            style="@style/CommonDataRowContentStyle"
+            android:layout_toRightOf="@id/contract_item_Num_title"
+            android:layout_centerVertical="true"
+            android:textColor="@color/black"
+            android:text="2014/01/01" />
+
+        <TextView
+            android:id="@+id/plan_item_thEnd"
+            style="@style/CommonDataRowTitleStyle"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:textColor="@color/limeGreen"
+            android:textSize="13sp"
+            android:text="已完结" />
+    </RelativeLayout>
+
+    <!-- 预定/实际 -->
+    <RelativeLayout style="@style/CommonDataRowStyle" >
+
+        <TextView
+            style="@style/CommonDataRowTitleStyle"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:text="@string/plan_reserve_reality" />
+
+        <TextView
+            android:id="@+id/plan_reserve_reality"
+            style="@style/CommonDataRowContentStyle"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:text="123/321" />
+    </RelativeLayout>
+    
+    <!-- 应收保证金金额 -->
+    <RelativeLayout style="@style/CommonDataRowStyle" >
+
+        <TextView
+            style="@style/CommonDataRowTitleStyle"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:text="@string/contract_must_get_pledge_money" />
+
+        <TextView
+            android:id="@+id/plan_must_get_pledge_money"
+            style="@style/CommonDataRowContentStyle"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:text="1234" />
+    </RelativeLayout>
+    
+    <!-- 应收保证金日期 -->
+    <RelativeLayout style="@style/CommonDataRowStyle" >
+
+        <TextView
+            style="@style/CommonDataRowTitleStyle"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:text="@string/contract_must_get_pledge_date" />
+
+        <TextView
+            android:id="@+id/plan_must_get_pledge_date"
+            style="@style/CommonDataRowContentStyle"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:text="2014/01/01" />
+    </RelativeLayout>
+    
+    
+
+</LinearLayout>

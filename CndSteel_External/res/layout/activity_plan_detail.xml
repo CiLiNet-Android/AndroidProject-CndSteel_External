@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" >
+
+        <!-- 订货计划年月 -->
+
+        <RelativeLayout
+            style="@style/CommonDataRowStyle"
+            android:layout_marginTop="20dp" >
+
+            <TextView
+                style="@style/CommonDataRowTitleStyle"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:text="@string/plan_yearMonth" />
+
+            <TextView
+                android:id="@+id/plan_detail_yearMonth"
+                style="@style/CommonDataRowContentStyle"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true" />
+        </RelativeLayout>
+
+        <!-- 应收保证金金额 -->
+
+        <RelativeLayout style="@style/CommonDataRowStyle" >
+
+            <TextView
+                style="@style/CommonDataRowTitleStyle"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:text="@string/contract_must_get_pledge_money" />
+
+            <TextView
+                android:id="@+id/plan_detail_must_get_pledge_money"
+                style="@style/CommonDataRowContentStyle"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true" />
+        </RelativeLayout>
+
+        <!-- 应收保证金日期 -->
+
+        <RelativeLayout style="@style/CommonDataRowStyle" >
+
+            <TextView
+                style="@style/CommonDataRowTitleStyle"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:text="@string/contract_must_get_pledge_date" />
+
+            <TextView
+                android:id="@+id/plan_detail_must_get_pledge_date"
+                style="@style/CommonDataRowContentStyle"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true" />
+        </RelativeLayout>
+
+        <!-- 状态 -->
+
+        <RelativeLayout style="@style/CommonDataRowStyle" >
+
+            <TextView
+                style="@style/CommonDataRowTitleStyle"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:text="@string/status" />
+
+            <TextView
+                android:id="@+id/plan_detail_status"
+                style="@style/CommonDataRowContentStyle"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true" />
+        </RelativeLayout>
+
+        <!-- 计划吨数 -->
+
+        <RelativeLayout style="@style/CommonDataRowStyle" >
+
+            <TextView
+                style="@style/CommonDataRowTitleStyle"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:text="@string/plan_tonnage" />
+
+            <TextView
+                android:id="@+id/plan_detail_tonnage"
+                style="@style/CommonDataRowContentStyle"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true" />
+        </RelativeLayout>
+
+        <!-- 实际吨数 -->
+
+        <RelativeLayout style="@style/CommonDataRowStyle" >
+
+            <TextView
+                style="@style/CommonDataRowTitleStyle"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:text="@string/plan_reality_tonnage" />
+
+            <TextView
+                android:id="@+id/plan_detail_reality_tonnage"
+                style="@style/CommonDataRowContentStyle"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true" />
+        </RelativeLayout>
+        
+        <!-- 品名 -->
+
+        <RelativeLayout style="@style/CommonDataRowStyle"
+            android:background="#f5f5f5" >
+
+            <TextView
+                android:id="@+id/contract_detail_left_goodsName"
+                style="@style/CommonDataRowTitleStyle"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:text="@string/contract_GoodsName" />
+
+            <TextView
+                android:id="@+id/plan_detail_goodsName"
+                style="@style/CommonDataRowTitleStyle"
+                android:layout_toRightOf="@id/contract_detail_left_goodsName"
+                android:layout_centerVertical="true" />
+        </RelativeLayout>
+
+        <!-- 材质 -->
+
+        <RelativeLayout style="@style/CommonDataRowStyle" >
+
+            <TextView
+                style="@style/CommonDataRowTitleStyle"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:text="@string/material" />
+
+            <TextView
+                android:id="@+id/plan_detail_material"
+                style="@style/CommonDataRowContentStyle"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true" />
+        </RelativeLayout>
+
+        <!-- 预定吨数 -->
+
+        <RelativeLayout style="@style/CommonDataRowStyle" >
+
+            <TextView
+                style="@style/CommonDataRowTitleStyle"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:text="@string/reserve" />
+
+            <TextView
+                android:id="@+id/plan_detail_reserve_tonnage"
+                style="@style/CommonDataRowContentStyle"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true" />
+        </RelativeLayout>
+
+        <!-- 实际吨数 -->
+
+        <RelativeLayout style="@style/CommonDataRowStyle" >
+
+            <TextView
+                style="@style/CommonDataRowTitleStyle"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:text="@string/plan_reality_tonnage" />
+
+            <TextView
+                android:id="@+id/plan_detail_btm_reality_tonnage"
+                style="@style/CommonDataRowContentStyle"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true" />
+        </RelativeLayout>
+
+        <!-- 钢厂 -->
+
+        <RelativeLayout style="@style/CommonDataRowStyle" >
+
+            <TextView
+                style="@style/CommonDataRowTitleStyle"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:text="@string/steelWorks" />
+
+            <TextView
+                android:id="@+id/plan_detail_steelWorks"
+                style="@style/CommonDataRowContentStyle"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true" />
+        </RelativeLayout>
+
+        
+    </LinearLayout>
+
+</ScrollView>

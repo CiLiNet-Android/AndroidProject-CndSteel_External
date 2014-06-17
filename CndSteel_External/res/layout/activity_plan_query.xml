@@ -4,6 +4,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical">
     
+    <!-- 计划年月 -->
     <RelativeLayout 
         android:id="@+id/lyot_planDate"
         style="@style/CommonDataRowStyle">
@@ -31,6 +32,7 @@
             
     </RelativeLayout>
     
+    <!-- 计划状态 -->
     <RelativeLayout 
         android:id="@+id/lyot_planStatus"
         style="@style/CommonDataRowStyle">
