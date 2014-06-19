@@ -24,6 +24,11 @@ public interface Constants {
 	public static final String BASE_PATH = Environment.getExternalStorageDirectory() + "/.cndSteel/";
 	
 	/**
+	 * 每页记录数
+	 */
+	public static final int PAGE_SIZE = 4;
+	
+	/**
 	 * 日志文件路径
 	 */
 	public static final String LOG_DIR = BASE_PATH;

@@ -1,6 +1,7 @@
-package com.cndsteel.main.bean;
+package com.cndsteel.plan.bean;
 
 import java.io.ByteArrayInputStream;
+import java.util.ArrayList;
 
 import javax.xml.parsers.SAXParser;
 import javax.xml.parsers.SAXParserFactory;
@@ -14,34 +15,25 @@ import com.cndsteel.framework.bean.WebServiceBean;
 import com.cndsteel.framework.constant.Constants;
 import com.cndsteel.framework.log.GlobalLog;
 
-public class LoginBean extends WebServiceBean {
-	private static final long serialVersionUID = 2120861506404482772L;
 
+public class PlanQueryResultListBean extends WebServiceBean {
+	
+	private static final long serialVersionUID = 7790784698237961633L;
+	
+	public ArrayList<PlanBean> mPlanBeans;
+	
 	@Override
 	public String getServiceUrl() {
-		return "http://vip.cndsteel.com/services/LoginService";
+		return "http://vip.cndsteel.com/services/BookingService";
 	}
-
 	@Override
 	public String getNamespace() {
 		return "http://impl.remote.webservice.steel.chinacnd.com";
 	}
-
 	@Override
 	public String getMethodName() {
-		return "login";
+		return "listBooking";
 	}
-	
-	public String username;
-	public String fullname;
-	public String mail;
-	public String cellphone;
-	public String email;
-	public String sessionId;
-
-	/**
-	 * 数据解析
-	 */
 	@Override
 	public void obtainDataInSoapObj(SoapObject soapObj) {
 		String _responseStr = soapObj.getProperty("return").toString();
@@ -67,9 +59,18 @@ public class LoginBean extends WebServiceBean {
 		/** 记录当前解析的元素名 **/
 		private String currentElementName;
 		
+		private PlanBean planBean;
+		
 		@Override
 		public void startElement(String uri, String localName, String qName,Attributes attributes) throws SAXException {
 			currentElementName = localName;
+			
+			if(true == state && "list".equals(currentElementName)){
+				mPlanBeans = new ArrayList<PlanBean>();
+			}if(null != mPlanBeans && "obj".equals(currentElementName)){
+				planBean = new PlanBean();
+			}
+			
 		}
 		
 		@Override
@@ -85,18 +86,29 @@ public class LoginBean extends WebServiceBean {
 				if(state == false){
 					errorMsg = _text;
 				}
-			}else if("username".equals(currentElementName)){
-				username = _text;
-			}else if("fullname".equals(currentElementName)){
-				fullname = _text;
-			}else if("mail".equals(currentElementName)){
-				mail = _text;
-			}else if("cellphone".equals(currentElementName)){
-				cellphone = _text;
-			}else if("email".equals(currentElementName)){
-				email = _text;
-			}else if("sessionId".equals(currentElementName)){
-				sessionId = _text;
+			}else if("bookingId".equals(currentElementName)){
+				planBean.bookingId = _text;
+			}else if("schDate".equals(currentElementName)){
+				planBean.schDate = _text;
+			}else if("weight".equals(currentElementName)){
+				planBean.weight = _text;
+			}else if("actWeight".equals(currentElementName)){
+				planBean.actWeight = _text;
+			}else if("receivedMargin".equals(currentElementName)){
+				planBean.receivedMargin = _text;
+			}else if("receivedMarginDate".equals(currentElementName)){
+				planBean.receivedMarginDate = _text;
+			}else if("status".equals(currentElementName)){
+				planBean.status = _text;
+			}
+		}
+
+		@Override
+		public void endElement(String uri, String localName, String qName)
+				throws SAXException {
+			if("obj".equals(localName)){
+				mPlanBeans.add(planBean);
+				planBean = null;
 			}
 		}
 		

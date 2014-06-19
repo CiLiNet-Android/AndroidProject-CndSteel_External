@@ -10,14 +10,12 @@ import android.support.v4.view.ViewPager;
 import android.view.View;
 import android.view.animation.AccelerateInterpolator;
 import android.view.animation.Animation;
-import android.view.animation.LinearInterpolator;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 
 import com.cndsteel.R;
 import com.cndsteel.framework.activity.FrameActivity;
 import com.cndsteel.framework.animation.Rotate3dAnimation;
-import com.cndsteel.framework.log.GlobalLog;
 import com.cndsteel.main.adapter.APPModulesVPagerAdapter;
 import com.cndsteel.main.bean.APPModuleBean;
 import com.cndsteel.settings.activity.SettingsActivity;

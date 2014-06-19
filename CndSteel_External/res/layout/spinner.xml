@@ -3,7 +3,7 @@
     android:id="@+id/lyot_spinner"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:background="#cccccc"
+    android:background="@color/floralwhite"
     android:orientation="vertical" >
 
     <ListView

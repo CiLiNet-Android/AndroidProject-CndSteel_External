@@ -4,8 +4,10 @@ import org.ksoap2.serialization.SoapObject;
 
 public abstract class WebServiceBean extends BaseBean {
 
+	private static final long serialVersionUID = 135889134607703605L;
+
 	/** 返回值状态，标识接口调用成功或者失败 true为成功，false为失败 **/
-	public boolean state;
+	public boolean state = false;
 	
 	/** 状态码
 	 * 成功：影响的数据个数；

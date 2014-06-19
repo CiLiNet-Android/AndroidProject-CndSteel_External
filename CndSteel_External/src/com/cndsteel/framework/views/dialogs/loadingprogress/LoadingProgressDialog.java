@@ -1,4 +1,4 @@
-package com.cndsteel.framework.views.dialog;
+package com.cndsteel.framework.views.dialogs.loadingprogress;
 
 import android.app.Dialog;
 import android.content.Context;

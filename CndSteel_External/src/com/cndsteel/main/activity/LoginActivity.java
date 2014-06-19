@@ -14,7 +14,7 @@ import com.cndsteel.framework.activity.FrameActivity;
 import com.cndsteel.framework.constant.Constants;
 import com.cndsteel.framework.constant.ErrorMsg;
 import com.cndsteel.framework.handler.AbsActivityHandler;
-import com.cndsteel.framework.views.dialog.LoadingProgressDialog;
+import com.cndsteel.framework.views.dialogs.loadingprogress.LoadingProgressDialog;
 import com.cndsteel.framework.webService.WebServiceThread;
 import com.cndsteel.main.bean.LoginBean;
 import com.cndsteel.settings.bean.SettingsBean;

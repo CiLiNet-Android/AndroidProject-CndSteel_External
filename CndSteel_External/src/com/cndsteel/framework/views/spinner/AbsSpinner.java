@@ -69,9 +69,10 @@ public abstract class AbsSpinner<T> extends PopupWindow implements OnItemClickLi
 	@Override
 	public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
 		if(null != mOnItemClickListener){
-			GlobalLog.i("onItemClick()...");
 			mOnItemClickListener.onItemClick(position);
 		}
+		
+		dismiss();
 	}
 	
 	private ArrayList<T> getDatas(){

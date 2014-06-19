@@ -71,7 +71,7 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter> -->
         </activity>
-        <activity android:name="com.cndsteel.plan.activity.PlanDetailActivity">
+        <activity android:name="com.cndsteel.plan.activity.PlanQueryResultDetailActivity">
             <!-- <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />

@@ -7,9 +7,9 @@ import android.widget.TextView;
 
 import com.cndsteel.R;
 import com.cndsteel.framework.adapter.AbsBaseAdapter;
-import com.cndsteel.plan.bean.Plan;
+import com.cndsteel.plan.bean.PlanBean;
 
-public class PlanQueryResultListAdapter extends AbsBaseAdapter<Plan> {
+public class PlanQueryResultListAdapter extends AbsBaseAdapter<PlanBean> {
 
 	public PlanQueryResultListAdapter(Context context) {
 		super(context);
@@ -24,7 +24,7 @@ public class PlanQueryResultListAdapter extends AbsBaseAdapter<Plan> {
 			
 			_holder = new ViewHolder();
 			
-			view = getLayoutInflater().inflate(R.layout.activity_plan_query_result_listview_item, null);
+			view = getLayoutInflater().inflate(R.layout.activity_plan_query_result_list_item, null);
 			_holder.plan_year_month = (TextView) view.findViewById(R.id.plan_year_month);
 			_holder.plan_reserve_reality = (TextView) view.findViewById(R.id.plan_reserve_reality);
 			_holder.plan_must_get_pledge_money = (TextView) view.findViewById(R.id.plan_must_get_pledge_money);
@@ -34,13 +34,13 @@ public class PlanQueryResultListAdapter extends AbsBaseAdapter<Plan> {
 			_holder = (ViewHolder) view.getTag();
 		}
 		
-		Plan _plan = (Plan) getItem(position);
+		PlanBean _plan = (PlanBean) getItem(position);
 		
-		_holder.plan_year_month.setText(_plan.plan_year_month);
-		_holder.plan_reserve_reality.setText(_plan.plan_reserve_reality);
-		_holder.plan_must_get_pledge_money.setText(_plan.plan_must_get_pledge_money);
-		_holder.plan_must_get_pledge_date.setText(_plan.plan_must_get_pledge_date);
-		_holder.plan_isEnd.setText(_plan.plan_isEnd);
+//		_holder.plan_year_month.setText(_plan.plan_year_month);
+//		_holder.plan_reserve_reality.setText(_plan.plan_reserve_reality);
+//		_holder.plan_must_get_pledge_money.setText(_plan.plan_must_get_pledge_money);
+//		_holder.plan_must_get_pledge_date.setText(_plan.plan_must_get_pledge_date);
+//		_holder.plan_isEnd.setText(_plan.plan_isEnd);
 		
 		return view;
 	}

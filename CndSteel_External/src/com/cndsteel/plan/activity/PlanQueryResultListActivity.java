@@ -3,23 +3,24 @@ package com.cndsteel.plan.activity;
 import java.util.ArrayList;
 
 import android.os.Bundle;
-import android.util.Log;
+import android.os.Message;
 import android.view.View;
 import android.widget.AdapterView;
-import android.widget.ImageButton;
 import android.widget.AdapterView.OnItemClickListener;
+import android.widget.ImageButton;
 
 import com.cndsteel.R;
 import com.cndsteel.framework.activity.FrameActivity;
+import com.cndsteel.framework.handler.AbsActivityHandler;
 import com.cndsteel.framework.views.pullToRefreshListView.PullToRefreshListView;
 import com.cndsteel.plan.adapter.PlanQueryResultListAdapter;
-import com.cndsteel.plan.bean.Plan;
+import com.cndsteel.plan.bean.PlanBean;
 
 public class PlanQueryResultListActivity extends FrameActivity implements OnItemClickListener{
 	
 	private PullToRefreshListView listV_planList;
 	
-	private ArrayList<Plan> list;
+	private ArrayList<PlanBean> list;
 	
 	private ImageButton imgBtn_topRight;
 	
@@ -36,13 +37,11 @@ public class PlanQueryResultListActivity extends FrameActivity implements OnItem
 		
 		setTopBarTitle(R.string.topBarTitle_planQueryResultList);
 		
-		imgBtn_topRight = (ImageButton) findViewById(R.id.imgBtn_topRight);
-		imgBtn_topRight.setVisibility(View.VISIBLE);
-		imgBtn_topRight.setBackgroundResource(R.drawable.add);
+		showProgressDialog("订货计划", "加载中..");
 		
 		listV_planList = (PullToRefreshListView)findViewById(R.id.listV_planList);
 		
-		list = new ArrayList<Plan>();
+		list = new ArrayList<PlanBean>();
 		
 		
 		////////////////////////////////////////////////
@@ -50,12 +49,12 @@ public class PlanQueryResultListActivity extends FrameActivity implements OnItem
 		
 		for(int i = 0; i < 50; i ++){
 			
-			Plan _plan = new Plan();
-			_plan.plan_isEnd = "已完结";
-			_plan.plan_year_month = "2014/06/01";
-			_plan.plan_reserve_reality = "123/321";
-			_plan.plan_must_get_pledge_money = "12345";
-			_plan.plan_must_get_pledge_date = "2014/06/01";
+			PlanBean _plan = new PlanBean();
+//			_plan.plan_isEnd = "已完结";
+//			_plan.plan_year_month = "2014/06/01";
+//			_plan.plan_reserve_reality = "123/321";
+//			_plan.plan_must_get_pledge_money = "12345";
+//			_plan.plan_must_get_pledge_date = "2014/06/01";
 			
 			list.add(_plan);
 		}
@@ -83,9 +82,16 @@ public class PlanQueryResultListActivity extends FrameActivity implements OnItem
 	@Override
 	public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
 		
-		startActivity(PlanDetailActivity.class);
+		startActivity(PlanQueryResultDetailActivity.class);
 		
 	}
 
+	private AbsActivityHandler<PlanQueryResultListActivity> mActivityHandler = new AbsActivityHandler<PlanQueryResultListActivity>(this) {
+		@Override
+		protected void handleMessage(PlanQueryResultListActivity theActivity,
+				Message msg) {
+			
+		}
+	};
 	
 }

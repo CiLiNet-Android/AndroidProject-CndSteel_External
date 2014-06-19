@@ -101,6 +101,7 @@
     
     <string name="ButtonTextYes">是</string>
     <string name="ButtonTextNo">否</string>
+    <string name="ButtonTextDone">完成</string>
     
     
 </resources>

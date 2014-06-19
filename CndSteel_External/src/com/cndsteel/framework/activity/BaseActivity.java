@@ -2,6 +2,7 @@ package com.cndsteel.framework.activity;
 
 import android.app.Activity;
 import android.app.AlertDialog;
+import android.app.ProgressDialog;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
@@ -16,6 +17,8 @@ import com.cndsteel.framework.application.BaseApplication;
 public class BaseActivity extends Activity {
 	
 	private static final int TOAST_DURATION =  Toast.LENGTH_SHORT;
+	
+	private ProgressDialog mProgressDialog;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -29,6 +32,19 @@ public class BaseActivity extends Activity {
 		BaseApplication _baseApplication = getBaseApplication();
 		if(_baseApplication.isProgramExit){
 			finish();
+		}
+	}
+	
+	protected void showProgressDialog(String dialogTitle,String dialogMessage){
+		mProgressDialog = new ProgressDialog(this);
+		mProgressDialog.setTitle(dialogTitle);
+		mProgressDialog.setMessage(dialogMessage);
+		mProgressDialog.show();
+	}
+	
+	protected void dismissProgressDialog(){
+		if(null != mProgressDialog){
+			mProgressDialog.dismiss();
 		}
 	}
 

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <declare-styleable name="DatePicker">
+        <attr name="dateFormatStr" format="string" />
+        <attr name="dateFormat">
+
+            <!-- yyyy-MM-dd -->
+            <enum name="date" value="0" />
+            <!-- HH:mm:ss -->
+            <enum name="time" value="1" />
+        </attr>
+    </declare-styleable>
+
+</resources>

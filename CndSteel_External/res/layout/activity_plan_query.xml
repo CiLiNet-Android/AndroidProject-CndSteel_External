@@ -20,8 +20,7 @@
 			style="@style/CommonDataRowContentStyle"
 			android:layout_alignParentRight="true"
 			android:layout_centerVertical="true"
-			android:layout_marginRight="25dp"
-			android:text="2014/03"/>
+			android:layout_marginRight="25dp"/>
         
         <ImageButton 
             android:layout_width="15dp"
@@ -48,8 +47,7 @@
 			style="@style/CommonDataRowContentStyle"
 			android:layout_alignParentRight="true"
 			android:layout_centerVertical="true"
-			android:layout_marginRight="25dp"
-			android:text="全部"/>
+			android:layout_marginRight="25dp"/>
             
         <ImageButton 
             android:layout_width="15dp"
