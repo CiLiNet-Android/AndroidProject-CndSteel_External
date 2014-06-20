@@ -16,7 +16,6 @@ import com.cndsteel.stock.fragments.StockFragmentContract;
 import com.cndsteel.stock.fragments.StockFragmentGoods;
 import com.cndsteel.stock.fragments.StockFragmentStock;
 
-@SuppressLint("NewApi")
 public class StockActivity extends FrameActivity implements OnClickListener {
 
 	// private ArrayList<Fragment> fragmentList;
@@ -52,9 +51,9 @@ public class StockActivity extends FrameActivity implements OnClickListener {
 
 	private void initVariable() {
 		
-		fragmentManager = getFragmentManager();
+		//fragmentManager = getFragmentManager();
 		
-		stock = new StockFragmentStock();
+		//stock = new StockFragmentStock();
 		contract = new StockFragmentContract();
 		goods = new StockFragmentGoods();
 		
@@ -64,10 +63,10 @@ public class StockActivity extends FrameActivity implements OnClickListener {
 
 		setTopBarTitle(R.string.appModule_stock);
 		
-		fragmentTransaction = fragmentManager.beginTransaction();
+		//fragmentTransaction = fragmentManager.beginTransaction();
 		
-		fragmentTransaction.add(R.id.stock_fragment, stock);
-		fragmentTransaction.commit();
+		//fragmentTransaction.add(R.id.stock_fragment, stock);
+		//fragmentTransaction.commit();
 
 		stock_lay_stock = (Button) findViewById(R.id.stock_btn_stock);
 		stock_lay_stock.setOnClickListener(this);
@@ -83,7 +82,7 @@ public class StockActivity extends FrameActivity implements OnClickListener {
 	@Override
 	public void onClick(View view) {
 		
-		fragmentTransaction = fragmentManager.beginTransaction();
+		//fragmentTransaction = fragmentManager.beginTransaction();
 		
 		ImageButton stock_img_stock = (ImageButton) findViewById(R.id.stock_img_stock);
 		ImageButton stock_img_contract = (ImageButton) findViewById(R.id.stock_img_contract);
@@ -100,8 +99,8 @@ public class StockActivity extends FrameActivity implements OnClickListener {
 			stock_img_contract.setVisibility(View.GONE);
 			stock_img_goods.setVisibility(View.GONE);
 			
-			fragmentTransaction.replace(R.id.stock_fragment, new StockFragmentStock());
-			fragmentTransaction.commit();
+			//fragmentTransaction.replace(R.id.stock_fragment, new StockFragmentStock());
+			//fragmentTransaction.commit();
 
 			break;
 		// 按合同
@@ -113,8 +112,8 @@ public class StockActivity extends FrameActivity implements OnClickListener {
 			stock_img_contract.setVisibility(View.VISIBLE);
 			stock_img_goods.setVisibility(View.GONE);
 			
-			fragmentTransaction.replace(R.id.stock_fragment, contract);
-			fragmentTransaction.commit();
+//			fragmentTransaction.replace(R.id.stock_fragment, contract);
+//			fragmentTransaction.commit();
 
 			break;
 		// 按商品
@@ -126,8 +125,8 @@ public class StockActivity extends FrameActivity implements OnClickListener {
 			stock_img_contract.setVisibility(View.GONE);
 			stock_img_goods.setVisibility(View.VISIBLE);
 			
-			fragmentTransaction.replace(R.id.stock_fragment, goods);
-			fragmentTransaction.commit();
+//			fragmentTransaction.replace(R.id.stock_fragment, goods);
+//			fragmentTransaction.commit();
 
 			break;
 
