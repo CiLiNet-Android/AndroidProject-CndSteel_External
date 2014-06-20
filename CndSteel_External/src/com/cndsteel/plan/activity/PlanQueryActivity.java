@@ -42,7 +42,7 @@ public class PlanQueryActivity extends FrameActivity implements View.OnClickList
 		sPlanStatusNames = new ArrayList<String>();
 		sPlanStatusNames.add("全部");
 		sPlanStatusNames.add("暂存");
-		sPlanStatusNames.add("未完结");
+		sPlanStatusNames.add("等待");
 		sPlanStatusNames.add("已确认");
 		sPlanStatusNames.add("未完结");
 		sPlanStatusNames.add("已完结");

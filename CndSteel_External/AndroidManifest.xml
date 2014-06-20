@@ -60,10 +60,10 @@
         
         <!-- 计划 -->
         <activity android:name="com.cndsteel.plan.activity.PlanQueryActivity">
-            <!-- <intent-filter>
+            <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter> -->
+            </intent-filter>
         </activity>
         <activity android:name="com.cndsteel.plan.activity.PlanQueryResultListActivity">
             <!-- <intent-filter>
@@ -114,10 +114,10 @@
         
         <!-- 库存 -->
         <activity android:name="com.cndsteel.stock.activity.StockActivity">
-            <intent-filter>
+            <!-- <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
+            </intent-filter> -->
         </activity>
         <activity android:name="com.cndsteel.stock.activity.StockAccordingStockQueryResultActivity">
            <!--  <intent-filter>
