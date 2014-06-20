@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <!-- 仓库名 -->
+
+    <RelativeLayout
+        style="@style/CommonDataRowStyle"
+        android:background="@color/white_bg" >
+
+        <TextView
+            android:id="@+id/contract_item_Num_title"
+            style="@style/CommonDataRowContentStyle"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:text="@string/stock_warehouseName"
+            android:textColor="@color/black" />
+
+        <TextView
+            android:id="@+id/contract_terms_Num"
+            style="@style/CommonDataRowContentStyle"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@id/contract_item_Num_title"
+            android:text="：1号仓库"
+            android:textColor="@color/black" />
+    </RelativeLayout>
+
+    <ListView
+        android:id="@+id/stockQueryResultListView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:cacheColorHint="#00000000"
+        android:divider="@color/darkgrey"
+        android:dividerHeight="1px" >
+    </ListView>
+
+</LinearLayout>

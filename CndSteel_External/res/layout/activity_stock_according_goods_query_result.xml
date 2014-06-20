@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <TableLayout 
+         style="@style/CommonDataRowStyle"
+         android:layout_height="wrap_content"
+         android:background="@color/white_bg" >
+         <TableRow >
+             <!-- 品名 -->
+             <TextView 
+                 style="@style/CommonDataRowTitleStyle"
+                 android:text="@string/contract_GoodsName"/>
+             <TextView 
+                 android:id="@+id/StockAccordingGoodsQueryResult_goodsName"
+                 style="@style/CommonDataRowTitleStyle"
+                 android:layout_weight="1"
+                 android:text="管坯"/>
+             
+             <!-- 材质 -->
+             <TextView 
+                 style="@style/CommonDataRowContentStyle"
+                 android:textSize="15sp"
+                 android:text="@string/Material"/>
+             <TextView 
+                 android:id="@+id/StockAccordingGoodsQueryResult_Material"
+                  style="@style/CommonDataRowContentStyle"
+                 android:textSize="15sp"
+                 android:layout_weight="1"
+                 android:text="20#"/>
+             
+             <!-- 规格 -->
+             <TextView 
+                  style="@style/CommonDataRowContentStyle"
+                 android:textSize="15sp"
+                 android:text="@string/stock_Standard"/>
+             <TextView 
+                 android:id="@+id/StockAccordingGoodsQueryResult_Standard"
+                  style="@style/CommonDataRowContentStyle"
+                 android:textSize="15sp"
+                 android:layout_weight="1"
+                 android:text="100*50"/>
+         </TableRow>
+    </TableLayout>
+
+    <ListView
+        android:id="@+id/StockAccordingGoodsQueryResultListView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:cacheColorHint="#00000000"
+        android:divider="@color/darkgrey"
+        android:dividerHeight="1px" >
+    </ListView>
+
+</LinearLayout>
