@@ -8,7 +8,7 @@ import android.widget.TextView;
 import com.cndsteel.R;
 import com.cndsteel.framework.activity.FrameActivity;
 
-public class PlanDetailActivity extends FrameActivity {
+public class PlanQueryResultDetailActivity extends FrameActivity {
 	
 	private TextView plan_detail_yearMonth;  //订货计划年月
 	private TextView plan_detail_must_get_pledge_money;  //应收保证金金额

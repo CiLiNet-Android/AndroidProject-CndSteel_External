@@ -83,7 +83,7 @@ public class PlanQueryResultListActivity extends FrameActivity implements OnItem
 	@Override
 	public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
 		
-		startActivity(PlanDetailActivity.class);
+		startActivity(PlanQueryResultDetailActivity.class);
 		
 	}
 
