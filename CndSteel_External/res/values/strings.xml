@@ -76,6 +76,7 @@
  	<string name="contract_reality_get_pledge_date">实收保证日期</string>
  	<string name="contract_maturity_date">到期日</string>
  	<string name="material">材质</string>
+ 	<string name="Material">材质：</string>
  	<string name="reserve">预定吨数</string>
  	
  	<!-- 库存 -->
@@ -83,6 +84,27 @@
  	<string name="stock_according_contract">按合同</string>
  	<string name="stock_according_goods">按商品</string>
  	
+ 	<string name="stock_into_date_start">入库日期从</string>
+ 	<string name="stock_into_date_end">入库日期至</string>
+ 	<string name="warehouse">仓库</string>
+ 	<string name="Warehouse">仓库：</string>
+ 	
+ 	<string name="stock_warehouse_detail">仓库明细</string>
+ 	
+ 	<string name="stock_warehouseName">仓库名</string>
+ 	<string name="stock_standard">规格</string>
+ 	<string name="stock_Standard">规格：</string>
+ 	<string name="stock_numberOfPackages">件数</string>
+ 	<string name="stock_NumberOfPackages">件数：</string>
+ 	<string name="tonnage">吨数</string>
+ 	<string name="Tonnage">吨数：</string>
+ 	<string name="money">金额</string>
+ 	<string name="Money">金额:</string>
+ 	
+ 	<string name="No.1">1号仓库</string>
+ 	
+ 	<string name="stock_into_date">入库日期</string>
+ 	<string name="package_num">捆包号</string>
  	
  	<!-- 公用 -->
  	<string name="query">查询</string>

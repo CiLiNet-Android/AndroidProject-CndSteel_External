@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/StockContractDetail_relativelayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    
+    <!-- 顶部标题导航区 -->
+    <FrameLayout 
+        android:id="@+id/StockContractDetail_top"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_alignParentTop="true"
+        android:background="@drawable/module_top_bar_bg"
+        android:paddingRight="15dp"
+        android:paddingLeft="15dp"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp" >
+        
+        <!-- 左边按钮 -->
+        <ImageButton 
+            android:id="@+id/imgBtn_StockContractDetail_topLeft"
+            android:layout_width="28dp"
+            android:layout_height="28dp"
+            android:layout_gravity="center_vertical|left"
+            android:background="@drawable/module_top_bar_back"/>
+        
+        <!-- 中间标题 -->
+        <TextView 
+            android:id="@+id/txtV_StockContractDetail_topCenter"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center|top"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            android:text="1号仓库"/>
+        
+        <!-- 中间小标题 -->
+        <TextView 
+            android:id="@+id/txtV_StockContractDetail_topCenter_smallTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center|bottom"
+            android:textColor="@color/white"
+            android:textSize="12sp"
+            android:text="合同号:45489634157896"/>
+        
+    </FrameLayout>
+    
+    <!-- 内容区 -->
+    <FrameLayout 
+        android:id="@+id/StockContractDetail_center"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/StockContractDetail_top"
+        style="@style/CommonDataPageBgStyle">
+    </FrameLayout>
+
+</RelativeLayout>
