@@ -39,12 +39,31 @@ public class BaseActivity extends Activity {
 		mProgressDialog = new ProgressDialog(this);
 		mProgressDialog.setTitle(dialogTitle);
 		mProgressDialog.setMessage(dialogMessage);
+		mProgressDialog.setProgressStyle(ProgressDialog.STYLE_SPINNER);
+		mProgressDialog.setCanceledOnTouchOutside(true);
+		mProgressDialog.setCancelable(true);
+		
+		mProgressDialog.show();
+	}
+	
+	protected void showLoadingProgressDialog(){
+		mProgressDialog = new ProgressDialog(this);
+		mProgressDialog.setProgressStyle(ProgressDialog.STYLE_SPINNER);
+		mProgressDialog.setCanceledOnTouchOutside(false);
+		mProgressDialog.setOnCancelListener(new DialogInterface.OnCancelListener() {
+			@Override
+			public void onCancel(DialogInterface dialog) {
+				finish();
+			}
+		});
+		
 		mProgressDialog.show();
 	}
 	
 	protected void dismissProgressDialog(){
 		if(null != mProgressDialog){
 			mProgressDialog.dismiss();
+			mProgressDialog = null;
 		}
 	}
 

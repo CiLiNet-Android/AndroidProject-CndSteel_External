@@ -42,9 +42,6 @@ public class WebServiceThread extends Thread {
 		
 		//发起WebService请求,获得响应
 		SoapObject _respSoapObj = WebServiceRequest.send(mWebServiceBean.getServiceUrl(), mWebServiceBean.getNamespace(), mWebServiceBean.getMethodName(), mRequestParams);
-	
-		GlobalLog.i("method_name: " +  mWebServiceBean.getMethodName() + "soapObj: " + (_respSoapObj != null? _respSoapObj.toString() : "null"));
-		
 		//将响应消息解析，并且返回给请求线程
 		if(null != mRequestHandler){
 			if(mIsCancel){

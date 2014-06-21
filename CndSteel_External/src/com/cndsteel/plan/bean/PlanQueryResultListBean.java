@@ -106,6 +106,8 @@ public class PlanQueryResultListBean extends WebServiceBean {
 		@Override
 		public void endElement(String uri, String localName, String qName)
 				throws SAXException {
+			currentElementName = "";
+			
 			if("obj".equals(localName)){
 				mPlanBeans.add(planBean);
 				planBean = null;

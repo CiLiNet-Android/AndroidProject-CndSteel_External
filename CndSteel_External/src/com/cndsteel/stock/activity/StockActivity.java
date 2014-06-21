@@ -22,6 +22,7 @@ import com.cndsteel.framework.activity.FrameActivity;
 import com.cndsteel.framework.views.spinner.AbsSpinner.OnItemClickListener;
 import com.cndsteel.framework.views.spinner.CndSteelSpinner;
 
+<<<<<<< HEAD
 @SuppressLint("NewApi")
 public class StockActivity extends FrameActivity implements OnClickListener,
 		OnPageChangeListener, OnItemClickListener {
@@ -35,6 +36,9 @@ public class StockActivity extends FrameActivity implements OnClickListener,
 
 	private ArrayList<View> viewList;
 	private ViewPager stockViewPager;
+=======
+public class StockActivity extends FrameActivity implements OnClickListener {
+>>>>>>> 464547f2ffd4437b5868e95c66972be046f7d9cc
 
 	private View stock;
 	private View contract;
@@ -122,14 +126,25 @@ public class StockActivity extends FrameActivity implements OnClickListener,
 	}
 
 	private void initVariable() {
+<<<<<<< HEAD
 
 		viewList = new ArrayList<View>();
 
+=======
+		
+		//fragmentManager = getFragmentManager();
+		
+		//stock = new StockFragmentStock();
+		contract = new StockFragmentContract();
+		goods = new StockFragmentGoods();
+		
+>>>>>>> 464547f2ffd4437b5868e95c66972be046f7d9cc
 	}
 
 	private void initView() {
 
 		setTopBarTitle(R.string.appModule_stock);
+<<<<<<< HEAD
 
 		initTitleBar();
 
@@ -148,6 +163,13 @@ public class StockActivity extends FrameActivity implements OnClickListener,
 	}
 
 	private void initButton() {
+=======
+		
+		//fragmentTransaction = fragmentManager.beginTransaction();
+		
+		//fragmentTransaction.add(R.id.stock_fragment, stock);
+		//fragmentTransaction.commit();
+>>>>>>> 464547f2ffd4437b5868e95c66972be046f7d9cc
 
 		stock_lay_stock = (Button) findViewById(R.id.stock_btn_stock);
 		stock_lay_stock.setOnClickListener(this);
@@ -188,6 +210,7 @@ public class StockActivity extends FrameActivity implements OnClickListener,
 	// 单击事件处理
 	@Override
 	public void onClick(View view) {
+<<<<<<< HEAD
 
 		CndSteelSpinner cndSteelSpinner = null;
 
@@ -195,6 +218,14 @@ public class StockActivity extends FrameActivity implements OnClickListener,
 		for (int i = 0; i < 5; i++) {
 			xx.add("content_" + i);
 		}
+=======
+		
+		//fragmentTransaction = fragmentManager.beginTransaction();
+		
+		ImageButton stock_img_stock = (ImageButton) findViewById(R.id.stock_img_stock);
+		ImageButton stock_img_contract = (ImageButton) findViewById(R.id.stock_img_contract);
+		ImageButton stock_img_goods = (ImageButton) findViewById(R.id.stock_img_goods);
+>>>>>>> 464547f2ffd4437b5868e95c66972be046f7d9cc
 
 		switch (view.getId()) {
 
@@ -206,8 +237,14 @@ public class StockActivity extends FrameActivity implements OnClickListener,
 			stock_img_stock.setVisibility(View.VISIBLE);
 			stock_img_contract.setVisibility(View.GONE);
 			stock_img_goods.setVisibility(View.GONE);
+<<<<<<< HEAD
 
 			stockViewPager.setCurrentItem(PAGE_ACCORDING_STOCK);
+=======
+			
+			//fragmentTransaction.replace(R.id.stock_fragment, new StockFragmentStock());
+			//fragmentTransaction.commit();
+>>>>>>> 464547f2ffd4437b5868e95c66972be046f7d9cc
 
 			break;
 		// title--按合同
@@ -218,8 +255,14 @@ public class StockActivity extends FrameActivity implements OnClickListener,
 			stock_img_stock.setVisibility(View.GONE);
 			stock_img_contract.setVisibility(View.VISIBLE);
 			stock_img_goods.setVisibility(View.GONE);
+<<<<<<< HEAD
 
 			stockViewPager.setCurrentItem(PAGE_ACCORDING_CONTRACT);
+=======
+			
+//			fragmentTransaction.replace(R.id.stock_fragment, contract);
+//			fragmentTransaction.commit();
+>>>>>>> 464547f2ffd4437b5868e95c66972be046f7d9cc
 
 			break;
 		// title--按商品
@@ -275,6 +318,7 @@ public class StockActivity extends FrameActivity implements OnClickListener,
 
 			// ///////////////// '按合同'页面下的单击事件处理 ///////////////////////////////
 			
+<<<<<<< HEAD
 		// 查询按钮
 		case R.id.btn_StockFragmentContract:
 
@@ -305,6 +349,10 @@ public class StockActivity extends FrameActivity implements OnClickListener,
 			cndSteelSpinner = new CndSteelSpinner(this, xx,lyot_StockFragmentContract_contract_num.getWidth());
 			cndSteelSpinner.showAsDropDown(lyot_StockFragmentContract_contract_num, 0, -5);
 			cndSteelSpinner.setOnItemClickListener(this);
+=======
+//			fragmentTransaction.replace(R.id.stock_fragment, goods);
+//			fragmentTransaction.commit();
+>>>>>>> 464547f2ffd4437b5868e95c66972be046f7d9cc
 
 			break;
 

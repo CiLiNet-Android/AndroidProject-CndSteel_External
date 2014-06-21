@@ -54,6 +54,8 @@ public class WebServiceRequest {
 			httpTransportSE.debug = true;
 			httpTransportSE.call(namespace + methodName,_soapSerializationEnvelope);
 			
+			GlobalLog.i("method_name: " +  methodName + "bodyIn: " + _soapSerializationEnvelope.bodyIn);
+			
 			return (SoapObject)_soapSerializationEnvelope.bodyIn;
 		} catch (SoapFault e) {
 			e.printStackTrace();
