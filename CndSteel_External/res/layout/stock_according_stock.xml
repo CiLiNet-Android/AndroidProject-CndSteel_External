@@ -1,102 +1,107 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:orientation="vertical" >
-    
-      
-    <!-- 入库日期从 -->
-    <RelativeLayout 
-        android:id="@+id/lyot_stock_into_date_start"
-        android:layout_marginTop="20dp"
-        style="@style/CommonDataRowStyle">
-        
-        <TextView 
-            style="@style/CommonDataRowTitleStyle"
-            android:layout_alignParentLeft="true"
-            android:layout_centerVertical="true"
-            android:text="@string/stock_into_date_start"/>
-        
-        <TextView 
-            android:id="@+id/txtV_stock_into_date_start"
-            style="@style/CommonDataRowContentStyle"
-            android:layout_alignParentRight="true"
-            android:layout_centerVertical="true"
-            android:layout_marginRight="25dp"
-            android:text="2014/06" />
-        
-        <ImageButton 
-            android:layout_width="15dp"
-            android:layout_height="10dp"
-            android:layout_centerVertical="true"
-            android:layout_alignParentRight="true"
-            android:background="@drawable/common_spinner_down_arrow"/>
-    </RelativeLayout>
-    
-    
-    <!-- 入库日期至 -->
-    <RelativeLayout 
-        android:id="@+id/lyot_stock_into_date_end"
-        style="@style/CommonDataRowStyle">
-        
-        <TextView 
-            style="@style/CommonDataRowTitleStyle"
-            android:layout_alignParentLeft="true"
-            android:layout_centerVertical="true"
-            android:text="@string/stock_into_date_end"/>
-        
-        <TextView 
-            android:id="@+id/txtV_stock_into_date_end"
-            style="@style/CommonDataRowContentStyle"
-            android:layout_alignParentRight="true"
-            android:layout_centerVertical="true"
-            android:layout_marginRight="25dp"
-            android:text="2014/06" />
-        
-        <ImageButton 
-            android:layout_width="15dp"
-            android:layout_height="10dp"
-            android:layout_centerVertical="true"
-            android:layout_alignParentRight="true"
-            android:background="@drawable/common_spinner_down_arrow"/>
-    </RelativeLayout>
+    android:layout_height="wrap_content"
+    android:scrollbars="none" >
 
-    
-    <!-- 仓库 -->
-    <RelativeLayout 
-        android:id="@+id/lyot_stock_warehouse"
-        style="@style/CommonDataRowStyle">
-        
-        <TextView 
-            style="@style/CommonDataRowTitleStyle"
-            android:layout_alignParentLeft="true"
-            android:layout_centerVertical="true"
-            android:text="@string/warehouse"/>
-        
-        <TextView 
-            android:id="@+id/txtV_stock_warehouse"
-            style="@style/CommonDataRowContentStyle"
-            android:layout_alignParentRight="true"
-            android:layout_centerVertical="true"
-            android:layout_marginRight="25dp"
-            android:text="@string/contract_all" />
-        
-        <ImageButton 
-            android:layout_width="15dp"
-            android:layout_height="10dp"
-            android:layout_centerVertical="true"
-            android:layout_alignParentRight="true"
-            android:background="@drawable/common_spinner_down_arrow"/>
-        
-    </RelativeLayout>
-    
-    <!-- 查询按钮 -->
-    <Button 
-        android:id="@+id/btn_stock_accordingStock"
-        style="@style/CommonButtonStyle"
-        android:layout_marginTop="40dp"
-        android:layout_gravity="center_horizontal"
-        android:text="@string/query"/>
-    
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical" >
 
-</LinearLayout>
+            <!-- 入库日期从 -->
+
+            <RelativeLayout
+                android:id="@+id/lyot_stock_into_date_start"
+                style="@style/CommonDataRowStyle"
+                android:layout_marginTop="20dp" >
+
+                <TextView
+                    style="@style/CommonDataRowTitleStyle"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:text="@string/stock_into_date_start" />
+
+                <TextView
+                    android:id="@+id/txtV_stock_into_date_start"
+                    style="@style/CommonDataRowContentStyle"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="25dp"
+                    android:text="2014/06" />
+
+                <ImageButton
+                    android:layout_width="15dp"
+                    android:layout_height="10dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:background="@drawable/common_spinner_down_arrow" />
+            </RelativeLayout>
+
+            <!-- 入库日期至 -->
+
+            <RelativeLayout
+                android:id="@+id/lyot_stock_into_date_end"
+                style="@style/CommonDataRowStyle" >
+
+                <TextView
+                    style="@style/CommonDataRowTitleStyle"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:text="@string/stock_into_date_end" />
+
+                <TextView
+                    android:id="@+id/txtV_stock_into_date_end"
+                    style="@style/CommonDataRowContentStyle"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="25dp"
+                    android:text="2014/06" />
+
+                <ImageButton
+                    android:layout_width="15dp"
+                    android:layout_height="10dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:background="@drawable/common_spinner_down_arrow" />
+            </RelativeLayout>
+
+            <!-- 仓库 -->
+
+            <RelativeLayout
+                android:id="@+id/lyot_stock_warehouse"
+                style="@style/CommonDataRowStyle" >
+
+                <TextView
+                    style="@style/CommonDataRowTitleStyle"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:text="@string/warehouse" />
+
+                <TextView
+                    android:id="@+id/txtV_stock_warehouse"
+                    style="@style/CommonDataRowContentStyle"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="25dp"
+                    android:text="@string/contract_all" />
+
+                <ImageButton
+                    android:layout_width="15dp"
+                    android:layout_height="10dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:background="@drawable/common_spinner_down_arrow" />
+            </RelativeLayout>
+
+            <!-- 查询按钮 -->
+
+            <Button
+                android:id="@+id/btn_stock_accordingStock"
+                style="@style/CommonButtonStyle"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="40dp"
+                android:text="@string/query" />
+    </LinearLayout>
+
+</ScrollView>
