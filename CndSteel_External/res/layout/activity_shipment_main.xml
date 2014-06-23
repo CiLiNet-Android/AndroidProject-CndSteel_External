@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white_bg"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        style="@style/CommonDataRowStyle"
+        android:background="@drawable/wave"
+        android:orientation="horizontal"
+        android:baselineAligned="false" >
+
+        <LinearLayout
+            
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp" >
+
+            <Button
+                android:id="@+id/shipment_btn_invoiceNum"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@null"
+                android:gravity="bottom|center_horizontal"
+                android:paddingBottom="0dp"
+                android:text="@string/shipment_according_invoiceNum"
+                android:textSize="20sp" />
+
+            <ImageButton
+                android:id="@+id/shipment_img_invoiceNum"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/smallbar"
+                android:paddingBottom="0dp" />
+        </LinearLayout>
+
+        <LinearLayout
+            
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp" >
+
+            <Button
+                android:id="@+id/shipment_btn_contractNum"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@null"
+                android:gravity="bottom|center_horizontal"
+                android:paddingBottom="0dp"
+                android:text="@string/shipment_according_contractNum"
+                android:textSize="20sp" />
+
+            <ImageButton
+                android:id="@+id/shipment_img_contractNum"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/smallbar"
+                android:paddingBottom="0dp"
+                android:visibility="gone" />
+        </LinearLayout>
+    
+    </LinearLayout>
+    
+    <android.support.v4.view.ViewPager
+        android:id="@+id/shipmentViewPager"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center" >
+    </android.support.v4.view.ViewPager>
+
+</LinearLayout>

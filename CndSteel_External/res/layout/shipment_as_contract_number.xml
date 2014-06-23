@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white_bg"
+    android:orientation="vertical" >
+    
+    <!-- 发货日期从 -->
+    <RelativeLayout 
+        android:id="@+id/lyot_shipmentAsContractNum_invoiceDate_start"
+        android:layout_marginTop="20dp"
+        style="@style/CommonDataRowStyle">
+        
+        <TextView 
+            style="@style/CommonDataRowTitleStyle"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:text="@string/shipment_invoiceDate_start"/>
+        
+        <TextView 
+            android:id="@+id/txtV_shipmentAsContractNum_invoiceDate_start"
+            style="@style/CommonDataRowContentStyle"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="25dp"
+            android:text="2014/06" />
+        
+        <ImageButton 
+            android:layout_width="15dp"
+            android:layout_height="10dp"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+            android:background="@drawable/common_spinner_down_arrow"/>
+    </RelativeLayout>
+    
+    
+    <!-- 发货日期至 -->
+    <RelativeLayout 
+        android:id="@+id/lyot_shipmentAsContractNum_invoiceDate_end"
+        style="@style/CommonDataRowStyle">
+        
+        <TextView 
+            style="@style/CommonDataRowTitleStyle"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:text="@string/shipment_invoiceDate_end"/>
+        
+        <TextView 
+            android:id="@+id/txtV_shipmentAsContractNum_invoiceDate_end"
+            style="@style/CommonDataRowContentStyle"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="25dp"
+            android:text="2014/06" />
+        
+        <ImageButton 
+            android:layout_width="15dp"
+            android:layout_height="10dp"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+            android:background="@drawable/common_spinner_down_arrow"/>
+    </RelativeLayout>
+    
+    
+    <!-- 合同号 -->
+    <RelativeLayout 
+        android:id="@+id/lyot_shipmentAsContractNum_contractNum"
+        style="@style/CommonDataRowStyle">
+        
+        <TextView 
+            style="@style/CommonDataRowTitleStyle"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:text="@string/contract_number"/>
+        
+        <TextView 
+            android:id="@+id/txtV_shipmentAsContractNum_contractNum"
+            style="@style/CommonDataRowContentStyle"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:text="254789325" />
+
+        
+    </RelativeLayout>
+    
+    <!-- 品名 -->
+    <RelativeLayout 
+        android:id="@+id/lyot_shipmentAsContractNum_goodsName"
+        style="@style/CommonDataRowStyle">
+        
+        <TextView 
+            style="@style/CommonDataRowTitleStyle"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:text="@string/contract_goodsName"/>
+        
+        <TextView 
+            android:id="@+id/txtV_shipmentAsContractNum_goodsName"
+            style="@style/CommonDataRowContentStyle"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="25dp"
+            android:text="@string/contract_all" />
+        
+        <ImageButton 
+            android:layout_width="15dp"
+            android:layout_height="10dp"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+            android:background="@drawable/common_spinner_down_arrow"/>
+        
+    </RelativeLayout>
+    
+    
+    <!-- 材质 -->
+    <RelativeLayout 
+        android:id="@+id/lyot_shipmentAsContractNum_material"
+        style="@style/CommonDataRowStyle">
+        
+        <TextView 
+            style="@style/CommonDataRowTitleStyle"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:text="@string/material"/>
+        
+        <TextView 
+            android:id="@+id/txtV_shipmentAsContractNum_material"
+            style="@style/CommonDataRowContentStyle"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="25dp"
+            android:text="@string/contract_all" />
+        
+        <ImageButton 
+            android:layout_width="15dp"
+            android:layout_height="10dp"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+            android:background="@drawable/common_spinner_down_arrow"/>
+        
+    </RelativeLayout>
+    
+    <!-- 查询按钮 -->
+    <Button 
+        android:id="@+id/btn_shipmentAsContractNum"
+        style="@style/CommonButtonStyle"
+        android:layout_marginTop="40dp"
+        android:layout_gravity="center_horizontal"
+        android:text="@string/query"/>
+    
+
+</LinearLayout>

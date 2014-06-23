@@ -164,12 +164,9 @@ public class StockActivity extends FrameActivity implements OnClickListener,
 		contract = findViewById(R.layout.stock_according_contract);
 		goods = findViewById(R.layout.stock_according_goods);
 
-		@SuppressWarnings("static-access")
-		LayoutInflater layoutInflater = getLayoutInflater().from(this);
-		stock = layoutInflater.inflate(R.layout.stock_according_stock, null);
-		contract = layoutInflater.inflate(R.layout.stock_according_contract,
-				null);
-		goods = layoutInflater.inflate(R.layout.stock_according_goods, null);
+		stock = inflateView(R.layout.stock_according_stock);
+		contract = inflateView(R.layout.stock_according_contract);
+		goods = inflateView(R.layout.stock_according_goods);
 
 		viewList.add(stock);
 		viewList.add(contract);

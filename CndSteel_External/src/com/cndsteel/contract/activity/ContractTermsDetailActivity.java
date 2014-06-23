@@ -21,7 +21,7 @@ public class ContractTermsDetailActivity extends FrameActivity implements OnItem
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 
-		appendFrameworkCenter(R.layout.activity_contract_listview);
+		appendFrameworkCenter(R.layout.activity_listview);
 
 		setTopBarTitle(R.string.contract_Sum_terms_detail);
 

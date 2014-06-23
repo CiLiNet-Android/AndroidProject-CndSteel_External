@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white_bg"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        style="@style/CommonDataRowStyle"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal" >
+
+            <TextView
+                style="@style/CommonDataRowTitleStyle"
+                android:lineSpacingMultiplier="1.5"
+                android:text="@string/shipment_InvoiceNum" />
+
+            <TextView
+                android:id="@+id/ShipmentDetailAsInvoice_InvoiceNum"
+                style="@style/CommonDataRowTitleStyle"
+                android:layout_marginLeft="15dp"
+                android:layout_weight="1"
+                android:text="1256sd8ewf56addd" />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal" >
+
+            <TextView
+                style="@style/CommonDataRowTitleStyle"
+                android:lineSpacingMultiplier="1.5"
+                android:text="@string/Warehouse" />
+
+            <TextView
+                android:id="@+id/ShipmentDetailAsInvoice_Warehouse"
+                style="@style/CommonDataRowTitleStyle"
+                android:layout_marginLeft="15dp"
+                android:layout_weight="1"
+                android:text="3号仓" />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal" >
+
+            <TextView
+                style="@style/CommonDataRowTitleStyle"
+                android:text="@string/shipment_InvoiceDate" />
+
+            <TextView
+                android:id="@+id/ShipmentDetailAsInvoice_InvoiceDate"
+                style="@style/CommonDataRowTitleStyle"
+                android:layout_marginLeft="15dp"
+                android:layout_weight="1"
+                android:text="2014/06/30" />
+        </LinearLayout>
+        
+    </LinearLayout>
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="3dp"
+        android:background="@drawable/wave" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="15dp"
+        android:background="@null"
+        android:gravity="center_vertical"
+        android:orientation="horizontal" >
+
+        <TextView
+            style="@style/CommonDataRowTitleStyle"
+            android:layout_width="wrap_content"
+            android:text="@string/contract_num" />
+
+        <TextView
+            android:id="@+id/ShipmentDetailAsInvoice_contractNum"
+            style="@style/CommonDataRowTitleStyle"
+            android:layout_width="match_parent"
+            android:text="322156489" />
+    </LinearLayout>
+
+    <ListView
+        android:id="@+id/shipmentDetailListview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:cacheColorHint="#00000000"
+        android:divider="@color/darkgrey"
+        android:dividerHeight="1px"
+        android:scrollbars="none" >
+    </ListView>
+
+</LinearLayout>

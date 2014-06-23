@@ -60,10 +60,10 @@
         
         <!-- 计划 -->
         <activity android:name="com.cndsteel.plan.activity.PlanQueryActivity">
-            <intent-filter>
+            <!-- <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
+            </intent-filter> -->
         </activity>
         <activity android:name="com.cndsteel.plan.activity.PlanQueryResultListActivity">
             <!-- <intent-filter>
@@ -150,6 +150,32 @@
             </intent-filter> -->
         </activity>
         <activity android:name="com.cndsteel.stock.activity.StockGoodsDetailActivity">
+            <!-- <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter> -->
+        </activity>
+        
+        <!-- 出仓 -->
+        <activity android:name="com.cndsteel.shipment.activity.ShipmentActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name="com.cndsteel.shipment.activity.ShipmentAsInvoiceNumQueryResultActivity">
+            <!-- <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter> -->
+        </activity>
+        <activity android:name="com.cndsteel.shipment.activity.ShipmentAsContractNumQueryResultActivity">
+            <!-- <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter> -->
+        </activity>
+        <activity android:name="com.cndsteel.shipment.activity.ShipmentDetailAsInvoice">
             <!-- <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />

@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical" >
+
+    <!-- 发货单号 -->
+    <RelativeLayout
+        style="@style/CommonDataRowStyle"
+        android:background="@color/white_bg" >
+
+        <TextView
+            android:id="@+id/shipment_AsInvoiceNum"
+            style="@style/CommonDataRowContentStyle"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:textColor="@color/black"
+            android:text="@string/shipment_InvoiceNum" />
+        <TextView
+            android:id="@+id/shipment_AsInvoiceNum_value"
+            style="@style/CommonDataRowContentStyle"
+            android:layout_toRightOf="@id/shipment_AsInvoiceNum"
+            android:layout_centerVertical="true"
+            android:textColor="@color/black"
+            android:text="25461247896215" />
+
+    </RelativeLayout>
+
+    <!-- 吨数 -->
+    <RelativeLayout style="@style/CommonDataRowStyle" >
+
+        <TextView
+            style="@style/CommonDataRowTitleStyle"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:text="@string/tonnage" />
+
+        <TextView
+            android:id="@+id/shipment_AsInvoiceNum_tonnage"
+            style="@style/CommonDataRowContentStyle"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:text="2000" />
+    </RelativeLayout>
+    
+    <!-- 件数 -->
+    <RelativeLayout style="@style/CommonDataRowStyle" >
+
+        <TextView
+            style="@style/CommonDataRowTitleStyle"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:text="@string/stock_numberOfPackages" />
+
+        <TextView
+            android:id="@+id/shipment_AsInvoiceNum_numberOfPackages"
+            style="@style/CommonDataRowContentStyle"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:text="200" />
+    </RelativeLayout>
+    
+    <!-- 仓库 -->
+    <RelativeLayout style="@style/CommonDataRowStyle" >
+
+        <TextView
+            style="@style/CommonDataRowTitleStyle"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:text="@string/warehouse" />
+
+        <TextView
+            android:id="@+id/shipment_AsInvoiceNum_warehouse"
+            style="@style/CommonDataRowContentStyle"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:text="1号仓" />
+    </RelativeLayout>
+    
+    <!-- 发货日期 -->
+    <RelativeLayout style="@style/CommonDataRowStyle" >
+
+        <TextView
+            style="@style/CommonDataRowTitleStyle"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:text="@string/shipment_invoiceDate" />
+
+        <TextView
+            android:id="@+id/shipment_AsInvoiceNum_date"
+            style="@style/CommonDataRowContentStyle"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:text="2014/06/01" />
+    </RelativeLayout>
+
+</LinearLayout>
