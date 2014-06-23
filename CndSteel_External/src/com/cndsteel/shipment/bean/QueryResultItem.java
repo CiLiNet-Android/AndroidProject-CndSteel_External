@@ -1,6 +1,6 @@
 package com.cndsteel.shipment.bean;
 
-public class AsInvoiceQueryResultItem {
+public class QueryResultItem {
 	
 	public String number;
 	public String tonnage;
@@ -8,7 +8,7 @@ public class AsInvoiceQueryResultItem {
 	public String warehouse;
 	public String date;
 	
-	public AsInvoiceQueryResultItem(String number,String tonnage,String numberOfPackages,String warehouse,String date) {
+	public QueryResultItem(String number,String tonnage,String numberOfPackages,String warehouse,String date) {
 		this.number = number;
 		this.tonnage = tonnage;
 		this.numberOfPackages = numberOfPackages;
@@ -16,4 +16,9 @@ public class AsInvoiceQueryResultItem {
 		this.date = date;
 	}
 
+	public QueryResultItem(String number,String tonnage,String numberOfPackages) {
+		this.number = number;
+		this.tonnage = tonnage;
+		this.numberOfPackages = numberOfPackages;
+	}
 }

@@ -11,7 +11,7 @@ import android.widget.ListView;
 import com.cndsteel.R;
 import com.cndsteel.framework.activity.FrameActivity;
 import com.cndsteel.shipment.adapter.AsInvoiceQueryResultAdapter;
-import com.cndsteel.shipment.bean.AsInvoiceQueryResultItem;
+import com.cndsteel.shipment.bean.QueryResultItem;
 
 public class ShipmentAsInvoiceNumQueryResultActivity extends FrameActivity implements OnItemClickListener{
 	
@@ -43,12 +43,12 @@ public class ShipmentAsInvoiceNumQueryResultActivity extends FrameActivity imple
 		
 		itemList = (ListView) findViewById(R.id.contract_listView);
 		
-		ArrayList<AsInvoiceQueryResultItem> _datas = new ArrayList<AsInvoiceQueryResultItem>();
-		_datas.add(new AsInvoiceQueryResultItem("231564983", "2000", "200", "1号仓", "2014/06/01"));
-		_datas.add(new AsInvoiceQueryResultItem("231564983", "2000", "200", "1号仓", "2014/06/01"));
-		_datas.add(new AsInvoiceQueryResultItem("231564983", "2000", "200", "1号仓", "2014/06/01"));
-		_datas.add(new AsInvoiceQueryResultItem("231564983", "2000", "200", "1号仓", "2014/06/01"));
-		_datas.add(new AsInvoiceQueryResultItem("231564983", "2000", "200", "1号仓", "2014/06/01"));
+		ArrayList<QueryResultItem> _datas = new ArrayList<QueryResultItem>();
+		_datas.add(new QueryResultItem("231564983", "2000", "200", "1号仓", "2014/06/01"));
+		_datas.add(new QueryResultItem("231564983", "2000", "200", "1号仓", "2014/06/01"));
+		_datas.add(new QueryResultItem("231564983", "2000", "200", "1号仓", "2014/06/01"));
+		_datas.add(new QueryResultItem("231564983", "2000", "200", "1号仓", "2014/06/01"));
+		_datas.add(new QueryResultItem("231564983", "2000", "200", "1号仓", "2014/06/01"));
 		
 		AsInvoiceQueryResultAdapter _adapter = new AsInvoiceQueryResultAdapter(this);
 		_adapter.initDatas(_datas);

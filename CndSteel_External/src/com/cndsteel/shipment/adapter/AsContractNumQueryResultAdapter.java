@@ -9,24 +9,21 @@ import com.cndsteel.R;
 import com.cndsteel.framework.adapter.AbsBaseAdapter;
 import com.cndsteel.shipment.bean.QueryResultItem;
 
-public class AsInvoiceQueryResultAdapter extends AbsBaseAdapter<QueryResultItem> {
+public class AsContractNumQueryResultAdapter extends AbsBaseAdapter<QueryResultItem> {
 
-	public AsInvoiceQueryResultAdapter(Context context) {
+	public AsContractNumQueryResultAdapter(Context context) {
 		super(context);
 	}
 
 	@Override
 	public View getView(int position, View view, ViewGroup viewGroup) {
-		
 		ViewHolder _holder;
 		if(null == view){
 			_holder = new ViewHolder();
-			view = getLayoutInflater().inflate(R.layout.shipment_as_invoice_number_query_result_item, null);
-			_holder.number = (TextView) view.findViewById(R.id.shipment_AsInvoiceNum_value);
-			_holder.tonnage = (TextView) view.findViewById(R.id.shipment_AsInvoiceNum_tonnage);
-			_holder.numberOfPackages = (TextView) view.findViewById(R.id.shipment_AsInvoiceNum_numberOfPackages);
-			_holder.warehouse = (TextView) view.findViewById(R.id.shipment_AsInvoiceNum_warehouse);
-			_holder.date = (TextView) view.findViewById(R.id.shipment_AsInvoiceNum_date);
+			view = getLayoutInflater().inflate(R.layout.shipment_as_contract_number_query_result_item, null);
+			_holder.number = (TextView) view.findViewById(R.id.shipment_AsContractNum_value);
+			_holder.tonnage = (TextView) view.findViewById(R.id.shipment_AsContractNum_tonnage);
+			_holder.numberOfPackages = (TextView) view.findViewById(R.id.shipment_AsContractNum_numberOfPackages);
 			view.setTag(_holder);
 		}else {
 			_holder = (ViewHolder) view.getTag();
@@ -35,8 +32,6 @@ public class AsInvoiceQueryResultAdapter extends AbsBaseAdapter<QueryResultItem>
 		_holder.number.setText(_item.number);
 		_holder.tonnage.setText(_item.tonnage);
 		_holder.numberOfPackages.setText(_item.numberOfPackages);
-		_holder.warehouse.setText(_item.warehouse);
-		_holder.date.setText(_item.date);
 		
 		return view;
 	}
@@ -45,8 +40,6 @@ public class AsInvoiceQueryResultAdapter extends AbsBaseAdapter<QueryResultItem>
 		public TextView number;
 		public TextView tonnage;
 		public TextView numberOfPackages;
-		public TextView warehouse;
-		public TextView date;
 	}
 
 }
