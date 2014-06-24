@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical" >
+    
+     <!-- 票据号 -->
+    <RelativeLayout
+        style="@style/CommonDataRowStyle"
+        android:background="@color/white_bg" >
+
+        <TextView
+            android:id="@+id/BillNum"
+            style="@style/CommonDataRowContentStyle"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:textColor="@color/black"
+            android:text="@string/BillNum" />
+        <TextView
+            android:id="@+id/payment_informationItem_BillNum"
+            style="@style/CommonDataRowContentStyle"
+            android:layout_toRightOf="@id/BillNum"
+            android:layout_centerVertical="true"
+            android:textColor="@color/black"
+            android:text="25461247896215" />
+
+    </RelativeLayout>
+
+    <!-- 付款日期 -->
+    <RelativeLayout style="@style/CommonDataRowStyle" >
+
+        <TextView
+            style="@style/CommonDataRowTitleStyle"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:text="@string/contract_payDate" />
+
+        <TextView
+            android:id="@+id/payment_informationItem_payDate"
+            style="@style/CommonDataRowContentStyle"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:text="2014/06" />
+    </RelativeLayout>
+    
+    <!-- 支付方式 -->
+    <RelativeLayout style="@style/CommonDataRowStyle" >
+
+        <TextView
+            style="@style/CommonDataRowTitleStyle"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:text="@string/paymentMethod" />
+
+        <TextView
+            android:id="@+id/payment_informationItem_paymentMethod"
+            style="@style/CommonDataRowContentStyle"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:text="现金" />
+    </RelativeLayout>
+    
+    <!-- 金额 -->
+	<RelativeLayout style="@style/CommonDataRowStyle" >
+
+        <TextView
+            style="@style/CommonDataRowTitleStyle"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:text="@string/money" />
+
+        <TextView
+            android:id="@+id/payment_informationItem_money"
+            style="@style/CommonDataRowContentStyle"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:text="50,000" />
+    </RelativeLayout>
+</LinearLayout>

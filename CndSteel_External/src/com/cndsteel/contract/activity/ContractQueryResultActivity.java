@@ -73,7 +73,7 @@ public class ContractQueryResultActivity extends FrameActivity implements OnItem
 	public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
 		
 		//启动合同款项
-		startActivity(ContractTermsActivity.class);
+		startActivity(ContractDetailActivity.class);
 		
 	}
 }

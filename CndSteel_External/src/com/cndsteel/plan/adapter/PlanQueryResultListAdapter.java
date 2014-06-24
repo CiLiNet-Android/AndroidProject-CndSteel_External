@@ -30,6 +30,7 @@ public class PlanQueryResultListAdapter extends AbsBaseAdapter<PlanBean> {
 			_holder.plan_must_get_pledge_money = (TextView) view.findViewById(R.id.plan_must_get_pledge_money);
 			_holder.plan_must_get_pledge_date = (TextView) view.findViewById(R.id.plan_must_get_pledge_date);
 			_holder.plan_isEnd = (TextView) view.findViewById(R.id.plan_item_thEnd);
+			view.setTag(_holder);
 		}else {
 			_holder = (ViewHolder) view.getTag();
 		}

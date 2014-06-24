@@ -92,7 +92,7 @@ public class StockAccordingGoodsQueryResultActivity extends FrameActivity implem
 				_holder.StockAccordingGoodsQueryResult_Tonnage = (TextView) view.findViewById(R.id.StockAccordingGoodsQueryResult_Tonnage);
 				_holder.StockAccordingGoodsQueryResult_NumberOfPackages = (TextView) view.findViewById(R.id.StockAccordingGoodsQueryResult_NumberOfPackages);
 
-				
+				view.setTag(_holder);
 			}else{
 				_holder = (ViewHolder) view.getTag();
 			}

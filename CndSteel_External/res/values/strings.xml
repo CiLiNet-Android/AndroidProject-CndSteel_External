@@ -120,6 +120,21 @@
  	<string name="shipment_InvoiceDate">发货日期：</string>
  	<string name="shipmentDetail">出仓明细</string>
  	
+ 	<!-- 往来 -->
+    <string name="appModule_runningAccount">往来</string>
+    
+    <string name="payment_information">付款信息</string>
+    <string name="paymentDateStart">支付日期从</string>
+    <string name="paymentDateEnd">支付日期至</string>
+    <string name="paymentMethod">支付方式</string>
+    <string name="payment_Method">支付方式：</string>
+    <string name="billNum">票据号</string>
+    <string name="BillNum">票据号：</string>
+    <string name="paymentDetail">付款明细</string>
+    <string name="paymentDate">付款日期：</string>
+    
+    <string name="use">用途</string>
+ 	
  	<!-- 公用 -->
  	<string name="query">查询</string>
  	<string name="image_desc"></string>

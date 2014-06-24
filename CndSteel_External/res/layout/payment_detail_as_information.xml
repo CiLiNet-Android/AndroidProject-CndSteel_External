@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white_bg"
+    android:orientation="vertical" >
+
+    <LinearLayout 
+        style="@style/CommonDataRowStyle"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <LinearLayout 
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:orientation="horizontal">
+            <TextView 
+                 style="@style/CommonDataRowTitleStyle"
+                 android:lineSpacingMultiplier="1.2"
+                 android:text="@string/paymentDate"/>
+             <TextView 
+                 android:id="@+id/paymentDate"
+                 style="@style/CommonDataRowTitleStyle"
+                 android:layout_weight="1"
+                 android:layout_marginLeft="15dp"
+                 android:text="2014/06"/>
+        </LinearLayout>
+        <LinearLayout 
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:orientation="horizontal">
+            <TextView 
+                 style="@style/CommonDataRowTitleStyle"
+                 android:lineSpacingMultiplier="1.2"
+                 android:text="@string/payment_Method"/>
+             <TextView 
+                 android:id="@+id/payment_Method"
+                 style="@style/CommonDataRowTitleStyle"
+                 android:layout_width="match_parent"
+                 android:layout_weight="1"
+                 android:text="现金"/>
+             <TextView 
+                 style="@style/CommonDataRowTitleStyle"
+                 android:lineSpacingMultiplier="1.2"
+                 android:text="@string/Money"/>
+             <TextView 
+                 android:id="@+id/stock_goodsName"
+                 style="@style/CommonDataRowTitleStyle"
+                 android:layout_width="match_parent"
+                 android:layout_weight="1"
+                 android:text="100,000,000"/>
+        </LinearLayout>
+        <LinearLayout 
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:orientation="horizontal">
+            <TextView 
+                 style="@style/CommonDataRowTitleStyle"
+                 android:text="@string/BillNum"/>
+             <TextView 
+                 android:id="@+id/BillNum"
+                 style="@style/CommonDataRowTitleStyle"
+                 android:layout_weight="1"
+                 android:layout_marginLeft="15dp"
+                 android:text="5531EAF513ADF1E5"/>
+        </LinearLayout>
+    </LinearLayout>
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="3dp"
+        android:background="@drawable/wave" />
+
+    <ListView 
+        android:id="@+id/PaymentDetailAsContractList"
+        android:layout_marginTop="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+</LinearLayout>

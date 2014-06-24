@@ -114,7 +114,7 @@ public class StockWarehouseDetailActivity extends FrameActivity {
 				_holder.stock_detail_package_num = (TextView) view.findViewById(R.id.stock_detail_package_num);
 				_holder.stock_detail_tonnage = (TextView) view.findViewById(R.id.stock_detail_tonnage);
 				_holder.stock_detail_numberOfPackages = (TextView) view.findViewById(R.id.stock_detail_numberOfPackages);
-				
+				view.setTag(_holder);
 			}else{
 				_holder = (ViewHolder) view.getTag();
 			}

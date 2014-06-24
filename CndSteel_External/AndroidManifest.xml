@@ -92,18 +92,6 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter> -->
         </activity>
-        <activity android:name="com.cndsteel.contract.activity.ContractTermsActivity">
-            <!-- <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter> -->
-        </activity>
-        <activity android:name="com.cndsteel.contract.activity.ContractTermsDetailActivity">
-            <!-- <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter> -->
-        </activity>
         <activity android:name="com.cndsteel.contract.activity.ContractDetailActivity">
             <!-- <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -158,10 +146,10 @@
         
         <!-- 出仓 -->
         <activity android:name="com.cndsteel.shipment.activity.ShipmentActivity">
-            <intent-filter>
+            <!-- <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
+            </intent-filter> -->
         </activity>
         <activity android:name="com.cndsteel.shipment.activity.ShipmentAsInvoiceNumQueryResultActivity">
             <!-- <intent-filter>
@@ -188,8 +176,37 @@
             </intent-filter> -->
         </activity>
         
-        
-        
+        <!-- 往来 -->
+        <activity android:name="com.cndsteel.payment.activity.PaymentActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name="com.cndsteel.payment.activity.PaymentAsInformationQueryResultActivity">
+            <!-- <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter> -->
+        </activity>
+        <activity android:name="com.cndsteel.payment.activity.PaymentDetailAsInformetionActivity">
+            <!-- <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter> -->
+        </activity>
+        <activity android:name="com.cndsteel.payment.activity.PaymentAsContractQueryResultActivity">
+            <!-- <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter> -->
+        </activity>
+        <activity android:name="com.cndsteel.payment.activity.PaymentDetailAsContractActivity">
+            <!-- <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter> -->
+        </activity>
     </application>
 
 </manifest>

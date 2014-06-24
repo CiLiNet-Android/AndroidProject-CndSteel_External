@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white_bg"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        style="@style/CommonDataRowStyle"
+        android:background="@drawable/wave"
+        android:orientation="horizontal"
+        android:baselineAligned="false" >
+
+        <LinearLayout
+            
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp" >
+
+            <Button
+                android:id="@+id/payment_btn_information"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@null"
+                android:gravity="bottom|center_horizontal"
+                android:paddingBottom="0dp"
+                android:text="@string/payment_information"
+                android:textSize="20sp" />
+
+            <ImageButton
+                android:id="@+id/payment_img_information"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/smallbar"
+                android:paddingBottom="0dp" />
+        </LinearLayout>
+
+        <LinearLayout
+            
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp" >
+
+            <Button
+                android:id="@+id/payment_btn_contractFunds"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@null"
+                android:gravity="bottom|center_horizontal"
+                android:paddingBottom="0dp"
+                android:text="@string/contract_Sum_terms"
+                android:textSize="20sp" />
+
+            <ImageButton
+                android:id="@+id/payment_img_contractFunds"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/smallbar"
+                android:paddingBottom="0dp"
+                android:visibility="gone" />
+        </LinearLayout>
+    
+    </LinearLayout>
+    
+    <android.support.v4.view.ViewPager
+        android:id="@+id/paymentViewPager"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center" >
+    </android.support.v4.view.ViewPager>
+
+</LinearLayout>
