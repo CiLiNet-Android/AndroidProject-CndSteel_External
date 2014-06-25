@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        style="@style/CommonDataRowStyle"
+        android:background="@drawable/wave"
+        android:baselineAligned="false"
+        android:orientation="horizontal" >
+
+        <!-- 待提货意向 -->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:paddingLeft="30dp"
+            android:paddingRight="30dp" >
+
+            <Button
+                android:id="@+id/btn_toPickUpTheGoodsIntention"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@null"
+                android:gravity="bottom|center_horizontal"
+                android:paddingBottom="0dp"
+                android:text="@string/toPickUpTheGoodsIntention"
+                android:textSize="20sp" />
+
+            <ImageButton
+                android:id="@+id/img_toPickUpTheGoodsIntention"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/smallbar"
+                android:paddingBottom="0dp" />
+        </LinearLayout>
+
+        <!-- 提货意向单 -->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:paddingLeft="30dp"
+            android:paddingRight="30dp" >
+
+            <Button
+                android:id="@+id/btn_pickUpTheGoodsIntentionBill"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@null"
+                android:gravity="bottom|center_horizontal"
+                android:paddingBottom="0dp"
+                android:text="@string/pickUpTheGoodsIntentionBill"
+                android:textSize="20sp" />
+
+            <ImageButton
+                android:id="@+id/img_pickUpTheGoodsIntentionBill"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/smallbar"
+                android:paddingBottom="0dp"
+                android:visibility="gone" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/shipmentIntentViewPager"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center" >
+    </android.support.v4.view.ViewPager>
+
+</LinearLayout>

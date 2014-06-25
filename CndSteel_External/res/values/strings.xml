@@ -134,6 +134,10 @@
     <string name="paymentDate">付款日期：</string>
     
     <string name="use">用途</string>
+    
+    <!-- 提货意向 -->
+    <string name="toPickUpTheGoodsIntention">待提货意向</string>
+    <string name="pickUpTheGoodsIntentionBill">提货意向单</string>
  	
  	<!-- 公用 -->
  	<string name="DialogMsgNoDatas">未找到符合查询条件的%s&#8230;</string>
