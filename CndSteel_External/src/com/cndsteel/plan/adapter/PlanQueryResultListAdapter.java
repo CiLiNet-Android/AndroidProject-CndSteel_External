@@ -16,32 +16,34 @@ public class PlanQueryResultListAdapter extends AbsBaseAdapter<PlanBean> {
 	}
 
 	@Override
-	public View getView(int position, View convertView, ViewGroup viewGroup) {
-		ViewHolder _viewHolder = null;;
-		if(null == convertView){
-			convertView = getLayoutInflater().inflate(R.layout.activity_plan_query_result_list_item, null);
+	public View getView(int position, View view, ViewGroup viewGroup) {
+		
+		ViewHolder _holder;
+		
+		if(null == view){
 			
-			_viewHolder = new ViewHolder();
-			_viewHolder.plan_year_month = (TextView) convertView.findViewById(R.id.plan_year_month);
-			_viewHolder.plan_reserve_reality = (TextView) convertView.findViewById(R.id.plan_reserve_reality);
-			_viewHolder.plan_must_get_pledge_money = (TextView) convertView.findViewById(R.id.plan_must_get_pledge_money);
-			_viewHolder.plan_must_get_pledge_date = (TextView) convertView.findViewById(R.id.plan_must_get_pledge_date);
-			_viewHolder.plan_isEnd = (TextView) convertView.findViewById(R.id.plan_item_thEnd);
+			_holder = new ViewHolder();
 			
-			convertView.setTag(_viewHolder);
+			view = getLayoutInflater().inflate(R.layout.activity_plan_query_result_list_item, null);
+			_holder.plan_year_month = (TextView) view.findViewById(R.id.plan_year_month);
+			_holder.plan_reserve_reality = (TextView) view.findViewById(R.id.plan_reserve_reality);
+			_holder.plan_must_get_pledge_money = (TextView) view.findViewById(R.id.plan_must_get_pledge_money);
+			_holder.plan_must_get_pledge_date = (TextView) view.findViewById(R.id.plan_must_get_pledge_date);
+			_holder.plan_isEnd = (TextView) view.findViewById(R.id.plan_item_thEnd);
+			view.setTag(_holder);
 		}else {
-			_viewHolder = (ViewHolder) convertView.getTag();
+			_holder = (ViewHolder) view.getTag();
 		}
 		
 		PlanBean _plan = (PlanBean) getItem(position);
 		
-		_viewHolder.plan_year_month.setText(_plan.schDate);
-		_viewHolder.plan_reserve_reality.setText(_plan.weight + "/" + _plan.actWeight);
-		_viewHolder.plan_must_get_pledge_money.setText(_plan.receivedMargin);
-		_viewHolder.plan_must_get_pledge_date.setText(_plan.receivedMarginDate);
-		_viewHolder.plan_isEnd.setText(_plan.status);
+//		_holder.plan_year_month.setText(_plan.plan_year_month);
+//		_holder.plan_reserve_reality.setText(_plan.plan_reserve_reality);
+//		_holder.plan_must_get_pledge_money.setText(_plan.plan_must_get_pledge_money);
+//		_holder.plan_must_get_pledge_date.setText(_plan.plan_must_get_pledge_date);
+//		_holder.plan_isEnd.setText(_plan.plan_isEnd);
 		
-		return convertView;
+		return view;
 	}
 	
 	private class ViewHolder {
