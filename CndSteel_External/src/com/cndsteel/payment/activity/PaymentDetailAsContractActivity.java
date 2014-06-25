@@ -6,7 +6,7 @@ import android.os.Bundle;
 import android.widget.ListView;
 
 import com.cndsteel.R;
-import com.cndsteel.contract.bean.Contract_item;
+import com.cndsteel.contract.beans.ContractBean;
 import com.cndsteel.framework.activity.FrameActivity;
 import com.cndsteel.payment.adapter.PaymentDetailAsContractAdapter;
 
@@ -34,16 +34,16 @@ public class PaymentDetailAsContractActivity extends FrameActivity {
 	private void initListView() {
 
 		//以下为初使界面测试...
-		ArrayList<Contract_item> _datas = new ArrayList<Contract_item>();
+		ArrayList<ContractBean> _datas = new ArrayList<ContractBean>();
 
-		Contract_item _item = new Contract_item();
-		_item.payDate = "2014/06/01";
-		_item.payAmouontPaid = "236541";
+		ContractBean _item = new ContractBean();
+//		_item.payDate = "2014/06/01";
+//		_item.payAmouontPaid = "236541";
 		_datas.add(_item);
 
-		Contract_item _item2 = new Contract_item();
-		_item2.payDate = "2014/06/01";
-		_item2.payAmouontPaid = "236541";
+		ContractBean _item2 = new ContractBean();
+//		_item2.payDate = "2014/06/01";
+//		_item2.payAmouontPaid = "236541";
 		_datas.add(_item2);
 
 		paymentDetailAsContractlistView = (ListView) findViewById(R.id.paymentDetailAsContractlistView);

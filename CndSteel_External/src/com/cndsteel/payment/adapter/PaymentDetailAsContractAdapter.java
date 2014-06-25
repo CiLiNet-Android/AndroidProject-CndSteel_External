@@ -8,12 +8,12 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 
 import com.cndsteel.R;
-import com.cndsteel.contract.bean.Contract_item;
+import com.cndsteel.contract.beans.ContractBean;
 import com.cndsteel.framework.adapter.AbsBaseAdapter;
 
-public class PaymentDetailAsContractAdapter extends AbsBaseAdapter<Contract_item> {
+public class PaymentDetailAsContractAdapter extends AbsBaseAdapter<ContractBean> {
 
-	public PaymentDetailAsContractAdapter(Context context,ArrayList<Contract_item> datas) {
+	public PaymentDetailAsContractAdapter(Context context,ArrayList<ContractBean> datas) {
 		super(context);
 		initDatas(datas);
 	}
@@ -37,9 +37,9 @@ public class PaymentDetailAsContractAdapter extends AbsBaseAdapter<Contract_item
 		}else{
 			_holder = (ViewHolder) view.getTag();
 		}
-		Contract_item _item = (Contract_item) getItem(position);
-		_holder.amountPaid.setText(_item.payDate);
-		_holder.unpaidAmount.setText(_item.payAmouontPaid);
+		ContractBean _item = (ContractBean) getItem(position);
+//		_holder.amountPaid.setText(_item.payDate);
+//		_holder.unpaidAmount.setText(_item.payAmouontPaid);
 		
 		return view;
 	}

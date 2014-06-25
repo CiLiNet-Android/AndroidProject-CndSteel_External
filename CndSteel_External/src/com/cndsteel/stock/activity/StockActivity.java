@@ -1,12 +1,12 @@
 package com.cndsteel.stock.activity;
 
 import java.util.ArrayList;
+
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.view.PagerAdapter;
 import android.support.v4.view.ViewPager;
 import android.support.v4.view.ViewPager.OnPageChangeListener;
-import android.view.LayoutInflater;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.view.ViewGroup;
@@ -14,6 +14,7 @@ import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
+
 import com.cndsteel.R;
 import com.cndsteel.framework.activity.FrameActivity;
 import com.cndsteel.framework.views.spinner.AbsSpinner.OnItemClickListener;

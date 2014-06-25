@@ -49,7 +49,8 @@ public class BaseActivity extends Activity {
 	protected void showLoadingProgressDialog(){
 		mProgressDialog = new ProgressDialog(this);
 		mProgressDialog.setProgressStyle(ProgressDialog.STYLE_SPINNER);
-		mProgressDialog.setCanceledOnTouchOutside(false);
+		//mProgressDialog.setCanceledOnTouchOutside(false);
+		mProgressDialog.setCancelable(true);
 		mProgressDialog.setOnCancelListener(new DialogInterface.OnCancelListener() {
 			@Override
 			public void onCancel(DialogInterface dialog) {

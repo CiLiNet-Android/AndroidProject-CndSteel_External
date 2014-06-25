@@ -8,12 +8,12 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 
 import com.cndsteel.R;
-import com.cndsteel.contract.bean.Contract_item;
+import com.cndsteel.contract.beans.ContractBean;
 import com.cndsteel.framework.adapter.AbsBaseAdapter;
 
-public class PaymentAsContractQueryResultAdapter extends AbsBaseAdapter<Contract_item> {
+public class PaymentAsContractQueryResultAdapter extends AbsBaseAdapter<ContractBean> {
 
-	public PaymentAsContractQueryResultAdapter(Context context,ArrayList<Contract_item> datas) {
+	public PaymentAsContractQueryResultAdapter(Context context,ArrayList<ContractBean> datas) {
 		super(context);
 		initDatas(datas);
 	}
@@ -31,10 +31,10 @@ public class PaymentAsContractQueryResultAdapter extends AbsBaseAdapter<Contract
 		}else{
 			_holder = (ViewHolder) view.getTag();
 		}
-		Contract_item _item = (Contract_item) getItem(position);
-		_holder.contractNum.setText(_item.num);
-		_holder.amountPaid.setText(_item.amountPaid);
-		_holder.unpaidAmount.setText(_item.unpaidAmount);
+		ContractBean _item = (ContractBean) getItem(position);
+//		_holder.contractNum.setText(_item.num);
+//		_holder.amountPaid.setText(_item.amountPaid);
+//		_holder.unpaidAmount.setText(_item.unpaidAmount);
 		
 		view.setBackgroundResource(R.color.grey);
 		

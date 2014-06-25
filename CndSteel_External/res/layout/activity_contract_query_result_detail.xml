@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content" >
+
+    <LinearLayout
+        android:id="@+id/lyot_contractDetails"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" 
+        android:visibility="invisible">
+
+        <!-- 合同号 -->
+
+        <RelativeLayout
+            style="@style/CommonDataRowStyle"
+            android:layout_marginTop="20dp" >
+
+            <TextView
+                style="@style/CommonDataRowTitleStyle"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:text="@string/contract_number" />
+
+            <TextView
+                android:id="@+id/contract_detail_number"
+                style="@style/CommonDataRowContentStyle"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true" />
+        </RelativeLayout>
+
+        <!-- 签约日期 -->
+
+        <RelativeLayout style="@style/CommonDataRowStyle" >
+
+            <TextView
+                style="@style/CommonDataRowTitleStyle"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:text="@string/contract_sign_date" />
+
+            <TextView
+                android:id="@+id/contract_detail_signDate"
+                style="@style/CommonDataRowContentStyle"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true" />
+        </RelativeLayout>
+
+        <!-- 合同吨数 -->
+
+        <RelativeLayout style="@style/CommonDataRowStyle" >
+
+            <TextView
+                style="@style/CommonDataRowTitleStyle"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:text="@string/contract_tonnage" />
+
+            <TextView
+                android:id="@+id/contract_detail_tonnage"
+                style="@style/CommonDataRowContentStyle"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true" />
+        </RelativeLayout>
+
+        <!-- 合同金额 -->
+
+        <RelativeLayout style="@style/CommonDataRowStyle" >
+
+            <TextView
+                style="@style/CommonDataRowTitleStyle"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:text="@string/contract_amountOfMoney" />
+
+            <TextView
+                android:id="@+id/contract_detail_amountOfMoney"
+                style="@style/CommonDataRowContentStyle"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true" />
+        </RelativeLayout>
+
+        <!-- 应收保证日期 -->
+
+        <RelativeLayout style="@style/CommonDataRowStyle" >
+
+            <TextView
+                style="@style/CommonDataRowTitleStyle"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:text="@string/contract_must_get_pledge_date" />
+
+            <TextView
+                android:id="@+id/contract_detail_mustGetPledgeDate"
+                style="@style/CommonDataRowContentStyle"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true" />
+        </RelativeLayout>
+
+        <!-- 应收保证金金额 -->
+
+        <RelativeLayout style="@style/CommonDataRowStyle" >
+
+            <TextView
+                style="@style/CommonDataRowTitleStyle"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:text="@string/contract_must_get_pledge_money" />
+
+            <TextView
+                android:id="@+id/contract_detail_mustGetPledgeMoney"
+                style="@style/CommonDataRowContentStyle"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true" />
+        </RelativeLayout>
+
+        <!-- 实收保证日期 -->
+
+        <RelativeLayout style="@style/CommonDataRowStyle" >
+
+            <TextView
+                style="@style/CommonDataRowTitleStyle"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:text="@string/contract_reality_get_pledge_date" />
+
+            <TextView
+                android:id="@+id/contract_detail_realityGetPledgeDate"
+                style="@style/CommonDataRowContentStyle"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true" />
+        </RelativeLayout>
+
+        <!-- 到期日 -->
+
+        <RelativeLayout style="@style/CommonDataRowStyle" >
+
+            <TextView
+                style="@style/CommonDataRowTitleStyle"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:text="@string/contract_maturity_date" />
+
+            <TextView
+                android:id="@+id/contract_detail_maturityDate"
+                style="@style/CommonDataRowContentStyle"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true" />
+        </RelativeLayout>
+
+        
+    </LinearLayout>
+
+</ScrollView>

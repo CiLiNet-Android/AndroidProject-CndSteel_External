@@ -9,7 +9,7 @@ import android.widget.AdapterView.OnItemClickListener;
 import android.widget.ListView;
 
 import com.cndsteel.R;
-import com.cndsteel.contract.bean.Contract_item;
+import com.cndsteel.contract.beans.ContractBean;
 import com.cndsteel.framework.activity.FrameActivity;
 import com.cndsteel.payment.adapter.PaymentAsContractQueryResultAdapter;
 
@@ -37,19 +37,19 @@ public class PaymentAsContractQueryResultActivity extends FrameActivity implemen
 	private void initListView() {
 		
 		//以下为初使界面测试...
-		ArrayList<Contract_item> _datas = new ArrayList<Contract_item>();
+		ArrayList<ContractBean> _datas = new ArrayList<ContractBean>();
 		
-		Contract_item _item = new Contract_item();
-		_item.num = "63254102178956";
-		_item.amountPaid = "524103";
-		_item.unpaidAmount = "236541";
+		ContractBean _item = new ContractBean();
+//		_item.num = "63254102178956";
+//		_item.amountPaid = "524103";
+//		_item.unpaidAmount = "236541";
 		
 		_datas.add(_item);
 		
-		Contract_item _item2 = new Contract_item();
-		_item2.num = "63254102178956";
-		_item2.amountPaid = "524103";
-		_item2.unpaidAmount = "236541";
+		ContractBean _item2 = new ContractBean();
+//		_item2.num = "63254102178956";
+//		_item2.amountPaid = "524103";
+//		_item2.unpaidAmount = "236541";
 		
 		_datas.add(_item2);
 		

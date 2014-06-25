@@ -16,7 +16,7 @@ public interface Constants {
 	/**
 	 * WebService配置
 	 */
-	public static final String WEB_SERVICE_URL = "http://vip.cndsteel.com/services/BookingService";
+	public static final String WEB_SERVICE_BASE_URL = "http://vip.cndsteel.com/services";
 	public static final String WEB_SERVICE_NAMESPACE = "http://impl.remote.webservice.steel.chinacnd.com";
 	
 	/**
