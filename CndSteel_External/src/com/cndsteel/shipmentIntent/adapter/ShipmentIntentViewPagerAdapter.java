@@ -3,6 +3,7 @@ package com.cndsteel.shipmentIntent.adapter;
 import java.util.ArrayList;
 
 import android.content.Context;
+import android.content.Intent;
 import android.support.v4.view.PagerAdapter;
 import android.view.View;
 import android.view.View.OnClickListener;
@@ -17,6 +18,7 @@ import android.widget.Toast;
 import com.cndsteel.R;
 import com.cndsteel.framework.views.spinner.CndSteelSpinner;
 import com.cndsteel.shipmentIntent.activity.ShipmentIntentActivity;
+import com.cndsteel.shipmentIntent.activity.ShipmentIntentQueryResultActivity;
 import com.cndsteel.shipmentIntent.bean.ShipmentIntent;
 
 public class ShipmentIntentViewPagerAdapter extends PagerAdapter implements OnClickListener, OnItemClickListener,com.cndsteel.framework.views.spinner.AbsSpinner.OnItemClickListener {
@@ -154,7 +156,8 @@ public class ShipmentIntentViewPagerAdapter extends PagerAdapter implements OnCl
 			
 		//查询按钮
 		case R.id.btn_intent:
-			Toast.makeText(context, "...", Toast.LENGTH_SHORT).show();
+			Intent _intent = new Intent(context, ShipmentIntentQueryResultActivity.class);
+			context.startActivity(_intent);
 			break;
 
 		default:

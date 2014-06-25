@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white_bg"
+    android:orientation="vertical" >
+
+    <LinearLayout 
+        style="@style/CommonDataRowStyle"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        
+        <!-- 意向单号 -->
+        <LinearLayout 
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:orientation="horizontal">
+            <TextView 
+                 style="@style/CommonDataRowTitleStyle"
+                 android:textSize="15sp"
+                 android:lineSpacingMultiplier="1.2"
+                 android:text="@string/intentBillNum"/>
+             <TextView 
+                 android:id="@+id/paymentDate"
+                 style="@style/CommonDataRowTitleStyle"
+                 android:textSize="15sp"
+                 android:layout_weight="1"
+                 android:layout_marginLeft="15dp"
+                 android:text="23165456156"/>
+        </LinearLayout>
+        
+        <!-- 登记日期 -->
+        <LinearLayout 
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:orientation="horizontal">
+            <TextView 
+                 style="@style/CommonDataRowTitleStyle"
+                 android:textSize="15sp"
+                 android:lineSpacingMultiplier="1.2"
+                 android:text="@string/RecordDate"/>
+             <TextView 
+                 android:id="@+id/payment_Method"
+                 style="@style/CommonDataRowTitleStyle"
+                 android:textSize="15sp"
+                 android:layout_width="match_parent"
+                 android:layout_weight="1"
+                 android:text="2014/06/01"/>
+             <TextView 
+                 style="@style/CommonDataRowTitleStyle"
+                 android:textSize="15sp"
+                 android:layout_marginLeft="10dp"
+                 android:lineSpacingMultiplier="1.2"
+                 android:text="@string/Warehouse"/>
+             <TextView 
+                 android:id="@+id/stock_goodsName"
+                 style="@style/CommonDataRowTitleStyle"
+                 android:textSize="15sp"
+                 android:layout_width="match_parent"
+                 android:layout_weight="1"
+                 android:text="5号仓"/>
+        </LinearLayout>
+        
+        
+         <!-- 吨数 -->
+        <LinearLayout 
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:orientation="horizontal">
+            <TextView 
+                 style="@style/CommonDataRowTitleStyle"
+                 android:textSize="15sp"
+                 android:lineSpacingMultiplier="1.2"
+                 android:text="@string/Tonnage"/>
+             <TextView 
+                 android:id="@+id/payment_Method"
+                 style="@style/CommonDataRowTitleStyle"
+                 android:textSize="15sp"
+                 android:layout_width="match_parent"
+                 android:layout_weight="1"
+                 android:text="5000吨"/>
+             <TextView 
+                 style="@style/CommonDataRowTitleStyle"
+                 android:textSize="15sp"
+                 android:lineSpacingMultiplier="1.2"
+                 android:text="@string/stock_NumberOfPackages"/>
+             <TextView 
+                 android:id="@+id/stock_goodsName"
+                 style="@style/CommonDataRowTitleStyle"
+                 android:textSize="15sp"
+                 android:layout_width="match_parent"
+                 android:layout_weight="1"
+                 android:text="125件"/>
+        </LinearLayout>
+        
+        <!-- 备注 -->
+        <LinearLayout 
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:orientation="horizontal">
+            <TextView 
+                 style="@style/CommonDataRowTitleStyle"
+                 android:textSize="15sp"
+                 android:text="@string/comment"/>
+             <TextView 
+                 android:id="@+id/BillNum"
+                 style="@style/CommonDataRowTitleStyle"
+                 android:textSize="15sp"
+                 android:layout_weight="1"
+                 android:layout_marginLeft="15dp"
+                 android:text="xxxxxxxxx"/>
+        </LinearLayout>
+    </LinearLayout>
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="3dp"
+        android:background="@drawable/wave" />
+    
+    <LinearLayout 
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginTop="20dp"
+        android:orientation="horizontal">
+        
+        <TextView 
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:layout_weight="1"
+            android:textColor="@color/black"
+            android:text="@string/contract_goodsName"/>
+        <TextView 
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:layout_weight="1"
+            android:textColor="@color/black"
+            android:text="@string/material"/>
+        <TextView 
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:layout_weight="1"
+            android:textColor="@color/black"
+            android:text="@string/stock_standard"/>
+        <TextView 
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:layout_weight="1"
+            android:textColor="@color/black"
+            android:text="@string/package_num"/>
+        <TextView 
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:layout_weight="1"
+            android:textColor="@color/black"
+            android:text="@string/tonnage"/>
+        <TextView 
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:layout_weight="1"
+            android:textColor="@color/black"
+            android:text="@string/stock_numberOfPackages"/>
+    </LinearLayout>
+
+    <ListView 
+        android:id="@+id/shipmentIntentBillDetailListView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp" />
+
+</LinearLayout>

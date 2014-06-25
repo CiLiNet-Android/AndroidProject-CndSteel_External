@@ -15,7 +15,7 @@
             android:layout_centerVertical="true"
             android:text="@string/intentBillNum"/>
         <TextView 
-            android:id="@+id/txtV_contractDate"
+            android:id="@+id/txtV_intentBillNum"
             style="@style/CommonDataRowTitleStyle"
             android:layout_toRightOf="@id/title_intentBillNum"
             android:layout_centerVertical="true"

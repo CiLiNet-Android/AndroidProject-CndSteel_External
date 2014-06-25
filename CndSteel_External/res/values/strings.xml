@@ -144,9 +144,13 @@
     <string name="pleaseIntoIntentBillNumber">请输入意向单号</string>
     
     <string name="recordDate">登记日期</string>
+    <string name="RecordDate">登记日期：</string>
     <string name="recordDateStart">登记日期从</string>
     <string name="recordDateEnd">登记日期至</string>
+ 	<string name="shipmentIntentBillDetail">提货意向单明细</string>
  	
+ 	<string name="comment">备注：</string>
+    
  	<!-- 公用 -->
  	<string name="DialogMsgNoDatas">未找到符合查询条件的%s&#8230;</string>
  	<string name="query">查询</string>

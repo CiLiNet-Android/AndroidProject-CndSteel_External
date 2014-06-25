@@ -216,6 +216,19 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name="com.cndsteel.shipmentIntent.activity.ShipmentIntentQueryResultActivity">
+           <!--  <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter> -->
+        </activity>
+        <activity android:name="com.cndsteel.shipmentIntent.activity.ShipmentIntentBillDetailActivity">
+            <!-- <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter> -->
+        </activity>
+        
     </application>
 
 </manifest>
