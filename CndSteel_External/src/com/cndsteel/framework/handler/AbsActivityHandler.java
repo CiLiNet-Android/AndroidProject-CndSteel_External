@@ -22,5 +22,5 @@ public abstract class AbsActivityHandler<T extends Activity> extends Handler {
 		}
 	}
 	
-	protected abstract void handleMessage(T theActivity,Message msg);
+	protected abstract void handleMessage(final T theActivity,Message msg);
 }

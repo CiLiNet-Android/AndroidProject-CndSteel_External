@@ -14,6 +14,7 @@ import android.widget.TextView;
 
 import com.cndsteel.R;
 import com.cndsteel.framework.activity.FrameActivity;
+import com.cndsteel.framework.constant.QueryParams;
 import com.cndsteel.framework.utils.DateUtil;
 import com.cndsteel.framework.views.dialogs.datepicker.DatePickerDialog;
 import com.cndsteel.framework.views.spinner.AbsSpinner;
@@ -27,9 +28,7 @@ import com.cndsteel.framework.views.spinner.CndSteelSpinner;
  */
 public class PlanQueryActivity extends FrameActivity implements View.OnClickListener,DatePickerDialog.OnDateSelectedListener,AbsSpinner.OnItemClickListener {
 
-	public static final String QUERY_PARAM_PLAN_STATUS = "status";
-	public static final String QUERY_PARAM_PLAN_DATE_YEAR = "year";
-	public static final String QUERY_PARAM_PLAN_DATE_MONTH = "month";
+	
 	
 	private static final String QUERY_DATE_FORMAT = "yyyy/MM";
 	
@@ -55,7 +54,7 @@ public class PlanQueryActivity extends FrameActivity implements View.OnClickList
 		sPlanStatusCodes.add("CONFIRM");
 		sPlanStatusCodes.add("UNDONE");
 		sPlanStatusCodes.add("DONE");
-		sPlanStatusCodes.add("INVALId");
+		sPlanStatusCodes.add("INVALID");
 	}
 	
 	/** 计划年月 **/
@@ -147,9 +146,9 @@ public class PlanQueryActivity extends FrameActivity implements View.OnClickList
 			
 			//请求参数
 			Bundle _queryParams = new Bundle();
-			_queryParams.putString(QUERY_PARAM_PLAN_DATE_YEAR, mQueryParamYear);
-			_queryParams.putString(QUERY_PARAM_PLAN_DATE_MONTH, mQueryParamMonth);
-			_queryParams.putString(QUERY_PARAM_PLAN_STATUS, mQueryParamStatus);
+			_queryParams.putString(QueryParams.QUERY_PARAM_PLAN_DATE_YEAR, mQueryParamYear);
+			_queryParams.putString(QueryParams.QUERY_PARAM_PLAN_DATE_MONTH, mQueryParamMonth);
+			_queryParams.putString(QueryParams.QUERY_PARAM_PLAN_STATUS, mQueryParamStatus);
 			_intent.putExtras(_queryParams);
 			
 			startActivity(_intent);

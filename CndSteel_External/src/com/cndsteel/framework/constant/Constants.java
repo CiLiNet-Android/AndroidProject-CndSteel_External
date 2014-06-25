@@ -26,7 +26,7 @@ public interface Constants {
 	/**
 	 * 每页记录数
 	 */
-	public static final int PAGE_SIZE = 4;
+	public static final int DEFAULT_PAGE_SIZE = 4;
 	
 	/**
 	 * 日志文件路径
@@ -53,9 +53,13 @@ public interface Constants {
 	/**
 	 * 请求HandlerMsg消息类型
 	 */
-	public static final int HANDLER_MSG_DATA_LOAD_SUCCESS = 0x000;
+	public static final int HANDLER_MSG_REQUEST_FAILURE = 0x000;
 	
-	public static final int HANDLER_MSG_REQUEST_FAILURE = 0x001;
+	public static final int HANDLER_MSG_DATA_LOAD_SUCCESS = 0x001;
+	public static final int HANDLER_MSG_DATA_RELOAD_SUCCESS = 0x002;
+	public static final int HANDLER_MSG_PULL_FROM_START_TO_REFRESH_DATA_SUCCESS = 0x003;
+	public static final int HANDLER_MSG_PULL_FROM_END_TO_REFRESH_DATA_SUCCESS = 0x004;
+	
 	public static final int HANDLER_MSG_DATA_PARSE_ERROR = 0xFFF;
 	public static final int HANDLER_MSG_THREAD_CANCEL = 0x404;
 	

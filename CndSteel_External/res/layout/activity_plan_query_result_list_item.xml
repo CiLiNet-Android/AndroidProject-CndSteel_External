@@ -21,8 +21,7 @@
             style="@style/CommonDataRowContentStyle"
             android:layout_toRightOf="@id/contract_item_Num_title"
             android:layout_centerVertical="true"
-            android:textColor="@color/black"
-            android:text="2014/01/01" />
+            android:textColor="@color/black"/>
 
         <TextView
             android:id="@+id/plan_item_thEnd"
@@ -30,8 +29,7 @@
             android:layout_alignParentRight="true"
             android:layout_centerVertical="true"
             android:textColor="@color/limeGreen"
-            android:textSize="13sp"
-            android:text="已完结" />
+            android:textSize="13sp"/>
     </RelativeLayout>
 
     <!-- 预定/实际 -->
@@ -47,8 +45,7 @@
             android:id="@+id/plan_reserve_reality"
             style="@style/CommonDataRowContentStyle"
             android:layout_alignParentRight="true"
-            android:layout_centerVertical="true"
-            android:text="123/321" />
+            android:layout_centerVertical="true"/>
     </RelativeLayout>
     
     <!-- 应收保证金金额 -->
@@ -64,8 +61,7 @@
             android:id="@+id/plan_must_get_pledge_money"
             style="@style/CommonDataRowContentStyle"
             android:layout_alignParentRight="true"
-            android:layout_centerVertical="true"
-            android:text="1234" />
+            android:layout_centerVertical="true"/>
     </RelativeLayout>
     
     <!-- 应收保证金日期 -->
@@ -81,8 +77,7 @@
             android:id="@+id/plan_must_get_pledge_date"
             style="@style/CommonDataRowContentStyle"
             android:layout_alignParentRight="true"
-            android:layout_centerVertical="true"
-            android:text="2014/01/01" />
+            android:layout_centerVertical="true"/>
     </RelativeLayout>
     
     

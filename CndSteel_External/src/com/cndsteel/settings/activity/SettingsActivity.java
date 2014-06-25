@@ -90,7 +90,7 @@ public class SettingsActivity extends FrameActivity implements Toggle.OnToggleSt
 
 	@Override
 	public void onClick(View view) {
-		showAlertDialog(R.string.DialogTitleLogout, R.string.DialogMessageLogout, this);
+		showConfirmDialog(R.string.DialogTitleLogout, R.string.DialogMessageLogout, this);
 	}
 
 	@Override

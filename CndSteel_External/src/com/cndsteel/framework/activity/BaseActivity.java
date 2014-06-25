@@ -50,13 +50,6 @@ public class BaseActivity extends Activity {
 		mProgressDialog = new ProgressDialog(this);
 		mProgressDialog.setProgressStyle(ProgressDialog.STYLE_SPINNER);
 		mProgressDialog.setCanceledOnTouchOutside(false);
-		mProgressDialog.setOnCancelListener(new DialogInterface.OnCancelListener() {
-			@Override
-			public void onCancel(DialogInterface dialog) {
-				finish();
-			}
-		});
-		
 		mProgressDialog.show();
 	}
 	
@@ -110,7 +103,7 @@ public class BaseActivity extends Activity {
 	}
 	
 	/** 鍒涘缓涓�埇鐨刟lertDialog **/
-	protected AlertDialog showAlertDialog(int titleResId,int messageResId,DialogInterface.OnClickListener neutralButtonOnClickListener){
+	protected AlertDialog showConfirmDialog(int titleResId,int messageResId,DialogInterface.OnClickListener neutralButtonOnClickListener){
 		AlertDialog.Builder _alertDialogBuilder = new AlertDialog.Builder(this);
 		return _alertDialogBuilder.setTitle(getApplicationContext().getString(titleResId))
 				   				  .setMessage(messageResId)
@@ -118,5 +111,23 @@ public class BaseActivity extends Activity {
 				                  .setNegativeButton(R.string.ButtonTextNo, null)
 				                  .show();
 	}
+	
+	protected AlertDialog showConfirmDialog(int titleResId,String message,DialogInterface.OnClickListener neutralButtonOnClickListener){
+		AlertDialog.Builder _alertDialogBuilder = new AlertDialog.Builder(this);
+		return _alertDialogBuilder.setTitle(getApplicationContext().getString(titleResId))
+				   				  .setMessage(message)
+				                  .setNeutralButton(R.string.ButtonTextYes, neutralButtonOnClickListener)
+				                  .setNegativeButton(R.string.ButtonTextNo, null)
+				                  .show();
+	}
+	
+	protected AlertDialog showAlertDialog(int titleResId,String message,DialogInterface.OnClickListener neutralButtonOnClickListener){
+		AlertDialog.Builder _alertDialogBuilder = new AlertDialog.Builder(this);
+		return _alertDialogBuilder.setTitle(getApplicationContext().getString(titleResId))
+				   				  .setMessage(message)
+				                  .setNeutralButton(R.string.ButtonTextOk, neutralButtonOnClickListener)
+				                  .show();
+	}
+	
 	
 }
