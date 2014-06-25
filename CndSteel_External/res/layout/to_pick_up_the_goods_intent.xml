@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+    
+    <RelativeLayout 
+        android:id="@+id/lyot_contractDate"
+        android:layout_marginTop="20dp"
+        style="@style/CommonDataRowStyle">
+        
+        <TextView 
+            style="@style/CommonDataRowTitleStyle"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:text="@string/stock_warehouseName"/>
+        
+        <TextView 
+            android:id="@+id/txtV_contractDate"
+            style="@style/CommonDataRowContentStyle"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="25dp"
+            android:text="1号仓" />
+        
+        <ImageButton 
+            android:layout_width="15dp"
+            android:layout_height="10dp"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+            android:background="@drawable/common_spinner_down_arrow"/>
+    </RelativeLayout>
+    
+    <ListView
+        android:id="@+id/toPickUpTheGoodsIntentListView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:divider="@null"
+        android:scrollbars="none"
+        android:cacheColorHint="@null" />
+    
+
+</LinearLayout>

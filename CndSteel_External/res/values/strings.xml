@@ -138,6 +138,14 @@
     <!-- 提货意向 -->
     <string name="toPickUpTheGoodsIntention">待提货意向</string>
     <string name="pickUpTheGoodsIntentionBill">提货意向单</string>
+    
+    <string name="intentBillNum">意向单号：</string>
+    <string name="intentBillNumer">意向单号</string>
+    <string name="pleaseIntoIntentBillNumber">请输入意向单号</string>
+    
+    <string name="recordDate">登记日期</string>
+    <string name="recordDateStart">登记日期从</string>
+    <string name="recordDateEnd">登记日期至</string>
  	
  	<!-- 公用 -->
  	<string name="DialogMsgNoDatas">未找到符合查询条件的%s&#8230;</string>

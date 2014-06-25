@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+    
+     <!-- 登记日期从 -->
+    <RelativeLayout 
+        android:id="@+id/lyot_recordDateStart"
+        android:layout_marginTop="20dp"
+        style="@style/CommonDataRowStyle">
+        
+        <TextView 
+            style="@style/CommonDataRowTitleStyle"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:text="@string/recordDateStart"/>
+        
+        <TextView 
+            android:id="@+id/txtV_recordDateStart"
+            style="@style/CommonDataRowContentStyle"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="25dp"
+            android:text="2014/06" />
+        
+        <ImageButton 
+            android:layout_width="15dp"
+            android:layout_height="10dp"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+            android:background="@drawable/common_spinner_down_arrow"/>
+    </RelativeLayout>
+    
+    
+    <!-- 登记日期至 -->
+    <RelativeLayout 
+        android:id="@+id/lyot_recordDateEnd"
+        style="@style/CommonDataRowStyle">
+        
+        <TextView 
+            style="@style/CommonDataRowTitleStyle"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:text="@string/recordDateEnd"/>
+        
+        <TextView 
+            android:id="@+id/txtV_recordDateEnd"
+            style="@style/CommonDataRowContentStyle"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="25dp"
+            android:text="2014/06" />
+        
+        <ImageButton 
+            android:layout_width="15dp"
+            android:layout_height="10dp"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+            android:background="@drawable/common_spinner_down_arrow"/>
+    </RelativeLayout>
+    
+    <!-- 意向单号 -->
+    <RelativeLayout 
+        android:id="@+id/lyot_intentBillNumer"
+        style="@style/CommonDataRowStyle">
+        
+        <TextView 
+            android:id="@+id/txtV_left_contractNumber"
+            style="@style/CommonDataRowTitleStyle"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:text="@string/intentBillNumer"/>
+        
+        <EditText 
+            android:id="@+id/txtV_intentBillNumer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="18sp"
+            android:textColor="@color/grey"
+            android:layout_toRightOf="@id/txtV_left_contractNumber"
+            android:layout_marginLeft="20dp"
+            android:background="@null"
+            android:gravity="right"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:hint="@string/pleaseIntoIntentBillNumber" />
+        
+    </RelativeLayout>
+    
+    <!-- 查询按钮 -->
+    <Button 
+        android:id="@+id/btn_intent"
+        style="@style/CommonButtonStyle"
+        android:layout_marginTop="40dp"
+        android:layout_gravity="center_horizontal"
+        android:text="@string/query"/>
+
+</LinearLayout>

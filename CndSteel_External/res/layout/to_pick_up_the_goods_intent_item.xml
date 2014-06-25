@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="5dp"
+    android:background="@color/white_bg"
+    android:orientation="vertical" >
+
+    <TableLayout
+        style="@style/CommonDataRowStyle"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp" >
+
+        <TableRow>
+
+            <TextView
+                style="@style/CommonDataRowTitleStyle"
+                android:lineSpacingMultiplier="1.5"
+                android:text="@string/contract_GoodsName" />
+
+            <TextView
+                android:id="@+id/shipmentIntentGoodsName"
+                style="@style/CommonDataRowTitleStyle"
+                android:layout_marginLeft="15dp"
+                android:layout_weight="1"
+                android:text="管坯" />
+
+            <TextView
+                style="@style/CommonDataRowTitleStyle"
+                android:text="@string/Material" />
+
+            <TextView
+                android:id="@+id/shipmentIntentMaterial"
+                style="@style/CommonDataRowTitleStyle"
+                android:layout_marginLeft="15dp"
+                android:layout_weight="1"
+                android:text="20#" />
+        </TableRow>
+
+        <TableRow>
+
+            <TextView
+                style="@style/CommonDataRowTitleStyle"
+                android:lineSpacingMultiplier="1.5"
+                android:text="@string/stock_Standard" />
+
+            <TextView
+                android:id="@+id/shipmentIntentStandard"
+                style="@style/CommonDataRowTitleStyle"
+                android:layout_marginLeft="15dp"
+                android:layout_weight="1" />
+
+            <TextView
+                style="@style/CommonDataRowTitleStyle"
+                android:text="@string/Tonnage" />
+
+            <TextView
+                android:id="@+id/shipmentIntentTonnage"
+                style="@style/CommonDataRowTitleStyle"
+                android:layout_marginLeft="15dp"
+                android:layout_weight="1"
+                android:text="123" />
+        </TableRow>
+
+        <TableRow>
+
+            <TextView
+                style="@style/CommonDataRowTitleStyle"
+                android:text="@string/stock_NumberOfPackages" />
+
+            <TextView
+                android:id="@+id/shipmentIntentNumberOfPackages"
+                style="@style/CommonDataRowTitleStyle"
+                android:layout_marginLeft="15dp"
+                android:layout_weight="1"
+                android:text="50" />
+
+            <TextView
+                android:id="@+id/title_Hide"
+                style="@style/CommonDataRowTitleStyle"
+                android:text="@string/Money"
+                android:visibility="invisible" />
+
+            <TextView
+                android:id="@+id/stock_Value"
+                style="@style/CommonDataRowTitleStyle"
+                android:layout_marginLeft="15dp"
+                android:layout_weight="1"
+                android:text="1230"
+                android:visibility="invisible" />
+        </TableRow>
+    </TableLayout>
+
+    <ImageView
+        android:id="@+id/shipmentIntentEvoke"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|right"
+        android:src="@drawable/evoke_dark" />
+
+</FrameLayout>
