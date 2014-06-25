@@ -20,4 +20,5 @@ public interface QueryParams {
 	public static final String QUERY_PARAM_PLAN_STATUS = "status";
 	public static final String QUERY_PARAM_PLAN_DATE_YEAR = "year";
 	public static final String QUERY_PARAM_PLAN_DATE_MONTH = "month";
+	public static final String QUERY_PARAM_PLAN_BOOKING_ID = "bookingId";
 }

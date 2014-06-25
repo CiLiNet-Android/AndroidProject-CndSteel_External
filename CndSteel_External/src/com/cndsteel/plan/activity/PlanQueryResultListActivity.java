@@ -3,8 +3,8 @@ package com.cndsteel.plan.activity;
 import java.util.LinkedHashMap;
 import java.util.LinkedList;
 
-import android.app.AlertDialog;
 import android.content.DialogInterface;
+import android.content.Intent;
 import android.os.Bundle;
 import android.os.Message;
 import android.view.KeyEvent;
@@ -96,7 +96,14 @@ public class PlanQueryResultListActivity extends FrameActivity implements OnItem
 	
 	@Override
 	public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-		startActivity(PlanQueryResultDetailActivity.class);
+		Intent _intent = new Intent(this,PlanQueryResultDetailActivity.class);
+		
+		PlanBean _planBean = (PlanBean)parent.getAdapter().getItem(position);
+		Bundle _queryParams = new Bundle();
+		_queryParams.putString(QueryParams.QUERY_PARAM_PLAN_BOOKING_ID, _planBean.bookingId);
+		_intent.putExtras(_queryParams);
+		
+		startActivity(_intent);
 	}
 
 	private AbsActivityHandler<PlanQueryResultListActivity> mActivityHandler = new AbsActivityHandler<PlanQueryResultListActivity>(this) {
@@ -195,7 +202,5 @@ public class PlanQueryResultListActivity extends FrameActivity implements OnItem
 		
 		return _webServiceRequestParams;
 	}
-	
-	
 	
 }

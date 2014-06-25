@@ -39,5 +39,15 @@ public class PlanBean extends BaseBean {
 	 * 计划状态
 	 */
 	public String status;
+	
+	/** 钢厂 **/
+	public String steel;
+	
+	/** 规格 **/
+	public String pname;
+	/** 材质 **/
+	public String material;
+	/** 规格 **/
+	public String spec;
 
 }

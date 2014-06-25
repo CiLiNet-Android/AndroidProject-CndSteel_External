@@ -1,6 +1,15 @@
 package com.cndsteel.framework.bean;
 
+import java.io.ByteArrayInputStream;
+
+import javax.xml.parsers.SAXParser;
+import javax.xml.parsers.SAXParserFactory;
+
 import org.ksoap2.serialization.SoapObject;
+import org.xml.sax.helpers.DefaultHandler;
+
+import com.cndsteel.framework.constant.Constants;
+import com.cndsteel.framework.log.GlobalLog;
 
 public abstract class WebServiceBean extends BaseBean {
 
@@ -35,9 +44,23 @@ public abstract class WebServiceBean extends BaseBean {
 	 */
 	public abstract String getMethodName();
 	
+	public abstract DefaultHandler getXmlParserHandler();
+	
 	/**
 	 * 解析响应Soap 
 	 */
-	public abstract void obtainDataInSoapObj(SoapObject soapObj);
+	public void obtainDataInSoapObj(SoapObject soapObj) {
+		String _responseStr = soapObj.getProperty("return").toString();
+		
+		GlobalLog.i("responseStr: " + _responseStr);
+		
+		try{
+			SAXParserFactory _parserFactory = SAXParserFactory.newInstance();
+			SAXParser _parser = _parserFactory.newSAXParser();
+			_parser.parse(new ByteArrayInputStream(_responseStr.getBytes(Constants.CHARACTER_ENCODING)), getXmlParserHandler());
+		}catch(Exception e){
+			e.printStackTrace();
+		}
+	}
 	
 }

@@ -14,6 +14,12 @@ public interface Constants {
 	public static final boolean DEBUG = true;
 	
 	/**
+	 * WebService配置
+	 */
+	public static final String WEB_SERVICE_URL = "http://vip.cndsteel.com/services/BookingService";
+	public static final String WEB_SERVICE_NAMESPACE = "http://impl.remote.webservice.steel.chinacnd.com";
+	
+	/**
 	 * 全局编码
 	 */
 	public static final String CHARACTER_ENCODING = "UTF-8"; 

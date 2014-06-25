@@ -50,6 +50,13 @@ public class BaseActivity extends Activity {
 		mProgressDialog = new ProgressDialog(this);
 		mProgressDialog.setProgressStyle(ProgressDialog.STYLE_SPINNER);
 		mProgressDialog.setCanceledOnTouchOutside(false);
+		mProgressDialog.setOnCancelListener(new DialogInterface.OnCancelListener() {
+			@Override
+			public void onCancel(DialogInterface dialog) {
+				finish();
+			}
+		});
+		
 		mProgressDialog.show();
 	}
 	
