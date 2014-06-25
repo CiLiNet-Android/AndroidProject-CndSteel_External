@@ -178,10 +178,10 @@
         
         <!-- 往来 -->
         <activity android:name="com.cndsteel.payment.activity.PaymentActivity">
-            <intent-filter>
+            <!-- <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
+            </intent-filter> -->
         </activity>
         <activity android:name="com.cndsteel.payment.activity.PaymentAsInformationQueryResultActivity">
             <!-- <intent-filter>
@@ -206,6 +206,15 @@
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter> -->
+        </activity>
+        
+        
+        <!-- 提货意向 -->
+        <activity android:name="com.cndsteel.shipmentIntent.activity.ShipmentIntentActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
         </activity>
     </application>
 
