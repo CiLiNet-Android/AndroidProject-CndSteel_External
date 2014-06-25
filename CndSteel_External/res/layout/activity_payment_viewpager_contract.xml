@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <!-- 计划年月 -->
+
+    <RelativeLayout
+        android:id="@+id/lyot_paymentPlanDate"
+        style="@style/CommonDataRowStyle"
+        android:layout_marginTop="20dp" >
+
+        <TextView
+            style="@style/CommonDataRowTitleStyle"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:text="@string/plan_date" />
+
+        <TextView
+            android:id="@+id/txtV_paymentPlanDate"
+            style="@style/CommonDataRowContentStyle"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="25dp"
+            android:text="2014/06" />
+
+        <ImageButton
+            android:layout_width="15dp"
+            android:layout_height="10dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:background="@drawable/common_spinner_down_arrow" />
+    </RelativeLayout>
+
+    <!-- 合同号 -->
+
+    <RelativeLayout
+        android:id="@+id/lyot_paymentContractNum"
+        style="@style/CommonDataRowStyle" >
+
+        <TextView
+            android:id="@+id/txtV_left_contractNumber"
+            style="@style/CommonDataRowTitleStyle"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:text="@string/contract_number" />
+
+        <EditText
+            android:id="@+id/txtV_paymentContractNum"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="20dp"
+            android:layout_toRightOf="@id/txtV_left_contractNumber"
+            android:background="@null"
+            android:gravity="right"
+            android:hint="@string/contract_input_contractNum"
+            android:textColor="@color/grey"
+            android:textSize="18sp" />
+    </RelativeLayout>
+
+    <!-- 查询按钮 -->
+
+    <Button
+        android:id="@+id/btn_paymentContractNumQuery"
+        style="@style/CommonButtonStyle"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="40dp"
+        android:text="@string/query" />
+
+</LinearLayout>

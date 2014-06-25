@@ -101,7 +101,7 @@ public class StockAccordingContractQueryResultActivity extends FrameActivity imp
 				_holder.stock_warehouse = (TextView) view.findViewById(R.id.stock_Value);				
 				_holder.title_Hide = (TextView) view.findViewById(R.id.title_Hide);
 
-				
+				view.setTag(_holder);
 			}else{
 				_holder = (ViewHolder) view.getTag();
 			}

@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical" >
+
+    <!-- 合同号 -->
+    <RelativeLayout style="@style/CommonDataRowStyle" >
+
+        <TextView
+            style="@style/CommonDataRowTitleStyle"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:text="@string/contract_number" />
+
+        <TextView
+            android:id="@+id/payment_asInformation_contractNumber"
+            style="@style/CommonDataRowContentStyle"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:text="123456789" />
+    </RelativeLayout>
+    
+    <!-- 付款日期 -->
+    <RelativeLayout style="@style/CommonDataRowStyle" >
+
+        <TextView
+            style="@style/CommonDataRowTitleStyle"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:text="@string/contract_payDate" />
+
+        <TextView
+            android:id="@+id/payment_asInformation_paymentDate"
+            style="@style/CommonDataRowContentStyle"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:text="2014/06" />
+    </RelativeLayout>
+    
+    <!-- 金额 -->
+    <RelativeLayout style="@style/CommonDataRowStyle" >
+
+        <TextView
+            style="@style/CommonDataRowTitleStyle"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:text="@string/money" />
+
+        <TextView
+            android:id="@+id/payment_asInformation_money"
+            style="@style/CommonDataRowContentStyle"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:text="123,456,789" />
+    </RelativeLayout>
+    
+    <!-- 用途 -->
+    <RelativeLayout style="@style/CommonDataRowStyle" >
+
+        <TextView
+            style="@style/CommonDataRowTitleStyle"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:text="@string/use" />
+
+        <TextView
+            android:id="@+id/payment_asInformation_use"
+            style="@style/CommonDataRowContentStyle"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:text="货款" />
+    </RelativeLayout>
+
+</LinearLayout>

@@ -30,7 +30,7 @@ public class StockAccordingStockQueryResultAdapter extends AbsBaseAdapter<Stock>
 			_holder.stock_Standard = (TextView) view.findViewById(R.id.stock_Standard);
 			_holder.stock_Tonnage = (TextView) view.findViewById(R.id.stock_Tonnage);
 			_holder.stock_NumberOfPackages = (TextView) view.findViewById(R.id.stock_NumberOfPackages);
-			
+			view.setTag(_holder);
 		}else{
 			_holder = (ViewHolder) view.getTag();
 		}
