@@ -136,6 +136,7 @@
     <string name="use">用途</string>
  	
  	<!-- 公用 -->
+ 	<string name="DialogMsgNoDatas">未找到符合查询条件的%s&#8230;</string>
  	<string name="query">查询</string>
  	<string name="image_desc"></string>
     <string name="label_update">更新于: </string>
@@ -151,6 +152,7 @@
     <string name="click_for_more">点击加载更多</string>
     
     <string name="ButtonTextYes">是</string>
+    <string name="ButtonTextOk">好</string>
     <string name="ButtonTextNo">否</string>
     <string name="ButtonTextDone">完成</string>
     
