@@ -18,6 +18,7 @@ import android.widget.Toast;
 import com.cndsteel.R;
 import com.cndsteel.framework.views.spinner.CndSteelSpinner;
 import com.cndsteel.shipmentIntent.activity.ShipmentIntentActivity;
+import com.cndsteel.shipmentIntent.activity.ShipmentIntentCommitActivity;
 import com.cndsteel.shipmentIntent.activity.ShipmentIntentQueryResultActivity;
 import com.cndsteel.shipmentIntent.bean.ShipmentIntent;
 
@@ -165,10 +166,11 @@ public class ShipmentIntentViewPagerAdapter extends PagerAdapter implements OnCl
 		}
 	}
 
-	//Listview的item事件
+	//ListView的item事件
 	@Override
 	public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-		
+		Intent _intent = new Intent(context,ShipmentIntentCommitActivity.class);
+		context.startActivity(_intent);
 	}
 
 	//下拉的item事件

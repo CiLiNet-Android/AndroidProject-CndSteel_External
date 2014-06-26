@@ -3,6 +3,8 @@ package com.cndsteel.shipmentIntent.activity;
 import java.util.ArrayList;
 
 import android.os.Bundle;
+import android.view.View;
+import android.widget.ImageButton;
 import android.widget.ListView;
 
 import com.cndsteel.R;
@@ -13,6 +15,8 @@ import com.cndsteel.shipmentIntent.bean.ShipmentIntent;
 public class ShipmentIntentBillDetailActivity extends FrameActivity {
 	
 	private ListView shipmentIntentBillDetailListView;
+	
+	private ImageButton imgBtn_topRight;  //顶部右边的"+"号按钮
 	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -34,6 +38,10 @@ public class ShipmentIntentBillDetailActivity extends FrameActivity {
 
 	private void initView() {
 		
+		imgBtn_topRight = (ImageButton) findViewById(R.id.imgBtn_topRight);
+		imgBtn_topRight.setBackgroundResource(R.drawable.add);
+		imgBtn_topRight.setVisibility(View.VISIBLE);
+		
 		initListView();
 		
 	}
@@ -41,11 +49,11 @@ public class ShipmentIntentBillDetailActivity extends FrameActivity {
 	private void initListView() {
 		
 		ArrayList<ShipmentIntent> _datas = new ArrayList<ShipmentIntent>();
-		_datas.add(new ShipmentIntent("管坯", "20#", "  ", "123456", "500吨", "321件"));
-		_datas.add(new ShipmentIntent("管坯", "20#", "  ", "123456", "500吨", "321件"));
-		_datas.add(new ShipmentIntent("管坯", "20#", "  ", "123456", "500吨", "321件"));
-		_datas.add(new ShipmentIntent("管坯", "20#", "  ", "123456", "500吨", "321件"));
-		_datas.add(new ShipmentIntent("管坯", "20#", "  ", "123456", "500吨", "321件"));
+		_datas.add(new ShipmentIntent("管坯", "20#", "100*100", "123456", "500吨", "321件"));
+		_datas.add(new ShipmentIntent("管坯", "20#", "100*100", "123456", "500吨", "321件"));
+		_datas.add(new ShipmentIntent("管坯", "20#", "100*100", "123456", "500吨", "321件"));
+		_datas.add(new ShipmentIntent("管坯", "20#", "100*100", "123456", "500吨", "321件"));
+		_datas.add(new ShipmentIntent("管坯", "20#", "100*100", "123456", "500吨", "321件"));
 		
 		shipmentIntentBillDetailAdapter _adapter = new shipmentIntentBillDetailAdapter(this);
 		_adapter.initDatas(_datas);
