@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content" >
+
+    <!-- 确认按钮 -->
+    <RelativeLayout
+        android:id="@+id/lay_confirm"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:gravity="center" >
+
+        <Button
+            android:id="@+id/btn_confirm"
+            style="@style/CommonButtonStyle"
+            android:layout_marginTop="40dp"
+            android:layout_marginBottom="50dp"
+            android:text="@string/confirm" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/lay_confirm"
+        android:layout_alignParentTop="true" >
+
+        <include
+            layout="@layout/shipment_intent_bill_detail" />
+    </RelativeLayout>
+
+</RelativeLayout>

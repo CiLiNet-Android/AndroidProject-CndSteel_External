@@ -100,7 +100,7 @@ public class ShipmentIntentCommitActivity extends FrameActivity implements OnCli
 		switch (view.getId()) {
 		//提交按钮
 		case R.id.btn_commit:
-			
+			startActivity(ShipmentConfirmActivity.class);
 			break;
 		//仓库名的下拉
 		case R.id.lyot_warehouseName:
