@@ -156,6 +156,16 @@
  	<string name="Comment">备注</string>
  	
  	<string name="confirm">确认</string>
+ 	
+ 	<!-- 票据 -->
+ 	<string name="TheContractOfMakeOutAnInvoice">合同开票</string>
+ 	<string name="ContractTracking">合同正本跟踪</string>
+ 	
+ 	<string name="contract_date_start">合同年月从</string>
+ 	<string name="contract_date_end">合同年月至</string>
+ 	
+ 	<string name="corporationSendAndReceiveState">我司收发状态</string>
+ 	<string name="logisticsSendAndReceiveState">物流收发状态</string>
     
  	<!-- 公用 -->
  	<string name="DialogMsgNoDatas">未找到符合查询条件的%s&#8230;</string>

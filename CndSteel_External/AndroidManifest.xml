@@ -211,10 +211,10 @@
         
         <!-- 提货意向 -->
         <activity android:name="com.cndsteel.shipmentIntent.activity.ShipmentIntentActivity">
-            <intent-filter>
+            <!-- <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
+            </intent-filter> -->
         </activity>
         <activity android:name="com.cndsteel.shipmentIntent.activity.ShipmentIntentQueryResultActivity">
            <!--  <intent-filter>
@@ -235,6 +235,19 @@
             </intent-filter> -->
         </activity>
         <activity android:name="com.cndsteel.shipmentIntent.activity.ShipmentConfirmActivity">
+            <!-- <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter> -->
+        </activity>
+        
+        <!-- 票据 -->
+        <activity android:name="com.cndsteel.bill.activity.BillActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity><activity android:name="com.cndsteel.bill.activity.BillContractInvoiceQueryResultActivity">
             <!-- <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
