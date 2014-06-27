@@ -166,7 +166,19 @@
  	
  	<string name="corporationSendAndReceiveState">我司收发状态</string>
  	<string name="logisticsSendAndReceiveState">物流收发状态</string>
-    
+ 	
+ 	<string name="alreadyMakeOutAnInvoiceAmount">已开票金额</string>
+ 	<string name="AlreadyMakeOutAnInvoiceAmount">已开票金额：</string>
+ 	<string name="HaveNotMakeOutAnInvoiceAmount">未开票金额</string>
+ 	
+ 	<string name="TheContractOfMakeOutAnInvoiceDetail">合同开票明细</string>
+ 	
+ 	<string name="signForStatus">签收状态</string>
+    <string name="BillNumber">发票号：</string>
+ 	
+    <string name="invoiceDate">开票日期</string>
+    <string name="invoiceAmount">发票金额</string>
+ 	
  	<!-- 公用 -->
  	<string name="DialogMsgNoDatas">未找到符合查询条件的%s&#8230;</string>
  	<string name="query">查询</string>

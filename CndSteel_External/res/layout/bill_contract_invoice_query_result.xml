@@ -4,5 +4,81 @@
     android:layout_height="match_parent"
     android:orientation="vertical" >
     
+    <!-- 合同号 -->
+    <RelativeLayout
+        style="@style/CommonDataRowStyle"
+        android:background="@color/white_bg" >
+
+        <TextView
+            android:id="@+id/contract_item_Num_title"
+            style="@style/CommonDataRowContentStyle"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:textColor="@color/black"
+            android:text="@string/contract_num" />
+        <TextView
+            android:id="@+id/title_contract_Num"
+            style="@style/CommonDataRowContentStyle"
+            android:layout_toRightOf="@id/contract_item_Num_title"
+            android:layout_centerVertical="true"
+            android:textColor="@color/black" />
+
+        <TextView
+            android:id="@+id/contract_item_thEnd"
+            style="@style/CommonDataRowTitleStyle"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:textColor="@color/red"
+            android:textSize="13sp" />
+    </RelativeLayout>
+
+    <!-- 合同金额 -->
+    <RelativeLayout style="@style/CommonDataRowStyle" >
+
+        <TextView
+            style="@style/CommonDataRowTitleStyle"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:text="@string/contract_amountOfMoney" />
+
+        <TextView
+            android:id="@+id/contract_amountOfMoney"
+            style="@style/CommonDataRowContentStyle"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"/>
+    </RelativeLayout>
+    
+    <!-- 已开票金额 -->
+    <RelativeLayout style="@style/CommonDataRowStyle" >
+
+        <TextView
+            style="@style/CommonDataRowTitleStyle"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:text="@string/alreadyMakeOutAnInvoiceAmount" />
+
+        <TextView
+            android:id="@+id/alreadyMakeOutAnInvoiceAmount"
+            style="@style/CommonDataRowContentStyle"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true" />
+    </RelativeLayout>
+    
+     <!-- 未开票金额 -->
+    <RelativeLayout style="@style/CommonDataRowStyle" >
+
+        <TextView
+            style="@style/CommonDataRowTitleStyle"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:text="@string/HaveNotMakeOutAnInvoiceAmount" />
+
+        <TextView
+            android:id="@+id/HaveNotMakeOutAnInvoiceAmount"
+            style="@style/CommonDataRowContentStyle"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true" />
+    </RelativeLayout>
+    
 
 </LinearLayout>

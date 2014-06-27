@@ -3,6 +3,7 @@ package com.cndsteel.bill.adapter;
 import java.util.ArrayList;
 
 import android.content.Context;
+import android.content.Intent;
 import android.support.v4.view.PagerAdapter;
 import android.view.View;
 import android.view.View.OnClickListener;
@@ -14,6 +15,7 @@ import android.widget.TextView;
 
 import com.cndsteel.R;
 import com.cndsteel.bill.activity.BillActivity;
+import com.cndsteel.bill.activity.BillContractInvoiceQueryResultActivity;
 import com.cndsteel.framework.views.spinner.AbsSpinner.OnItemClickListener;
 import com.cndsteel.framework.views.spinner.CndSteelSpinner;
 
@@ -171,7 +173,7 @@ public class BillViewPagerAdapter extends PagerAdapter implements OnClickListene
 			break;
 		//查询按钮
 		case R.id.btn_contractInvoiceQuery:
-			
+			startActivity(BillContractInvoiceQueryResultActivity.class);
 			break;
 
 		/**
@@ -201,6 +203,11 @@ public class BillViewPagerAdapter extends PagerAdapter implements OnClickListene
 			break;
 		}
 		
+	}
+	
+	private void startActivity(Class<?> cla){
+		Intent _intent = new Intent(context,cla);
+		context.startActivity(_intent);
 	}
 
 	//下拉的item的事件处理
