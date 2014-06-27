@@ -243,10 +243,10 @@
         
         <!-- 票据 -->
         <activity android:name="com.cndsteel.bill.activity.BillActivity">
-            <intent-filter>
+           <!--  <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
+            </intent-filter> -->
         </activity>
         <activity android:name="com.cndsteel.bill.activity.BillContractInvoiceQueryResultActivity">
             <!-- <intent-filter>
@@ -268,6 +268,20 @@
         </activity>
         <activity android:name="com.cndsteel.bill.activity.BillContractTrackingDetailActivity">
             <!-- <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter> -->
+        </activity>
+        
+        <!-- 资讯 -->
+        <activity android:name="com.cndsteel.info.activity.InfoActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name="com.cndsteel.info.activity.InfoDetailActivity">
+           <!--  <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter> -->
