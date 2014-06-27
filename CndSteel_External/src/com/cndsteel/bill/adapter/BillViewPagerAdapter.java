@@ -16,6 +16,7 @@ import android.widget.TextView;
 import com.cndsteel.R;
 import com.cndsteel.bill.activity.BillActivity;
 import com.cndsteel.bill.activity.BillContractInvoiceQueryResultActivity;
+import com.cndsteel.bill.activity.BillContractTrackingQueryResultActivity;
 import com.cndsteel.framework.views.spinner.AbsSpinner.OnItemClickListener;
 import com.cndsteel.framework.views.spinner.CndSteelSpinner;
 
@@ -196,7 +197,7 @@ public class BillViewPagerAdapter extends PagerAdapter implements OnClickListene
 			break;
 		//查询按钮
 		case R.id.btn_contractTrackingQuery:
-			
+			startActivity(BillContractTrackingQueryResultActivity.class);
 			break;
 			
 		default:

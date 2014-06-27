@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" >
+
+        <!-- 寄出方 -->
+
+        <RelativeLayout
+            style="@style/CommonDataRowStyle"
+            android:background="@color/white_bg" >
+
+            <TextView
+                android:id="@+id/sendOffCompany"
+                style="@style/CommonDataRowContentStyle"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:text="寄出方"
+                android:textColor="@color/black" />
+
+        </RelativeLayout>
+
+        <!-- 快递公司 -->
+
+        <RelativeLayout style="@style/CommonDataRowStyle" >
+
+            <TextView
+                style="@style/CommonDataRowTitleStyle"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:text="@string/expressCompany" />
+
+            <TextView
+                android:id="@+id/expressCompany"
+                style="@style/CommonDataRowContentStyle"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true" />
+        </RelativeLayout>
+
+        <!-- 快递单号 -->
+
+        <RelativeLayout style="@style/CommonDataRowStyle" >
+
+            <TextView
+                style="@style/CommonDataRowTitleStyle"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:text="@string/expressNumber" />
+
+            <TextView
+                android:id="@+id/expressNumber"
+                style="@style/CommonDataRowContentStyle"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true" />
+        </RelativeLayout>
+
+        <!-- 快递时间 -->
+
+        <RelativeLayout style="@style/CommonDataRowStyle" >
+
+            <TextView
+                style="@style/CommonDataRowTitleStyle"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:text="@string/expressTime" />
+
+            <TextView
+                android:id="@+id/expressTime"
+                style="@style/CommonDataRowContentStyle"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true" />
+        </RelativeLayout>
+
+        <!-- 收件人 -->
+
+        <RelativeLayout style="@style/CommonDataRowStyle" >
+
+            <TextView
+                style="@style/CommonDataRowTitleStyle"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:text="@string/addressee" />
+
+            <TextView
+                android:id="@+id/addressee"
+                style="@style/CommonDataRowContentStyle"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true" />
+        </RelativeLayout>
+
+        <!-- 签收人 -->
+
+        <RelativeLayout style="@style/CommonDataRowStyle" >
+
+            <TextView
+                style="@style/CommonDataRowTitleStyle"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:text="@string/signForPeople" />
+
+            <TextView
+                android:id="@+id/signForPeople"
+                style="@style/CommonDataRowContentStyle"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true" />
+        </RelativeLayout>
+
+        <!-- 签收时间 -->
+
+        <RelativeLayout style="@style/CommonDataRowStyle" >
+
+            <TextView
+                style="@style/CommonDataRowTitleStyle"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:text="@string/signForTime" />
+
+            <TextView
+                android:id="@+id/signForTime"
+                style="@style/CommonDataRowContentStyle"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true" />
+        </RelativeLayout>
+
+        <!-- 备注 -->
+
+        <RelativeLayout style="@style/CommonDataRowStyle" >
+
+            <TextView
+                style="@style/CommonDataRowTitleStyle"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:text="@string/Comment" />
+
+            <TextView
+                android:id="@+id/Comment"
+                style="@style/CommonDataRowContentStyle"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true" />
+        </RelativeLayout>
+
+      
+    </LinearLayout>
+
+</ScrollView>
