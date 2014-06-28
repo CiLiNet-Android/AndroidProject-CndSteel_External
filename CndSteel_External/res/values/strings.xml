@@ -191,6 +191,15 @@
     
     <!-- 资讯详情 -->
     <string name="InfoDetail">资讯详情</string>
+    
+    <string name="send">发送</string>
+    <string name="category">类别：</string>
+    <string name="Time">时间：</string>
+    <string name="Issuer">发布人：</string>
+    <string name="userName">用户名</string>
+    
+    <!-- 通知详情 -->
+    <string name="SysInformDetail">通知详情</string>
  	
  	<!-- 公用 -->
  	<string name="DialogMsgNoDatas">未找到符合查询条件的%s&#8230;</string>

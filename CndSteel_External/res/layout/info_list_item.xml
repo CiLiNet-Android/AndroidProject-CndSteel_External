@@ -11,14 +11,12 @@
         android:id="@+id/title"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="dfjakdjsfjdsiofdsflkjsdaklfjkljasdfdfsa"
         android:textColor="@color/black"/>
     <TextView 
         android:id="@+id/date"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@id/title"
-        android:text="2014/06/01"/>
+        android:layout_below="@id/title"/>
     
     <TextView 
         android:id="@+id/name"
@@ -26,8 +24,7 @@
         android:layout_height="wrap_content"
         android:layout_marginLeft="15dp"
         android:layout_below="@id/title"
-        android:layout_toRightOf="@id/date"
-        android:text="张三"/>
+        android:layout_toRightOf="@id/date"/>
     
     <TextView 
         android:id="@+id/comments"
@@ -35,8 +32,7 @@
         android:layout_height="wrap_content"
         android:layout_below="@id/title"
         android:layout_alignParentRight="true"
-        android:textColor="@color/navajowhite"
-        android:text="5评论"/>
+        android:textColor="@color/navajowhite"/>
          
     </RelativeLayout>   
 </RelativeLayout>

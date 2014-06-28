@@ -275,13 +275,27 @@
         
         <!-- 资讯 -->
         <activity android:name="com.cndsteel.info.activity.InfoActivity">
+            <!-- <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter> -->
+        </activity>
+        <activity android:name="com.cndsteel.info.activity.InfoDetailActivity">
+           <!--  <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter> -->
+        </activity>
+        
+        <!-- 系统通知 -->
+        <activity android:name="com.cndsteel.sysinform.activity.SysInformActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name="com.cndsteel.info.activity.InfoDetailActivity">
-           <!--  <intent-filter>
+        <activity android:name="com.cndsteel.sysinform.activity.SysInformDetailActivity">
+            <!-- <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter> -->

@@ -12,4 +12,10 @@ public class Info {
 		this.name = name;
 		this.comments = comments;
 	}
+	
+	public Info(String name,String date,String comments) {
+		this.name = name;
+		this.date = date;
+		this.comments = comments;
+	}
 }

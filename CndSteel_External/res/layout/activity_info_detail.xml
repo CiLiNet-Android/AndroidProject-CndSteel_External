@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    style="@style/CommonDataPageBgStyle"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white_bg" >
+
+    <!-- 底部写评论、发送 -->
+
+    <RelativeLayout
+        android:id="@+id/lay_bottomChat"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@color/white"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:padding="10dp" >
+
+        <Button
+            android:id="@+id/btn_infoDetailSend"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_margin="10dp"
+            android:background="@null"
+            android:text="@string/send"
+            android:textColor="@color/grey"
+            android:textSize="18sp" />
+
+        <EditText
+            android:id="@+id/edt_infoDetailChat"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toLeftOf="@id/btn_infoDetailSend"
+            android:background="@drawable/chat"
+            android:hint="写评论..."
+            android:paddingLeft="50dp" />
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/lay_bottomChat"
+        android:layout_alignParentTop="true" >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="50dp" >
+
+            <!-- 顶部标题 -->
+
+            <RelativeLayout
+                android:id="@+id/lay_topTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:background="@null"
+                android:padding="15dp" >
+
+                <TextView
+                    android:id="@+id/infoDetailTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:gravity="center"
+                    android:text="中子寿命的研究再陷困局 仍未达成共识"
+                    android:textColor="@color/black"
+                    android:textSize="18sp" />
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/infoDetailTitle"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="5dp" >
+
+                    <TextView
+                        android:id="@+id/topCategory"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/category"
+                        android:textColor="@color/grey"
+                        android:textSize="12sp" />
+
+                    <TextView
+                        android:id="@+id/infoDetailCategoryValue"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toRightOf="@id/topCategory"
+                        android:text="行情资讯"
+                        android:textColor="@color/grey"
+                        android:textSize="12sp" />
+
+                    <TextView
+                        android:id="@+id/infoDetailTime"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:layout_toRightOf="@id/infoDetailCategoryValue"
+                        android:text="@string/Time"
+                        android:textColor="@color/grey"
+                        android:textSize="12sp" />
+
+                    <TextView
+                        android:id="@+id/infoDetailTimeValue"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toRightOf="@id/infoDetailTime"
+                        android:text="2014-06-28"
+                        android:textColor="@color/grey"
+                        android:textSize="12sp" />
+
+                    <TextView
+                        android:id="@+id/infoDetailIssuer"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:layout_toRightOf="@id/infoDetailTimeValue"
+                        android:text="@string/Issuer"
+                        android:textColor="@color/grey"
+                        android:textSize="12sp" />
+
+                    <TextView
+                        android:id="@+id/infoDetailIssuerValue"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toRightOf="@id/infoDetailIssuer"
+                        android:text="许小山"
+                        android:textColor="@color/grey"
+                        android:textSize="12sp" />
+                </RelativeLayout>
+            </RelativeLayout>
+
+            <!-- 内容 -->
+
+            <RelativeLayout
+                android:id="@+id/lay_infoDetailContent"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/lay_topTitle"
+                android:padding="15dp" >
+
+                <TextView
+                    android:id="@+id/infoDetailContentValue"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:lineSpacingMultiplier="1.5"
+                    android:text="      4月24日，新加坡商品期货交易所金属部总裁普拉卡什·沙阿来访上海建发物资有限公司。物资公司许朝斌副总经理会见了来访客人，并邀请建发矿业公司人员一同参加。
+
+       会上双方围绕着国内外矿产能源走势与行业情况两个主题展开了讨论。双方首先就目前国内钢铁行业情况及国内外矿产形势进行分析势做出预测分析。会后双方合影留念。      4月24日，新加坡商品期货交易所金属部总裁普拉卡什·沙阿来访上海建发物资有限公司。物资公司许朝斌副总经理会见了来访客人，并邀请建发矿业公司人员一同参加。
+
+       会上双方围绕着国内外矿产能源走势与行业情况两个主题展开了讨论。双方首先就目前国内钢铁行业情况及国内外矿产形势进行分析势做出预测分析。会后双方合影留念。"
+                    android:textColor="@color/grey" />
+            </RelativeLayout>
+
+            <!-- ListView -->
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_below="@id/lay_infoDetailContent" >
+
+                <ListView
+                    android:id="@+id/infoDetailListView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:cacheColorHint="#00000000"
+                    android:divider="@color/grey"
+                    android:dividerHeight="1dp"
+                    android:paddingLeft="15dp"
+                    android:paddingRight="15dp"
+                    android:scrollbars="none" >
+                </ListView>
+            </RelativeLayout>
+        </RelativeLayout>
+    </ScrollView>
+
+</RelativeLayout>
