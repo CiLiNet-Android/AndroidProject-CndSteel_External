@@ -46,4 +46,9 @@ public interface QueryParams {
 	public static final String QUERY_PARAM_STOCK_SPEC = "spec";
 	public static final String QUERY_PARAM_STOCK_STORE_DATE = "storeDate";
 	public static final String QUERY_PARAM_STOCK_CON_ID = "conId";
+	
+	/**
+	 * 资讯
+	 */
+	public static final String QUERY_PARAM_INFO_MSG_CATE = "msgCate";
 }

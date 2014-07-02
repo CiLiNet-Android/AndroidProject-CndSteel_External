@@ -16,12 +16,12 @@ import com.cndsteel.R;
 import com.cndsteel.framework.activity.FrameActivity;
 import com.cndsteel.framework.utils.DateUtils;
 import com.cndsteel.info.adapter.InfoDetailAdapter;
-import com.cndsteel.info.bean.Info;
+import com.cndsteel.info.bean.InfoQueryResultListBean;
 
 public class InfoDetailActivity extends FrameActivity implements OnClickListener {
 	
 	private ListView infoDetailListView;
-	private ArrayList<Info> itemList;
+	private ArrayList<InfoQueryResultListBean> itemList;
 	
 	
 	private TextView infoDetailTitle;
@@ -63,16 +63,16 @@ public class InfoDetailActivity extends FrameActivity implements OnClickListener
 		btn_infoDetailSend = (Button) findViewById(R.id.btn_infoDetailSend);
 		btn_infoDetailSend.setOnClickListener(this);
 		
-		itemList = new ArrayList<Info>();
+		itemList = new ArrayList<InfoQueryResultListBean>();
 		
 		infoDetailListView = (ListView) findViewById(R.id.infoDetailListView);
 		
-		itemList.add(new Info("用户名", DateUtils.getCurrentDate(), "XXXXXXXX"));
-		itemList.add(new Info("用户名", DateUtils.getCurrentDate(), "XXXXXXXX"));
-		itemList.add(new Info("用户名", DateUtils.getCurrentDate(), "XXXXXXXX"));
-		itemList.add(new Info("用户名", DateUtils.getCurrentDate(), "XXXXXXXX"));
-		itemList.add(new Info("用户名", DateUtils.getCurrentDate(), "XXXXXXXX"));
-		itemList.add(new Info("用户名", DateUtils.getCurrentDate(), "XXXXXXXX"));
+//		itemList.add(new InfoQueryResultListBean("用户名", DateUtils.getCurrentDate(), "XXXXXXXX"));
+//		itemList.add(new InfoQueryResultListBean("用户名", DateUtils.getCurrentDate(), "XXXXXXXX"));
+//		itemList.add(new InfoQueryResultListBean("用户名", DateUtils.getCurrentDate(), "XXXXXXXX"));
+//		itemList.add(new InfoQueryResultListBean("用户名", DateUtils.getCurrentDate(), "XXXXXXXX"));
+//		itemList.add(new InfoQueryResultListBean("用户名", DateUtils.getCurrentDate(), "XXXXXXXX"));
+//		itemList.add(new InfoQueryResultListBean("用户名", DateUtils.getCurrentDate(), "XXXXXXXX"));
 		
 		infoDetailListView.setAdapter(new InfoDetailAdapter(this, itemList));
 		
@@ -83,7 +83,7 @@ public class InfoDetailActivity extends FrameActivity implements OnClickListener
 	@Override
 	public void onClick(View view) {
 		
-		itemList.add(new Info("用户名", DateUtils.getCurrentDate(), edt_infoDetailChat.getText().toString()));
+		//itemList.add(new InfoQueryResultListBean("用户名", DateUtils.getCurrentDate(), edt_infoDetailChat.getText().toString()));
 		infoDetailListView.setAdapter(new InfoDetailAdapter(this, itemList));
 		setListViewHeight(infoDetailListView);
 		

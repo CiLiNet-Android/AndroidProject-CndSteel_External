@@ -23,9 +23,9 @@ public class SysInformAdapter extends AbsBaseAdapter<SysInform> {
 		ViewHolder _holder;
 		if(null == view){
 			_holder = new ViewHolder();
-			view = getLayoutInflater().inflate(R.layout.info_list_item, null);
-			_holder.title = (TextView) view.findViewById(R.id.title);
-			_holder.date = (TextView) view.findViewById(R.id.date);
+//			view = getLayoutInflater().inflate(R.layout.info_list_item, null);
+//			_holder.title = (TextView) view.findViewById(R.id.title);
+//			_holder.date = (TextView) view.findViewById(R.id.date);
 			view.setTag(_holder);
 		}else {
 			_holder = (ViewHolder) view.getTag();

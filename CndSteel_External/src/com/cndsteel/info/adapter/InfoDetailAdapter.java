@@ -9,11 +9,11 @@ import android.widget.TextView;
 
 import com.cndsteel.R;
 import com.cndsteel.framework.adapter.AbsBaseAdapter;
-import com.cndsteel.info.bean.Info;
+import com.cndsteel.info.bean.InfoQueryResultListBean;
 
-public class InfoDetailAdapter extends AbsBaseAdapter<Info> {
+public class InfoDetailAdapter extends AbsBaseAdapter<InfoQueryResultListBean> {
 
-	public InfoDetailAdapter(Context context,ArrayList<Info> viewList) {
+	public InfoDetailAdapter(Context context,ArrayList<InfoQueryResultListBean> viewList) {
 		super(context);
 		initDatas(viewList);
 	}
@@ -32,10 +32,10 @@ public class InfoDetailAdapter extends AbsBaseAdapter<Info> {
 			_holder = (ViewHolder) view.getTag();
 		}
 		
-		Info _info = (Info) getItem(position);
-		_holder.userName.setText(_info.name);
-		_holder.date.setText(_info.date);
-		_holder.content.setText(_info.comments);
+//		InfoQueryResultListBean _info = (InfoQueryResultListBean) getItem(position);
+//		_holder.userName.setText(_info.name);
+//		_holder.date.setText(_info.date);
+//		_holder.content.setText(_info.comments);
 		return view;
 	}
 	
