@@ -6,9 +6,7 @@ import java.util.LinkedHashMap;
 import android.os.Bundle;
 import android.os.Message;
 import android.view.View;
-import android.widget.ImageButton;
 import android.widget.LinearLayout;
-import android.widget.ScrollView;
 import android.widget.TextView;
 
 import com.cndsteel.R;
@@ -22,11 +20,9 @@ import com.cndsteel.plan.beans.PlanQueryResultDetailBean;
 
 public class PlanQueryResultDetailActivity extends FrameActivity {
 	
-	private WebServiceThread mWebServiceThread;
-	
 	/** 请求参数 **/
 	private String mQueryParamBookingId;
-	private String mQueryParamSessionId = "20C5DA37D9CF5C8FDE3DD19E858D5614";
+	private String mQueryParamSessionId;
 	
 	private LinearLayout lyot_planDetails;
 	
@@ -49,15 +45,14 @@ public class PlanQueryResultDetailActivity extends FrameActivity {
 	}
 
 	private void init() {
-		initViews();
-		
 		initVariables();
-		
+		initViews();
 		loadDatas(Constants.HANDLER_MSG_DATA_LOAD_SUCCESS);
 	}
 
 	private void initVariables() {
 		mQueryParamBookingId = getIntent().getStringExtra(QueryParams.QUERY_PARAM_PLAN_BOOKING_ID);
+		mQueryParamSessionId = "20C5DA37D9CF5C8FDE3DD19E858D5614";
 	}
 
 	private void initViews() {

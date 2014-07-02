@@ -21,7 +21,7 @@ import com.cndsteel.framework.views.dialogs.datepicker.listeners.OnWheelScrollLi
  * 日期选择对话框
  * @author zhxl
  */
-public class DatePickerDialog extends Dialog implements OnWheelScrollListener,View.OnClickListener {
+public class YearMonthPickerDialog extends Dialog implements OnWheelScrollListener,View.OnClickListener {
 	
 	/** 显示最小年(默认) **/
 	private static final int DEFAULT_MIN_PICKABLE_YEAR = 2010;
@@ -120,8 +120,8 @@ public class DatePickerDialog extends Dialog implements OnWheelScrollListener,Vi
 			return this;
 		}
 		
-		public DatePickerDialog create(){
-			final DatePickerDialog _datePickerDialog = new DatePickerDialog(mContext);
+		public YearMonthPickerDialog create(){
+			final YearMonthPickerDialog _datePickerDialog = new YearMonthPickerDialog(mContext);
 			_datePickerDialog.initViews();
 			
 			_datePickerDialog.setTitle(mTitle);
@@ -190,17 +190,17 @@ public class DatePickerDialog extends Dialog implements OnWheelScrollListener,Vi
 //		_dayPickerView.addScrollingListener(this);
 //	}
 
-	protected DatePickerDialog(Context context) {
+	protected YearMonthPickerDialog(Context context) {
 		super(context);
 	}
 
-	protected DatePickerDialog(Context context, int theme) {
+	protected YearMonthPickerDialog(Context context, int theme) {
 		super(context, theme);
 	}
 
 	protected void initViews() {
 		requestWindowFeature(Window.FEATURE_NO_TITLE);
-		setContentView(R.layout.dialog_date_picker);
+		setContentView(R.layout.dialog_year_month_picker);
 		
 		Window _window = getWindow();
 		_window.setGravity(Gravity.BOTTOM);

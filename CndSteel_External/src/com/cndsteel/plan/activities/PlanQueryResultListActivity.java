@@ -30,8 +30,6 @@ import com.handmark.pulltorefresh.library.PullToRefreshListView;
 
 public class PlanQueryResultListActivity extends FrameActivity implements OnItemClickListener,OnRefreshListener<ListView>{
 	
-	private WebServiceThread mWebServiceThread;
-	
 	/** 查询条件 **/
 	private String mQueryParamYear;
 	private String mQueryParamMonth;

@@ -29,8 +29,6 @@ import com.handmark.pulltorefresh.library.PullToRefreshListView;
 
 public class ContractQueryResultListActivity extends FrameActivity implements OnItemClickListener,OnRefreshListener<ListView>{
 	
-	private WebServiceThread mWebServiceThread;
-	
 	private PullToRefreshListView listV_ContractList;
 	private ContractQueryResultListAdapter mContractQueryResultListAdapter;
 	
@@ -150,7 +148,7 @@ public class ContractQueryResultListActivity extends FrameActivity implements On
 					if(_contractQueryResultListBean.code > 0){
 						_theActivity.mContractQueryResultListAdapter.refreshDatas(_contractQueryResultListBean.contractBeans);
 					}else {
-						_theActivity.showAlertDialog(R.string.topBarTitle_planQuery, _theActivity.getString(R.string.DialogMsgNoDatas, _theActivity.getString(R.string.topBarTitle_planQueryResultList)), new DialogInterface.OnClickListener() {
+						_theActivity.showAlertDialog(R.string.appModule_contract, _theActivity.getString(R.string.DialogMsgNoDatas, _theActivity.getString(R.string.appModule_contract)), new DialogInterface.OnClickListener() {
 							@Override
 							public void onClick(DialogInterface dialog, int which) {
 								if(which == DialogInterface.BUTTON_NEUTRAL){

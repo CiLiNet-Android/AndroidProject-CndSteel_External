@@ -21,7 +21,7 @@ public class ShipmentDetailAsInvoiceAdapter extends AbsBaseAdapter<ShipmentAsInv
 		ViewHolder _holder;
 		if(null == view){
 			_holder = new ViewHolder();
-			view = getLayoutInflater().inflate(R.layout.activity_stock_according_stock_query_result_item, null);
+			view = getLayoutInflater().inflate(R.layout.layout_stock_according_stock_query_result_child, null);
 			_holder.stock_goodsName = (TextView) view.findViewById(R.id.stock_goodsName);
 			_holder.stock_Material = (TextView) view.findViewById(R.id.stock_Material);
 			_holder.stock_Standard = (TextView) view.findViewById(R.id.stock_Standard);

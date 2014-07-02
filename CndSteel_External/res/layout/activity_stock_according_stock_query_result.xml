@@ -1,39 +1,25 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:pullToRefresh="http://schemas.android.com/apk/res/com.cndsteel"
+    android:id="@+id/lyot_stockQueryResult"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical" >
+    android:orientation="vertical" 
+    android:visibility="invisible">
 
-    <!-- 仓库名 -->
-
-    <RelativeLayout
-        style="@style/CommonDataRowStyle"
-        android:background="@color/white_bg" >
-
-        <TextView
-            android:id="@+id/contract_item_Num_title"
-            style="@style/CommonDataRowContentStyle"
-            android:layout_alignParentLeft="true"
-            android:layout_centerVertical="true"
-            android:text="@string/stock_warehouseName"
-            android:textColor="@color/black" />
-
-        <TextView
-            android:id="@+id/contract_terms_Num"
-            style="@style/CommonDataRowContentStyle"
-            android:layout_centerVertical="true"
-            android:layout_toRightOf="@id/contract_item_Num_title"
-            android:text="：1号仓库"
-            android:textColor="@color/black" />
-    </RelativeLayout>
-
-    <ListView
-        android:id="@+id/stockQueryResultListView"
+    <com.handmark.pulltorefresh.library.PullToRefreshExpandableListView
+        android:id="@+id/listV_stockQueryResult"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:cacheColorHint="#00000000"
-        android:divider="@color/darkgrey"
-        android:dividerHeight="1px" >
-    </ListView>
+        android:fadingEdge="horizontal"
+        android:fastScrollEnabled="false"
+        android:footerDividersEnabled="false"
+        android:headerDividersEnabled="false"
+        android:divider="@color/grey"
+        android:dividerHeight="1dp"
+        android:childDivider="#f5f5f5"
+        android:smoothScrollbar="true"
+        pullToRefresh:ptrHeaderBackground="@color/grey" />
 
 </LinearLayout>

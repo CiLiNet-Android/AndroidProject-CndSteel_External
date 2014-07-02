@@ -21,8 +21,7 @@
             style="@style/CommonDataRowContentStyle"
             android:layout_alignParentRight="true"
             android:layout_centerVertical="true"
-            android:layout_marginRight="25dp"
-            android:text="2014/06" />
+            android:layout_marginRight="25dp"/>
         
         <ImageButton 
             android:layout_width="15dp"
@@ -49,8 +48,7 @@
             style="@style/CommonDataRowContentStyle"
             android:layout_alignParentRight="true"
             android:layout_centerVertical="true"
-            android:layout_marginRight="25dp"
-            android:text="2014/06" />
+            android:layout_marginRight="25dp"/>
         
         <ImageButton 
             android:layout_width="15dp"
@@ -72,13 +70,18 @@
             android:layout_centerVertical="true"
             android:text="@string/contract_num"/>
         
-        <TextView 
+        <EditText 
             android:id="@+id/txtV_StockFragmentContract_contract_num"
-            style="@style/CommonDataRowContentStyle"
+           	android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="18sp"
+            android:textColor="@color/grey"
+            android:layout_marginLeft="20dp"
+            android:background="@null"
+            android:gravity="right"
             android:layout_alignParentRight="true"
             android:layout_centerVertical="true"
-            android:text="25478965420325" />
-
+            android:hint="@string/contract_input_contractNum" />
         
     </RelativeLayout>
     
@@ -98,8 +101,7 @@
             style="@style/CommonDataRowContentStyle"
             android:layout_alignParentRight="true"
             android:layout_centerVertical="true"
-            android:layout_marginRight="25dp"
-            android:text="@string/contract_all" />
+            android:layout_marginRight="25dp" />
         
         <ImageButton 
             android:layout_width="15dp"

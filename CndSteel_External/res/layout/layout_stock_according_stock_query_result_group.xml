@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 仓库名 -->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    style="@style/CommonDataRowStyle"
+    android:background="#eaeaea">
+
+    <TextView
+        android:id="@+id/contract_item_Num_title"
+        style="@style/CommonDataRowContentStyle"
+        android:layout_alignParentLeft="true"
+        android:layout_centerVertical="true"
+        android:text="@string/stock_warehouseName"
+        android:textColor="@color/black" />
+
+    <TextView
+        android:id="@+id/contract_terms_Num"
+        style="@style/CommonDataRowContentStyle"
+        android:layout_centerVertical="true"
+        android:layout_alignParentRight="true"
+        android:layout_toRightOf="@id/contract_item_Num_title"
+        android:textColor="@color/black"/>
+
+</RelativeLayout>

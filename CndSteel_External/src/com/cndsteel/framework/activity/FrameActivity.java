@@ -1,6 +1,7 @@
 package com.cndsteel.framework.activity;
 
 import com.cndsteel.R;
+import com.cndsteel.framework.webService.WebServiceThread;
 
 import android.content.pm.ActivityInfo;
 import android.os.Bundle;
@@ -14,6 +15,8 @@ public class FrameActivity extends BaseActivity {
 	
 	/** 界面主框架 **/
 	private RelativeLayout framework;
+	
+	protected WebServiceThread mWebServiceThread;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -56,6 +59,11 @@ public class FrameActivity extends BaseActivity {
 		txtV_topCenter.setText(getContext().getResources().getString(titleResId));
 	}
 	
+	protected void setTopBarTitle(String title){
+		TextView txtV_topCenter = (TextView)framework.findViewById(R.id.txtV_topCenter);
+		txtV_topCenter.setText(title);
+	}
+	
 	
 	/**
 	 * 显示顶部区域
@@ -76,6 +84,11 @@ public class FrameActivity extends BaseActivity {
 				FrameLayout.LayoutParams.MATCH_PARENT);
 
 		framework_center.addView(_view, _layoutParams);
+	}
+
+	@Override
+	protected WebServiceThread getWebServiceThread() {
+		return mWebServiceThread;
 	}
 	
 }

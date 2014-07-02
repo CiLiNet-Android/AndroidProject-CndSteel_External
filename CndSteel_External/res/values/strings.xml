@@ -91,7 +91,7 @@
  	
  	<string name="stock_warehouse_detail">仓库明细</string>
  	
- 	<string name="stock_warehouseName">仓库名</string>
+ 	<string name="stock_warehouseName">仓库名：</string>
  	<string name="stock_standard">规格</string>
  	<string name="stock_Standard">规格：</string>
  	<string name="stock_numberOfPackages">件数</string>
@@ -99,7 +99,8 @@
  	<string name="tonnage">吨数</string>
  	<string name="Tonnage">吨数：</string>
  	<string name="money">金额</string>
- 	<string name="Money">金额:</string>
+ 	<string name="Money">金额：</string>
+ 	<string name="stock_spec_detials">规格明细</string>
  	
  	<string name="No.1">1号仓库</string>
  	

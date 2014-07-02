@@ -13,8 +13,9 @@ import android.widget.Toast;
 
 import com.cndsteel.R;
 import com.cndsteel.framework.application.BaseApplication;
+import com.cndsteel.framework.webService.WebServiceThread;
 
-public class BaseActivity extends Activity {
+public abstract class BaseActivity extends Activity {
 	
 	private static final int TOAST_DURATION =  Toast.LENGTH_SHORT;
 	
@@ -40,7 +41,6 @@ public class BaseActivity extends Activity {
 		mProgressDialog.setTitle(dialogTitle);
 		mProgressDialog.setMessage(dialogMessage);
 		mProgressDialog.setProgressStyle(ProgressDialog.STYLE_SPINNER);
-		mProgressDialog.setCanceledOnTouchOutside(true);
 		mProgressDialog.setCancelable(true);
 		
 		mProgressDialog.show();
@@ -49,11 +49,18 @@ public class BaseActivity extends Activity {
 	protected void showLoadingProgressDialog(){
 		mProgressDialog = new ProgressDialog(this);
 		mProgressDialog.setProgressStyle(ProgressDialog.STYLE_SPINNER);
-		//mProgressDialog.setCanceledOnTouchOutside(false);
+		mProgressDialog.setCanceledOnTouchOutside(false);
 		mProgressDialog.setCancelable(true);
+		
 		mProgressDialog.setOnCancelListener(new DialogInterface.OnCancelListener() {
 			@Override
 			public void onCancel(DialogInterface dialog) {
+				WebServiceThread _webServiceThread = getWebServiceThread();
+				if(null != _webServiceThread){
+					_webServiceThread.cancel();
+					_webServiceThread = null;
+				}
+				
 				finish();
 			}
 		});
@@ -64,6 +71,13 @@ public class BaseActivity extends Activity {
 	protected void dismissProgressDialog(){
 		if(null != mProgressDialog){
 			mProgressDialog.dismiss();
+			mProgressDialog = null;
+		}
+	}
+	
+	protected void cancelProgressDialog(){
+		if(null != mProgressDialog){
+			mProgressDialog.cancel();
 			mProgressDialog = null;
 		}
 	}
@@ -137,5 +151,5 @@ public class BaseActivity extends Activity {
 				                  .show();
 	}
 	
-	
+	protected abstract WebServiceThread getWebServiceThread(); 
 }

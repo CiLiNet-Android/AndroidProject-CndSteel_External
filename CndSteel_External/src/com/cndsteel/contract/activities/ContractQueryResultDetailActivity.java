@@ -8,7 +8,6 @@ import java.util.LinkedHashMap;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
-import android.text.TextUtils;
 import android.view.View;
 import android.widget.LinearLayout;
 import android.widget.TextView;
@@ -24,7 +23,6 @@ import com.cndsteel.framework.webService.WebServiceThread;
 
 public class ContractQueryResultDetailActivity extends FrameActivity {
 	
-	private WebServiceThread mWebServiceThread;
 	
 	private String mQueryParamId;
 	private String mQueryParamSessionId;

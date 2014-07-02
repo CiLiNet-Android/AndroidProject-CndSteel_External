@@ -101,49 +101,20 @@
         
         
         <!-- 库存 -->
-        <activity android:name="com.cndsteel.stock.activity.StockActivity">
-            <!-- <intent-filter>
+        <activity android:name="com.cndsteel.stock.activity.StockQueryActivity">
+            <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter> -->
+            </intent-filter>
         </activity>
-        <activity android:name="com.cndsteel.stock.activity.StockAccordingStockQueryResultActivity">
-           <!--  <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter> -->
-        </activity>
-        <activity android:name="com.cndsteel.stock.activity.StockWarehouseDetailActivity">
-            <!-- <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter> -->
-        </activity>       
-        <activity android:name="com.cndsteel.stock.activity.StockAccordingContractQueryResultActivity">
-            <!-- <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter> -->
-        </activity>
-        <activity android:name="com.cndsteel.stock.activity.StockContractDetailActivity">
-            <!-- <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter> -->
-        </activity>
-        <activity android:name="com.cndsteel.stock.activity.StockAccordingGoodsQueryResultActivity">
-            <!-- <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter> -->
-        </activity>
-        <activity android:name="com.cndsteel.stock.activity.StockGoodsDetailActivity">
-            <!-- <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter> -->
-        </activity>
-        
+        <activity android:name="com.cndsteel.stock.activity.StockAccordingStockQueryResultListActivity"/>      
+        <activity android:name="com.cndsteel.stock.activity.StockAccordingContractQueryResultListActivity"/>
+        <activity android:name="com.cndsteel.stock.activity.StockAccordingGoodsQueryResultListActivity" />
+ 		<activity android:name="com.cndsteel.stock.activity.StockAccordingStockQueryResultDetailActivity" />
+ 		<activity android:name="com.cndsteel.stock.activity.StockAccordingContractQueryResultDetailActivity"/>
+ 		<activity android:name="com.cndsteel.stock.activity.StockAccordingGoodsQueryResultDetailActivity"></activity>
+ 		<activity android:name="com.cndsteel.stock.activity.StockQueryResultDetailListActivity" />
+ 		
         <!-- 出仓 -->
         <activity android:name="com.cndsteel.shipment.activity.ShipmentActivity">
             <!-- <intent-filter>
@@ -289,10 +260,10 @@
         
         <!-- 系统通知 -->
         <activity android:name="com.cndsteel.sysinform.activity.SysInformActivity">
-            <intent-filter>
+            <!-- <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
+            </intent-filter> -->
         </activity>
         <activity android:name="com.cndsteel.sysinform.activity.SysInformDetailActivity">
             <!-- <intent-filter>

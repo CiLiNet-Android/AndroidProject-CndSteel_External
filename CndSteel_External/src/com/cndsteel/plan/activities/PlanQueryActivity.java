@@ -16,7 +16,7 @@ import com.cndsteel.R;
 import com.cndsteel.framework.activity.FrameActivity;
 import com.cndsteel.framework.constant.QueryParams;
 import com.cndsteel.framework.utils.DateUtils;
-import com.cndsteel.framework.views.dialogs.datepicker.DatePickerDialog;
+import com.cndsteel.framework.views.dialogs.datepicker.YearMonthPickerDialog;
 import com.cndsteel.framework.views.spinner.AbsSpinner;
 import com.cndsteel.framework.views.spinner.CndSteelSpinner;
 
@@ -26,7 +26,7 @@ import com.cndsteel.framework.views.spinner.CndSteelSpinner;
  * @author zhxl
  * 
  */
-public class PlanQueryActivity extends FrameActivity implements View.OnClickListener,DatePickerDialog.OnDateSelectedListener,AbsSpinner.OnItemClickListener {
+public class PlanQueryActivity extends FrameActivity implements View.OnClickListener,YearMonthPickerDialog.OnDateSelectedListener,AbsSpinner.OnItemClickListener {
 
 	
 	
@@ -123,13 +123,13 @@ public class PlanQueryActivity extends FrameActivity implements View.OnClickList
 		switch (_viewId) {
 		//计划年月
 		case R.id.lyot_planDate: {
-			DatePickerDialog.Builder _builder = new DatePickerDialog.Builder(this);
+			YearMonthPickerDialog.Builder _builder = new YearMonthPickerDialog.Builder(this);
 			_builder.setTitle(R.string.plan_date)
 					.setMinPickableYear(mMinPickableYear)
 					.setMaxPickableYear(mMaxPickableYear)
 					.setOnDateSelectedListener(this);
 			
-			DatePickerDialog _datePickerDialog = _builder.create();					
+			YearMonthPickerDialog _datePickerDialog = _builder.create();					
 			_datePickerDialog.show();
 			
 	        break;

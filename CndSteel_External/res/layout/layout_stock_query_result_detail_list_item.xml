@@ -10,44 +10,30 @@
         android:orientation="horizontal"
         android:layout_marginTop="15dp"
         android:layout_marginBottom="15dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
         android:gravity="center_vertical" >
 
             <TextView
-                android:id="@+id/stock_detail_into_date"
+                android:id="@+id/stock_detail_list_packages_no"
                 style="@style/CommonDataRowContentStyle"
                 android:layout_width="match_parent"
                 android:gravity="center"
-                android:textSize="13sp"
-                android:layout_weight="1"
-                android:text="2014/06/01" />
+                android:layout_weight="1"/>
 
             <TextView
-                android:id="@+id/stock_detail_package_num"
+                android:id="@+id/stock_detail_list_tonnage"
                 style="@style/CommonDataRowContentStyle"
                 android:layout_width="match_parent"
                 android:gravity="center"
-                android:textSize="13sp"
-                android:layout_weight="1"
-                android:text="123456" />
+                android:layout_weight="1"/>
 
             <TextView
-                android:id="@+id/stock_detail_tonnage"
+                android:id="@+id/stock_detail_list_numberOfPackages"
                 style="@style/CommonDataRowContentStyle"
                 android:layout_width="match_parent"
                 android:gravity="center"
-                android:textSize="13sp"
-                android:layout_weight="1"
-                android:text="123" />
-
-            <TextView
-                android:id="@+id/stock_detail_numberOfPackages"
-                style="@style/CommonDataRowContentStyle"
-                android:layout_width="match_parent"
-                android:gravity="center"
-                android:textSize="13sp"
-                android:layout_weight="1"
-                android:text="321" />
+                android:layout_weight="1"/>
     </LinearLayout>
     
-
 </LinearLayout>

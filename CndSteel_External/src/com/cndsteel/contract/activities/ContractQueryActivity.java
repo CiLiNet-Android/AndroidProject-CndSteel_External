@@ -16,11 +16,11 @@ import com.cndsteel.R;
 import com.cndsteel.framework.activity.FrameActivity;
 import com.cndsteel.framework.constant.QueryParams;
 import com.cndsteel.framework.utils.DateUtils;
-import com.cndsteel.framework.views.dialogs.datepicker.DatePickerDialog;
+import com.cndsteel.framework.views.dialogs.datepicker.YearMonthPickerDialog;
 import com.cndsteel.framework.views.spinner.AbsSpinner;
 import com.cndsteel.framework.views.spinner.CndSteelSpinner;
 
-public class ContractQueryActivity extends FrameActivity implements View.OnClickListener,DatePickerDialog.OnDateSelectedListener,AbsSpinner.OnItemClickListener  {
+public class ContractQueryActivity extends FrameActivity implements View.OnClickListener,YearMonthPickerDialog.OnDateSelectedListener,AbsSpinner.OnItemClickListener  {
 	
 	private static final String QUERY_DATE_FORMAT = "yyyy/MM";
 	
@@ -66,7 +66,7 @@ public class ContractQueryActivity extends FrameActivity implements View.OnClick
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		
-		appendFrameworkCenter(R.layout.activity_contract);
+		appendFrameworkCenter(R.layout.activity_contract_query);
 		
 		init();
 	}
@@ -110,13 +110,13 @@ public class ContractQueryActivity extends FrameActivity implements View.OnClick
 		switch (_viewId) {
 		//合同年月
 		case R.id.lyot_contractDate: {
-			DatePickerDialog.Builder _builder = new DatePickerDialog.Builder(this);
-			_builder.setTitle(R.string.plan_date)
+			YearMonthPickerDialog.Builder _builder = new YearMonthPickerDialog.Builder(this);
+			_builder.setTitle(R.string.contract_date)
 					.setMinPickableYear(mMinPickableYear)
 					.setMaxPickableYear(mMaxPickableYear)
 					.setOnDateSelectedListener(this);
 			
-			DatePickerDialog _datePickerDialog = _builder.create();					
+			YearMonthPickerDialog _datePickerDialog = _builder.create();					
 			_datePickerDialog.show();
 			
 			break;

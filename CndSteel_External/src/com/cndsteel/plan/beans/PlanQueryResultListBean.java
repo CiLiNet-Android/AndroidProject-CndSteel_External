@@ -33,17 +33,17 @@ public class PlanQueryResultListBean extends WebServiceBean {
 	public DefaultHandler getXmlParserHandler() {
 		DefaultHandler _xmlParserHandler = new DefaultHandler(){
 			/** 记录当前解析的元素名 **/
-			private String currentElementName;
+			private String mCurrentElementName;
 			
 			private PlanBean planBean;
 			
 			@Override
 			public void startElement(String uri, String localName, String qName,Attributes attributes) throws SAXException {
-				currentElementName = localName;
+				mCurrentElementName = localName;
 				
-				if(true == state && "list".equals(currentElementName)){
+				if(true == state && "list".equals(mCurrentElementName)){
 					mPlanBeans = new ArrayList<PlanBean>();
-				}if(null != mPlanBeans && "obj".equals(currentElementName)){
+				}if(null != mPlanBeans && "obj".equals(mCurrentElementName)){
 					planBean = new PlanBean();
 				}
 				
@@ -54,27 +54,27 @@ public class PlanQueryResultListBean extends WebServiceBean {
 					throws SAXException {
 				String _text = new String(ch,start,length);
 				
-				if("state".equals(currentElementName)){
+				if("state".equals(mCurrentElementName)){
 					state = Constants.TRUE.equals(_text);
-				}else if("code".equals(currentElementName)){
+				}else if("code".equals(mCurrentElementName)){
 					code = Integer.valueOf(_text);
-				}else if("detail".equals(currentElementName)){
+				}else if("detail".equals(mCurrentElementName)){
 					if(state == false){
 						errorMsg = _text;
 					}
-				}else if("bookingId".equals(currentElementName)){
+				}else if("bookingId".equals(mCurrentElementName)){
 					planBean.bookingId = _text;
-				}else if("schDate".equals(currentElementName)){
+				}else if("schDate".equals(mCurrentElementName)){
 					planBean.schDate = _text;
-				}else if("weight".equals(currentElementName)){
+				}else if("weight".equals(mCurrentElementName)){
 					planBean.weight = _text;
-				}else if("actWeight".equals(currentElementName)){
+				}else if("actWeight".equals(mCurrentElementName)){
 					planBean.actWeight = _text;
-				}else if("receivedMargin".equals(currentElementName)){
+				}else if("receivedMargin".equals(mCurrentElementName)){
 					planBean.receivedMargin = _text;
-				}else if("receivedMarginDate".equals(currentElementName)){
+				}else if("receivedMarginDate".equals(mCurrentElementName)){
 					planBean.receivedMarginDate = _text;
-				}else if("status".equals(currentElementName)){
+				}else if("status".equals(mCurrentElementName)){
 					planBean.status = _text;
 				}
 			}
@@ -82,7 +82,7 @@ public class PlanQueryResultListBean extends WebServiceBean {
 			@Override
 			public void endElement(String uri, String localName, String qName)
 					throws SAXException {
-				currentElementName = null;
+				mCurrentElementName = null;
 				
 				if("obj".equals(localName)){
 					mPlanBeans.add(planBean);
