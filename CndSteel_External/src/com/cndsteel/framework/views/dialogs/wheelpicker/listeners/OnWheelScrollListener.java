@@ -14,9 +14,9 @@
  *  limitations under the License.
  */
 
-package com.cndsteel.framework.views.dialogs.datepicker.listeners;
+package com.cndsteel.framework.views.dialogs.wheelpicker.listeners;
 
-import com.cndsteel.framework.views.dialogs.datepicker.WheelView;
+import com.cndsteel.framework.views.dialogs.wheelpicker.WheelView;
 
 /**
  * Wheel scrolled listener interface.

@@ -1,4 +1,4 @@
-package com.cndsteel.framework.views.dialogs.datepicker;
+package com.cndsteel.framework.views.dialogs.wheelpicker;
 
 import java.util.ArrayList;
 import java.util.Calendar;
@@ -14,8 +14,8 @@ import android.widget.Button;
 import android.widget.TextView;
 
 import com.cndsteel.R;
-import com.cndsteel.framework.views.dialogs.datepicker.adapters.DatePickerWheelVAdapter;
-import com.cndsteel.framework.views.dialogs.datepicker.listeners.OnWheelScrollListener;
+import com.cndsteel.framework.views.dialogs.wheelpicker.adapters.DatePickerWheelVAdapter;
+import com.cndsteel.framework.views.dialogs.wheelpicker.listeners.OnWheelScrollListener;
 
 /**
  * 日期选择对话框
@@ -180,7 +180,11 @@ public class YearMonthDayPickerDialog extends Dialog implements OnWheelScrollLis
 		_dayPickerAdapter.initDatas(getPickableDays());
 		_dayPickerView.setViewAdapter(_dayPickerAdapter);
 		
-		_dayPickerView.setCurrentItem(_dayPickerAdapter.getItemIndexByText(String.valueOf(mSelectedDay)));
+		String _selectedDay = String.valueOf(mSelectedDay);
+		if(_selectedDay.length() <= 1){
+			_selectedDay = "0" + _selectedDay;
+		}
+		_dayPickerView.setCurrentItem(_dayPickerAdapter.getItemIndexByText(_selectedDay));
 		
 		_dayPickerView.addScrollingListener(this);
 	}

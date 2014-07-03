@@ -113,36 +113,11 @@
         </activity>
         
         <!-- 往来 -->
-        <activity android:name="com.cndsteel.payment.activity.PaymentQueryActivity">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
-        <activity android:name="com.cndsteel.payment.activity.PaymentAsInformationQueryResultListActivity">
-            <!-- <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter> -->
-        </activity>
-        <activity android:name="com.cndsteel.payment.activity.PaymentAsInformetionQueryResultDetailActivity">
-            <!-- <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter> -->
-        </activity>
-        <activity android:name="com.cndsteel.payment.activity.PaymentAsContractQueryResultListActivity">
-            <!-- <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter> -->
-        </activity>
-        <activity android:name="com.cndsteel.payment.activity.PaymentAsContractQueryResultDetailActivity">
-            <!-- <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter> -->
-        </activity>
+        <activity android:name="com.cndsteel.payment.activity.PaymentQueryActivity"/>
+        <activity android:name="com.cndsteel.payment.activity.PaymentAsInformationQueryResultListActivity"/>
+        <activity android:name="com.cndsteel.payment.activity.PaymentAsInformetionQueryResultDetailActivity" />
+        <activity android:name="com.cndsteel.payment.activity.PaymentAsContractQueryResultListActivity"/>
+        <activity android:name="com.cndsteel.payment.activity.PaymentAsContractQueryResultDetailActivity"/>
         
         
         <!-- 提货意向 -->
@@ -210,11 +185,11 @@
         </activity>
         
         <!-- 资讯 -->
-        <activity android:name="com.cndsteel.info.activity.InfoActivity">
-            <!-- <intent-filter>
+        <activity android:name="com.cndsteel.info.activity.InfoQueryResultListActivity">
+            <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter> -->
+            </intent-filter>
         </activity>
         <activity android:name="com.cndsteel.info.activity.InfoDetailActivity">
            <!--  <intent-filter>

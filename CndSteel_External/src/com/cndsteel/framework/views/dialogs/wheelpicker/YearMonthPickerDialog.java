@@ -1,4 +1,4 @@
-package com.cndsteel.framework.views.dialogs.datepicker;
+package com.cndsteel.framework.views.dialogs.wheelpicker;
 
 import java.util.ArrayList;
 import java.util.Calendar;
@@ -14,8 +14,8 @@ import android.widget.Button;
 import android.widget.TextView;
 
 import com.cndsteel.R;
-import com.cndsteel.framework.views.dialogs.datepicker.adapters.DatePickerWheelVAdapter;
-import com.cndsteel.framework.views.dialogs.datepicker.listeners.OnWheelScrollListener;
+import com.cndsteel.framework.views.dialogs.wheelpicker.adapters.DatePickerWheelVAdapter;
+import com.cndsteel.framework.views.dialogs.wheelpicker.listeners.OnWheelScrollListener;
 
 /**
  * 日期选择对话框

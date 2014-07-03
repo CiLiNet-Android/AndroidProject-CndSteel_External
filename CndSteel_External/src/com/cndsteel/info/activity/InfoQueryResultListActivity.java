@@ -56,7 +56,7 @@ public class InfoQueryResultListActivity extends FrameActivity implements OnItem
 	private void initVariables() {
 		mQueryParamMsgCate = "";
 		mQueryParamPageIndex = 1;
-		mQueryParamPageSize = Constants.DEFAULT_PAGE_SIZE;
+		mQueryParamPageSize = DEFAULT_PAGE_SIZE;
 		mQueryParamSessionId = "20C5DA37D9CF5C8FDE3DD19E858D5614";
 	}
 
@@ -82,7 +82,7 @@ public class InfoQueryResultListActivity extends FrameActivity implements OnItem
 		LinkedHashMap<String, String> _webServiceRequestParams = new LinkedHashMap<String, String>();
 		_webServiceRequestParams.put(QueryParams.QUERY_PARAM_INFO_MSG_CATE, mQueryParamMsgCate);
 		_webServiceRequestParams.put(QueryParams.QUERY_PARAM_PAGE_INDEX, String.valueOf(mQueryParamPageIndex));
-		_webServiceRequestParams.put(QueryParams.QUERY_PARAM_PAGE_SIZE, String.valueOf(DEFAULT_PAGE_SIZE));
+		_webServiceRequestParams.put(QueryParams.QUERY_PARAM_PAGE_SIZE, String.valueOf(mQueryParamPageSize));
 		_webServiceRequestParams.put(QueryParams.QUERY_PARAM_SESSION_ID, mQueryParamSessionId);
 		
 		mWebServiceThread = new WebServiceThread(new InfoQueryResultListBean(), _webServiceRequestParams, mTheHandler, msgWhat);
@@ -136,8 +136,18 @@ public class InfoQueryResultListActivity extends FrameActivity implements OnItem
 	}
 
 	@Override
-	public void onClick(View arg0) {
-		// TODO Auto-generated method stub
+	public void onClick(View view) {
+		int _viewId = view.getId();
+		switch (_viewId) {
+		//类别对话框
+		case R.id.imgBtn_topRight: {
+			
+			break;
+		}
+
+		default:
+			break;
+		}
 		
 	}
 

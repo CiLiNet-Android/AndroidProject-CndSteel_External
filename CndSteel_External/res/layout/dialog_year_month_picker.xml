@@ -45,7 +45,7 @@
         android:layout_marginRight="3dp">
 
         <!-- 年 -->
-        <com.cndsteel.framework.views.dialogs.datepicker.WheelView
+        <com.cndsteel.framework.views.dialogs.wheelpicker.WheelView
             android:id="@+id/wheelV_yearPicker"
             android:layout_width="match_parent"
             android:layout_height="150dp"
@@ -53,7 +53,7 @@
             android:layout_weight="1" />
 
         <!-- 月 -->
-        <com.cndsteel.framework.views.dialogs.datepicker.WheelView
+        <com.cndsteel.framework.views.dialogs.wheelpicker.WheelView
             android:id="@+id/wheelV_monthPicker"
             android:layout_width="match_parent"
             android:layout_height="150dp"

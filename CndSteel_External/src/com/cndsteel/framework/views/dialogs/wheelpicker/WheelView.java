@@ -17,7 +17,7 @@
  *  limitations under the License.
  */
 
-package com.cndsteel.framework.views.dialogs.datepicker;
+package com.cndsteel.framework.views.dialogs.wheelpicker;
 
 import java.util.LinkedList;
 import java.util.List;
@@ -36,10 +36,10 @@ import android.view.animation.Interpolator;
 import android.widget.LinearLayout;
 
 import com.cndsteel.R;
-import com.cndsteel.framework.views.dialogs.datepicker.adapters.WheelViewAdapter;
-import com.cndsteel.framework.views.dialogs.datepicker.listeners.OnWheelChangedListener;
-import com.cndsteel.framework.views.dialogs.datepicker.listeners.OnWheelClickedListener;
-import com.cndsteel.framework.views.dialogs.datepicker.listeners.OnWheelScrollListener;
+import com.cndsteel.framework.views.dialogs.wheelpicker.adapters.WheelViewAdapter;
+import com.cndsteel.framework.views.dialogs.wheelpicker.listeners.OnWheelChangedListener;
+import com.cndsteel.framework.views.dialogs.wheelpicker.listeners.OnWheelClickedListener;
+import com.cndsteel.framework.views.dialogs.wheelpicker.listeners.OnWheelScrollListener;
 
 /**
  * Numeric wheel view.

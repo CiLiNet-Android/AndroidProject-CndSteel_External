@@ -17,7 +17,7 @@
  *  limitations under the License.
  */
 
-package com.cndsteel.framework.views.dialogs.datepicker;
+package com.cndsteel.framework.views.dialogs.wheelpicker;
 
 /**
  * Range for visible items.
