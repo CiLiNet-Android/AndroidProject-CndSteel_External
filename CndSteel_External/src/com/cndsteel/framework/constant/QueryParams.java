@@ -51,4 +51,10 @@ public interface QueryParams {
 	 * 资讯
 	 */
 	public static final String QUERY_PARAM_INFO_MSG_CATE = "msgCate";
+	
+	/**
+	 * 系统消息
+	 */
+	public static final String QUETY_PARAM_SYS_INFORM_MSG_CATE = "msgCate";
+	
 }

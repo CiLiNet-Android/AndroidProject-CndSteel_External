@@ -241,10 +241,10 @@
         
         <!-- 资讯 -->
         <activity android:name="com.cndsteel.info.activity.InfoQueryResultListActivity">
-            <intent-filter>
+           <!--  <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
+            </intent-filter> -->
         </activity>
         <activity android:name="com.cndsteel.info.activity.InfoDetailActivity">
            <!--  <intent-filter>
@@ -254,11 +254,11 @@
         </activity>
         
         <!-- 系统通知 -->
-        <activity android:name="com.cndsteel.sysinform.activity.SysInformActivity">
-            <!-- <intent-filter>
+        <activity android:name="com.cndsteel.sysinform.activity.SysInformQueryResultListActivity">
+            <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter> -->
+            </intent-filter>
         </activity>
         <activity android:name="com.cndsteel.sysinform.activity.SysInformDetailActivity">
             <!-- <intent-filter>
