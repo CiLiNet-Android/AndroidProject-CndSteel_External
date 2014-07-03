@@ -192,6 +192,7 @@
     
     <!-- 资讯详情 -->
     <string name="InfoDetail">资讯详情</string>
+    <string name="InfoCategroy">资讯分类</string>
     
     <string name="send">发送</string>
     <string name="category">类别：</string>

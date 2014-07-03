@@ -14,54 +14,42 @@ import android.widget.TextView;
 
 import com.cndsteel.R;
 import com.cndsteel.framework.activity.FrameActivity;
-import com.cndsteel.framework.utils.DateUtils;
 import com.cndsteel.info.adapter.InfoDetailAdapter;
+import com.cndsteel.info.bean.InfoBean;
 import com.cndsteel.info.bean.InfoQueryResultListBean;
 
-public class InfoDetailActivity extends FrameActivity implements OnClickListener {
+public class InfoQueryResultDetailActivity extends FrameActivity implements OnClickListener {
 	
 	private ListView infoDetailListView;
 	private ArrayList<InfoQueryResultListBean> itemList;
 	
-	
-	private TextView infoDetailTitle;
-	private TextView infoDetailCategoryValue;
-	private TextView infoDetailTimeValue;
-	private TextView infoDetailIssuerValue;
-	private TextView infoDetailContentValue;
 	private EditText edt_infoDetailChat;
-	private Button btn_infoDetailSend;
 	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-		
 		setTopBarTitle(R.string.InfoDetail);
-		
 		appendFrameworkCenter(R.layout.activity_info_detail);
 		
 		init();
-		
 	}
 	
 	private void init() {
-
-		initView();
-
+		initViews();
 	}
 
-	private void initView() {
+	private void initViews() {
+		InfoBean _infoBean = (InfoBean)getIntent().getSerializableExtra("infoBean");
 
-		infoDetailTitle = (TextView) findViewById(R.id.infoDetailTitle);
-		infoDetailCategoryValue = (TextView) findViewById(R.id.infoDetailCategoryValue);
-		infoDetailTimeValue = (TextView) findViewById(R.id.infoDetailTimeValue);
-		infoDetailIssuerValue = (TextView) findViewById(R.id.infoDetailIssuerValue);
-		infoDetailContentValue = (TextView) findViewById(R.id.infoDetailContentValue);
+		((TextView)findViewById(R.id.infoDetailTitle)).setText(_infoBean.title);
+		((TextView)findViewById(R.id.infoDetailCategoryValue)).setText(_infoBean.title);
+		((TextView)findViewById(R.id.infoDetailTimeValue)).setText(_infoBean.date);
+		((TextView)findViewById(R.id.infoDetailIssuerValue)).setText(_infoBean.author);
+		((TextView)findViewById(R.id.infoDetailContentValue)).setText(_infoBean.content);
 		
-		edt_infoDetailChat = (EditText) findViewById(R.id.edt_infoDetailChat);
+		edt_infoDetailChat = (EditText)findViewById(R.id.edt_infoDetailChat);
 		
-		btn_infoDetailSend = (Button) findViewById(R.id.btn_infoDetailSend);
-		btn_infoDetailSend.setOnClickListener(this);
+		findViewById(R.id.btn_infoDetailSend).setOnClickListener(this);
 		
 		itemList = new ArrayList<InfoQueryResultListBean>();
 		
