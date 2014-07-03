@@ -47,7 +47,7 @@
             android:text="@string/contract_number" />
 
         <EditText
-            android:id="@+id/txtV_paymentContractNum"
+            android:id="@+id/edTxt_paymentContractNum"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_alignParentRight="true"

@@ -68,9 +68,9 @@ public class ContractQueryResultListActivity extends FrameActivity implements On
 	private void initVariables() {
 		Bundle _queryParams = getIntent().getExtras();
 		
-		mQueryParamConYear = _queryParams.getString(QueryParams.QUERY_PARAM_CONTRACT_CONYEAR);
-		mQueryParamConMonth = _queryParams.getString(QueryParams.QUERY_PARAM_CONTRACT_CONMONTH);
-		mQueryParamConCode = _queryParams.getString(QueryParams.QUERY_PARAM_CONTRACT_CONCODE);
+		mQueryParamConYear = _queryParams.getString(QueryParams.QUERY_PARAM_CON_YEAR);
+		mQueryParamConMonth = _queryParams.getString(QueryParams.QUERY_PARAM_CON_MONTH);
+		mQueryParamConCode = _queryParams.getString(QueryParams.QUERY_PARAM_CON_CODE);
 		mQueryParamStatus = _queryParams.getString(QueryParams.QUERY_PARAM_STATUS);
 		
 		mQueryParamPageIndex = 1;
@@ -109,9 +109,9 @@ public class ContractQueryResultListActivity extends FrameActivity implements On
 	private LinkedHashMap<String,String> createWebServiceRequestParams(){
 		LinkedHashMap<String, String> _webServiceRequestParams = new LinkedHashMap<String, String>();
 		
-		_webServiceRequestParams.put(QueryParams.QUERY_PARAM_CONTRACT_CONYEAR, mQueryParamConYear);
-		_webServiceRequestParams.put(QueryParams.QUERY_PARAM_CONTRACT_CONMONTH,mQueryParamConMonth);
-		_webServiceRequestParams.put(QueryParams.QUERY_PARAM_CONTRACT_CONCODE, mQueryParamConCode);
+		_webServiceRequestParams.put(QueryParams.QUERY_PARAM_CON_YEAR, mQueryParamConYear);
+		_webServiceRequestParams.put(QueryParams.QUERY_PARAM_CON_MONTH,mQueryParamConMonth);
+		_webServiceRequestParams.put(QueryParams.QUERY_PARAM_CON_CODE, mQueryParamConCode);
 		_webServiceRequestParams.put(QueryParams.QUERY_PARAM_STATUS, mQueryParamStatus);
 		_webServiceRequestParams.put(QueryParams.QUERY_PARAM_PAGE_INDEX, String.valueOf(mQueryParamPageIndex));
 		_webServiceRequestParams.put(QueryParams.QUERY_PARAM_PAGE_SIZE, String.valueOf(mQueryParamPageSize));

@@ -5,73 +5,79 @@
     android:background="@color/white_bg"
     android:orientation="vertical" >
 
-    <LinearLayout 
+    <TableLayout
         style="@style/CommonDataRowStyle"
-        android:layout_height="wrap_content"
-        android:orientation="vertical">
-        <LinearLayout 
-			android:layout_width="match_parent"
-			android:layout_height="wrap_content"
-			android:orientation="horizontal">
-            <TextView 
-                 style="@style/CommonDataRowTitleStyle"
-                 android:lineSpacingMultiplier="1.2"
-                 android:text="@string/paymentDate"/>
-             <TextView 
-                 android:id="@+id/paymentDate"
-                 style="@style/CommonDataRowTitleStyle"
-                 android:layout_weight="1"
-                 android:layout_marginLeft="15dp"
-                 android:text="2014/06"/>
-        </LinearLayout>
-        <LinearLayout 
-			android:layout_width="match_parent"
-			android:layout_height="wrap_content"
-			android:orientation="horizontal">
-            <TextView 
-                 style="@style/CommonDataRowTitleStyle"
-                 android:lineSpacingMultiplier="1.2"
-                 android:text="@string/payment_Method"/>
-             <TextView 
-                 android:id="@+id/payment_Method"
-                 style="@style/CommonDataRowTitleStyle"
-                 android:layout_width="match_parent"
-                 android:layout_weight="1"
-                 android:text="现金"/>
-             <TextView 
-                 style="@style/CommonDataRowTitleStyle"
-                 android:lineSpacingMultiplier="1.2"
-                 android:text="@string/Money"/>
-             <TextView 
-                 android:id="@+id/stock_goodsName"
-                 style="@style/CommonDataRowTitleStyle"
-                 android:layout_width="match_parent"
-                 android:layout_weight="1"
-                 android:text="100,000,000"/>
-        </LinearLayout>
-        <LinearLayout 
-			android:layout_width="match_parent"
-			android:layout_height="wrap_content"
-			android:orientation="horizontal">
-            <TextView 
-                 style="@style/CommonDataRowTitleStyle"
-                 android:text="@string/BillNum"/>
-             <TextView 
-                 android:id="@+id/BillNum"
-                 style="@style/CommonDataRowTitleStyle"
-                 android:layout_weight="1"
-                 android:layout_marginLeft="15dp"
-                 android:text="5531EAF513ADF1E5"/>
-        </LinearLayout>
-    </LinearLayout>
+        android:layout_height="wrap_content" 
+        android:background="@drawable/wave" >
+
+        <TableRow>
+
+            <TextView
+                style="@style/CommonDataRowTitleStyle"
+                android:lineSpacingMultiplier="1.5"
+                android:text="@string/paymentDate" />
+
+            <TextView
+                android:id="@+id/txtV_paymentInfoQueryDetailPaymentDate"
+                style="@style/CommonDataRowTitleStyle"
+                android:layout_marginLeft="15dp"
+                android:layout_weight="1" />
+
+        </TableRow>
+
+        <TableRow>
+
+            <TextView
+                style="@style/CommonDataRowTitleStyle"
+                android:lineSpacingMultiplier="1.5"
+                android:text="@string/payment_Method" />
+
+            <TextView
+                android:id="@+id/txtV_paymentInfoQueryDetailPaymentMode"
+                style="@style/CommonDataRowTitleStyle"
+                android:layout_marginLeft="15dp"
+                android:layout_weight="1" />
+
+        </TableRow>
+
+        <TableRow>
+
+            <TextView
+                style="@style/CommonDataRowTitleStyle"
+                android:lineSpacingMultiplier="1.5"
+                android:text="@string/Money" />
+
+            <TextView
+                android:id="@+id/txtV_paymentInfoQueryDetailAmount"
+                style="@style/CommonDataRowTitleStyle"
+                android:layout_marginLeft="15dp"
+                android:layout_span="3"
+                android:layout_weight="1" />
+        </TableRow>
+        
+        <TableRow>
+            <TextView
+                style="@style/CommonDataRowTitleStyle"
+                android:text="@string/BillNum" />
+
+            <TextView
+                android:id="@+id/txtV_paymentInfoQueryDetailBillNO"
+                style="@style/CommonDataRowTitleStyle"
+                android:layout_marginLeft="15dp"
+                android:layout_span="3"
+                android:layout_weight="1" />
+            
+        </TableRow>
+        
+    </TableLayout>
 
     <ImageView
         android:layout_width="match_parent"
         android:layout_height="3dp"
         android:background="@drawable/wave" />
 
-    <ListView 
-        android:id="@+id/PaymentDetailAsContractList"
+    <com.handmark.pulltorefresh.library.PullToRefreshListView 
+        android:id="@+id/listV_PaymentDetailAsInfoList"
         android:layout_marginTop="20dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content" />

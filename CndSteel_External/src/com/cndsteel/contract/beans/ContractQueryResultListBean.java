@@ -44,7 +44,7 @@ public class ContractQueryResultListBean extends WebServiceBean {
 				
 				if(true == state && "list".equals(mCurrentElementName)){
 					contractBeans = new ArrayList<ContractBean>();
-				}if(null != contractBeans && "obj".equals(mCurrentElementName)){
+				}else if(null != contractBeans && "obj".equals(mCurrentElementName)){
 					mContractBean = new ContractBean();
 				}
 			}

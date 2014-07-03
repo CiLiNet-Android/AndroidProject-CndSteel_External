@@ -21,7 +21,7 @@
             android:paddingRight="10dp" >
 
             <Button
-                android:id="@+id/payment_btn_information"
+                android:id="@+id/btn_paymentInfo"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:background="@null"
@@ -30,8 +30,8 @@
                 android:text="@string/payment_information"
                 android:textSize="20sp" />
 
-            <ImageButton
-                android:id="@+id/payment_img_information"
+            <ImageView
+                android:id="@+id/imgV_paymentInfo"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:background="@drawable/smallbar"
@@ -48,7 +48,7 @@
             android:paddingRight="10dp" >
 
             <Button
-                android:id="@+id/payment_btn_contractFunds"
+                android:id="@+id/btn_paymentContractFunds"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:background="@null"
@@ -57,8 +57,8 @@
                 android:text="@string/contract_Sum_terms"
                 android:textSize="20sp" />
 
-            <ImageButton
-                android:id="@+id/payment_img_contractFunds"
+            <ImageView
+                android:id="@+id/imgV_paymentContractFunds"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:background="@drawable/smallbar"
@@ -69,10 +69,9 @@
     </LinearLayout>
     
     <android.support.v4.view.ViewPager
-        android:id="@+id/paymentViewPager"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center" >
-    </android.support.v4.view.ViewPager>
+        android:id="@+id/vPager_paymentQuery"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center" />
 
 </LinearLayout>

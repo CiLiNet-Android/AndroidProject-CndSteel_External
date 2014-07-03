@@ -6,7 +6,9 @@
     
     <!-- 合同号 -->
     <RelativeLayout style="@style/CommonDataRowStyle"
-        android:background="@color/white_bg" >
+        android:background="@color/white_bg" 
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp">
 
         <TextView
             android:id="@+id/payment_contract_num"

@@ -19,6 +19,10 @@ public interface QueryParams {
 	public static final String QUERY_PARAM_ID = "id";
 	public static final String QUERY_PARAM_PNAME_ID = "pnameId";
 	public static final String QUERY_PARAM_MATERIAL_ID = "materialId";
+	public static final String QUERY_PARAM_CON_YEAR = "conYear";
+	public static final String QUERY_PARAM_CON_MONTH = "conMonth";
+	public static final String QUERY_PARAM_CON_CODE = "conCode";
+	public static final String QUERY_PARAM_CON_ID = "conId";
 
 	/**
 	 * 计划模块
@@ -26,13 +30,6 @@ public interface QueryParams {
 	public static final String QUERY_PARAM_PLAN_DATE_YEAR = "year";
 	public static final String QUERY_PARAM_PLAN_DATE_MONTH = "month";
 	public static final String QUERY_PARAM_PLAN_BOOKING_ID = "bookingId";
-	
-	/**
-	 * 合同
-	 */
-	public static final String QUERY_PARAM_CONTRACT_CONYEAR = "conYear";
-	public static final String QUERY_PARAM_CONTRACT_CONMONTH = "conMonth";
-	public static final String QUERY_PARAM_CONTRACT_CONCODE = "conCode";
 	
 	/**
 	 * 库存
@@ -48,13 +45,22 @@ public interface QueryParams {
 	public static final String QUERY_PARAM_STOCK_CON_ID = "conId";
 	
 	/**
+	 * 往来
+	 */
+	public static final String QUERY_PARAM_PAYMENT_PAY_DATE_FROM = "payDateFrom";
+	public static final String QUERY_PARAM_PAYMENT_PAY_DATE_TO = "payDateTo";
+	public static final String QUERY_PARAM_PAYMENT_PAY_MODE = "payMode";
+	public static final String QUERY_PARAM_PAYMENT_BILL_NO = "billNO";
+	public static final String QUERY_PARAM_PAYMENT_PAY_ID = "payId";
+	
+	
+	/**
 	 * 资讯
 	 */
 	public static final String QUERY_PARAM_INFO_MSG_CATE = "msgCate";
-	
+
 	/**
 	 * 系统消息
 	 */
 	public static final String QUETY_PARAM_SYS_INFORM_MSG_CATE = "msgCate";
-	
 }

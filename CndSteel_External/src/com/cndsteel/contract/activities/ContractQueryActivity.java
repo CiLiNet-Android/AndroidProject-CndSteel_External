@@ -171,9 +171,9 @@ public class ContractQueryActivity extends FrameActivity implements View.OnClick
 	
 	private Bundle createQueryParams(){
 		Bundle _queryParams = new Bundle();
-		_queryParams.putString(QueryParams.QUERY_PARAM_CONTRACT_CONYEAR, mQueryParamConYear);
-		_queryParams.putString(QueryParams.QUERY_PARAM_CONTRACT_CONMONTH, mQueryParamConMonth);
-		_queryParams.putString(QueryParams.QUERY_PARAM_CONTRACT_CONCODE, mQueryParamConCode);
+		_queryParams.putString(QueryParams.QUERY_PARAM_CON_YEAR, mQueryParamConYear);
+		_queryParams.putString(QueryParams.QUERY_PARAM_CON_MONTH, mQueryParamConMonth);
+		_queryParams.putString(QueryParams.QUERY_PARAM_CON_CODE, mQueryParamConCode);
 		_queryParams.putString(QueryParams.QUERY_PARAM_STATUS, mQueryParamStatus);
 		
 		return _queryParams;

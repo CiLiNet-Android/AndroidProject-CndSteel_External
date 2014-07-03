@@ -21,17 +21,17 @@
             style="@style/CommonDataRowContentStyle"
             android:layout_toRightOf="@id/contract_item_Num_title"
             android:layout_centerVertical="true"
-            android:textColor="@color/black"
-            android:text="25461247896215" />
+            android:textColor="@color/black"/>
 
     </RelativeLayout>
     
     <ListView 
-        android:id="@+id/paymentDetailAsContractlistView"
+        android:id="@+id/listV_paymentContractQueryDetailList"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:divider="@null"
-        android:dividerHeight="10dp" />
+        android:cacheColorHint="#00000000"
+        android:divider="#f5f5f5"
+        android:dividerHeight="15dp" />
     
 
 </LinearLayout>

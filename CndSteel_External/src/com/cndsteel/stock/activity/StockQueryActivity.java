@@ -15,7 +15,6 @@ import android.support.v4.view.ViewPager.OnPageChangeListener;
 import android.text.TextUtils;
 import android.view.View;
 import android.view.View.OnClickListener;
-import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.RelativeLayout;
@@ -32,7 +31,6 @@ import com.cndsteel.framework.bean.WareHouseBean;
 import com.cndsteel.framework.constant.QueryParams;
 import com.cndsteel.framework.utils.DateUtils;
 import com.cndsteel.framework.views.dialogs.datepicker.YearMonthDayPickerDialog;
-import com.cndsteel.framework.views.dialogs.datepicker.YearMonthPickerDialog;
 import com.cndsteel.framework.views.spinner.AbsSpinner;
 import com.cndsteel.framework.views.spinner.CndSteelSpinner;
 import com.cndsteel.framework.webService.WebServiceThread;
@@ -103,7 +101,6 @@ public class StockQueryActivity extends FrameActivity implements OnClickListener
 	 */
 	private TextView txtV_StockFragmentGoods_into_date_start;
 	private TextView txtV_StockFragmentGoods_into_date_end;
-	private Button btn_StockFragmentGoods;
 	/** 请求参数 **/
 	private String mGoodsQueryParamStoreDateForm;
 	private String mGoodsQueryParamStoreDateTo;
@@ -324,6 +321,8 @@ public class StockQueryActivity extends FrameActivity implements OnClickListener
 			_pageView.findViewById(R.id.btn_StockFragmentContract).setOnClickListener(new View.OnClickListener() {
 				@Override
 				public void onClick(View view) {
+					mContractQueryParamContractCode = txtV_StockFragmentContract_contract_num.getText().toString();
+					
 					Intent _intent = new Intent(StockQueryActivity.this,StockAccordingContractQueryResultListActivity.class);
 					
 					Bundle _queryParams = new Bundle();

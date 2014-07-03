@@ -4,7 +4,7 @@
     
     <!-- 功能模块名称 -->
     <string name="appModule_plan">计划</string>
-    <string name="appModule_payment">付款</string>
+    <string name="appModule_payment">往来</string>
     <string name="appModule_contract">合同</string>
     <string name="appModule_stock">库存</string>
     <string name="appModule_shipmentIntent">提货意向</string>

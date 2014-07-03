@@ -99,7 +99,7 @@
             android:text="@string/billNum" />
 
         <EditText
-            android:id="@+id/txtV_paymentBillNum"
+            android:id="@+id/edTxt_paymentBillNum"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_alignParentRight="true"
@@ -116,7 +116,7 @@
     <!-- 查询按钮 -->
 
     <Button
-        android:id="@+id/btn_contractQuery"
+        android:id="@+id/btn_paymentInfoQuery"
         style="@style/CommonButtonStyle"
         android:layout_gravity="center_horizontal"
         android:layout_marginTop="40dp"

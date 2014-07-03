@@ -59,45 +59,15 @@
         </activity>
         
         <!-- 计划 -->
-        <activity android:name="com.cndsteel.plan.activity.PlanQueryActivity">
-            <!-- <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter> -->
-        </activity>
-        <activity android:name="com.cndsteel.plan.activity.PlanQueryResultListActivity">
-            <!-- <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter> -->
-        </activity>
-        <activity android:name="com.cndsteel.plan.activity.PlanQueryResultDetailActivity">
-            <!-- <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter> -->
-        </activity>
+        <activity android:name="com.cndsteel.plan.activity.PlanQueryActivity" />
+        <activity android:name="com.cndsteel.plan.activity.PlanQueryResultListActivity" />
+        <activity android:name="com.cndsteel.plan.activity.PlanQueryResultDetailActivity" />
         
         
         <!-- contract(合同) -->
-        <activity android:name="com.cndsteel.contract.activity.ContractActivity">
-            <!-- <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter> -->
-        </activity>
-        <activity android:name="com.cndsteel.contract.activity.ContractQueryResultActivity" >
-            <!-- <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter> -->
-        </activity>
-        <activity android:name="com.cndsteel.contract.activity.ContractDetailActivity">
-            <!-- <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter> -->
-        </activity>
+        <activity android:name="com.cndsteel.contract.activity.ContractActivity" />
+        <activity android:name="com.cndsteel.contract.activity.ContractQueryResultActivity" />
+        <activity android:name="com.cndsteel.contract.activity.ContractDetailActivity" />
         
         
         <!-- 库存 -->
@@ -143,31 +113,31 @@
         </activity>
         
         <!-- 往来 -->
-        <activity android:name="com.cndsteel.payment.activity.PaymentActivity">
+        <activity android:name="com.cndsteel.payment.activity.PaymentQueryActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name="com.cndsteel.payment.activity.PaymentAsInformationQueryResultListActivity">
             <!-- <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter> -->
         </activity>
-        <activity android:name="com.cndsteel.payment.activity.PaymentAsInformationQueryResultActivity">
+        <activity android:name="com.cndsteel.payment.activity.PaymentAsInformetionQueryResultDetailActivity">
             <!-- <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter> -->
         </activity>
-        <activity android:name="com.cndsteel.payment.activity.PaymentDetailAsInformetionActivity">
+        <activity android:name="com.cndsteel.payment.activity.PaymentAsContractQueryResultListActivity">
             <!-- <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter> -->
         </activity>
-        <activity android:name="com.cndsteel.payment.activity.PaymentAsContractQueryResultActivity">
-            <!-- <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter> -->
-        </activity>
-        <activity android:name="com.cndsteel.payment.activity.PaymentDetailAsContractActivity">
+        <activity android:name="com.cndsteel.payment.activity.PaymentAsContractQueryResultDetailActivity">
             <!-- <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
@@ -240,8 +210,8 @@
         </activity>
         
         <!-- 资讯 -->
-        <activity android:name="com.cndsteel.info.activity.InfoQueryResultListActivity">
-           <!--  <intent-filter>
+        <activity android:name="com.cndsteel.info.activity.InfoActivity">
+            <!-- <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter> -->
@@ -254,11 +224,11 @@
         </activity>
         
         <!-- 系统通知 -->
-        <activity android:name="com.cndsteel.sysinform.activity.SysInformQueryResultListActivity">
-            <intent-filter>
+        <activity android:name="com.cndsteel.sysinform.activity.SysInformActivity">
+            <!-- <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
+            </intent-filter> -->
         </activity>
         <activity android:name="com.cndsteel.sysinform.activity.SysInformDetailActivity">
             <!-- <intent-filter>

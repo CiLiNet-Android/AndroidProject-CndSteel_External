@@ -4,9 +4,7 @@
     android:layout_height="wrap_content"
     android:orientation="vertical" >
     
-    
-
-    <!-- 已付款金额 -->
+    <!-- 付款日期 -->
     <RelativeLayout style="@style/CommonDataRowStyle" >
 
         <TextView
@@ -14,17 +12,17 @@
             style="@style/CommonDataRowTitleStyle"
             android:layout_alignParentLeft="true"
             android:layout_centerVertical="true"
-            android:text="@string/contract_amountPaid" />
+            android:text="@string/contract_payDate" />
 
         <TextView
-            android:id="@+id/contract_terms_amountPaid"
+            android:id="@+id/txtV_contractTermsAmountDate"
             style="@style/CommonDataRowContentStyle"
             android:layout_alignParentRight="true"
             android:layout_centerVertical="true"
             android:text="520410" />
     </RelativeLayout>
     
-    <!-- 未付款金额 -->
+    <!-- 付款金额 -->
     <RelativeLayout style="@style/CommonDataRowStyle" >
 
         <TextView
@@ -32,10 +30,10 @@
             style="@style/CommonDataRowTitleStyle"
             android:layout_alignParentLeft="true"
             android:layout_centerVertical="true"
-            android:text="@string/contract_UnpaidAmount" />
+            android:text="@string/contract_payAmouontPaid" />
 
         <TextView
-            android:id="@+id/contract_terms_unpaidAmount"
+            android:id="@+id/txtV_contractTermspaidAmount"
             style="@style/CommonDataRowContentStyle"
             android:layout_alignParentRight="true"
             android:layout_centerVertical="true"
