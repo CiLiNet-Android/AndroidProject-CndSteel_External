@@ -83,7 +83,7 @@
                     android:textSize="12sp" />
 
                 <TextView
-                    android:id="@+id/SysInformDetailIssuerValue"
+                    android:id="@+id/SysInformDetailAuthorValue"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_toRightOf="@id/SysInformDetailIssuer"

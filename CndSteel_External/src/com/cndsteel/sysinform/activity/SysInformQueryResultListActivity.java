@@ -5,6 +5,7 @@ import java.util.ArrayList;
 import java.util.LinkedHashMap;
 
 import android.content.DialogInterface;
+import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
@@ -40,6 +41,8 @@ public class SysInformQueryResultListActivity extends FrameActivity implements O
 	private SysInformQueryResultListAdapter mSysInformQueryResultListAdapter;
 
 	private ImageButton imgBtn_topRight;
+	
+	private SysInformQueryResultListBean sysInformQueryResultListBean;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -69,9 +72,11 @@ public class SysInformQueryResultListActivity extends FrameActivity implements O
 		_webServiceThread.start();
 	}
 	
+	
+	//  Handler
 	private static class MyHandler extends Handler {
 		
-		private WeakReference _mWeakReference;
+		private WeakReference<SysInformQueryResultListActivity> _mWeakReference;
 		
 		public MyHandler(SysInformQueryResultListActivity activity) {
 			
@@ -90,11 +95,11 @@ public class SysInformQueryResultListActivity extends FrameActivity implements O
 					
 					_mActivity.dismissProgressDialog();
 					
-					SysInformQueryResultListBean _sysInformQueryResultListBean = (SysInformQueryResultListBean)msg.obj;
+					_mActivity.sysInformQueryResultListBean = (SysInformQueryResultListBean)msg.obj;
 					
-					if(_sysInformQueryResultListBean.code > 0){
+					if(_mActivity.sysInformQueryResultListBean.code > 0){
 						
-						_mActivity.mSysInformQueryResultListAdapter.refreshDatas(_sysInformQueryResultListBean.mSysInformBeanList);
+						_mActivity.mSysInformQueryResultListAdapter.refreshDatas(_mActivity.sysInformQueryResultListBean.mSysInformBeanList);
 						
 					}else {
 						
@@ -145,31 +150,33 @@ public class SysInformQueryResultListActivity extends FrameActivity implements O
 		mSysInformQueryResultListAdapter = new SysInformQueryResultListAdapter(getApplicationContext());
 		mSysInformQueryResultListAdapter.initDatas(new ArrayList<SysInformBean>());
 		listV_sysInformQueryResultList.setAdapter(mSysInformQueryResultListAdapter);
+		
+		listV_sysInformQueryResultList.setOnItemClickListener(this);
 
-	}
-
-	private void initListView() {
-
-//		viewList = new ArrayList<SysInform>();
-//		viewList.add(new SysInform("系统通知:XXXXXXXXXXXXX", "2014/06/27"));
-//		viewList.add(new SysInform("系统通知:XXXXXXXXXXXXX", "2014/06/27"));
-//		viewList.add(new SysInform("系统通知:XXXXXXXXXXXXX", "2014/06/27"));
-//		viewList.add(new SysInform("系统通知:XXXXXXXXXXXXX", "2014/06/27"));
-//		viewList.add(new SysInform("系统通知:XXXXXXXXXXXXX", "2014/06/27"));
-//		viewList.add(new SysInform("系统通知:XXXXXXXXXXXXX", "2014/06/27"));
-//		viewList.add(new SysInform("系统通知:XXXXXXXXXXXXX", "2014/06/27"));
-//		viewList.add(new SysInform("系统通知:XXXXXXXXXXXXX", "2014/06/27"));
-//		viewList.add(new SysInform("系统通知:XXXXXXXXXXXXX", "2014/06/27"));
-//		viewList.add(new SysInform("系统通知:XXXXXXXXXXXXX", "2014/06/27"));
-//
-//		itemListView = (ListView) findViewById(R.id.contract_listView);
-//		itemListView.setAdapter(new SysInformAdapter(this, viewList));
-//		itemListView.setOnItemClickListener(this);
 	}
 
 	@Override
 	public void onItemClick(AdapterView<?> parent, View view, int position,long id) {
-		startActivity(SysInformDetailActivity.class);
+		
+		Intent _intent = new Intent(this, SysInformResultDetailActivity.class);
+		
+		String _title = sysInformQueryResultListBean.mSysInformBeanList.get(position - 1).title.toString();
+//		String _cateName = sysInformQueryResultListBean.mSysInformBeanList.get(position - 1).cateName.toString();
+		String _date = sysInformQueryResultListBean.mSysInformBeanList.get(position - 1).date.toString();
+		String _author = sysInformQueryResultListBean.mSysInformBeanList.get(position - 1).author.toString();
+		String _content = sysInformQueryResultListBean.mSysInformBeanList.get(position - 1).content.toString();
+		
+		Bundle _bundle = new Bundle();
+		
+		_bundle.putString("title", _title);
+		_bundle.putString("cateName", "??");
+		_bundle.putString("date", _date);
+		_bundle.putString("author", _author);
+		_bundle.putString("content", _content);
+		_intent.putExtras(_bundle);
+		
+		startActivity(_intent);
+		
 	}
 
 }
