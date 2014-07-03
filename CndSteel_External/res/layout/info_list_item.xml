@@ -1,38 +1,41 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content" >
-    
-    <RelativeLayout 
-        style="@style/CommonDataRowStyle"
-        android:padding="10dp">
+    android:layout_height="match_parent" >
 
-    <TextView 
-        android:id="@+id/txtV_infoQueryResultListItemTitle"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:textColor="@color/black"/>
-    <TextView 
-        android:id="@+id/txtV_infoQueryResultListItemDate"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/txtV_infoQueryResultListItemTitle"/>
-    
-    <TextView 
-        android:id="@+id/txtV_infoQueryResultListItemName"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="15dp"
-        android:layout_below="@id/txtV_infoQueryResultListItemTitle"
-        android:layout_toRightOf="@id/date"/>
-    
-    <TextView 
-        android:id="@+id/txtV_infoQueryResultListItemComments"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/txtV_infoQueryResultListItemTitle"
-        android:layout_alignParentRight="true"
-        android:textColor="@color/navajowhite"/>
-         
-    </RelativeLayout>   
+    <RelativeLayout
+        style="@style/CommonDataRowStyle"
+        android:layout_centerVertical="true"
+        android:padding="8dp" >
+
+        <TextView
+            android:id="@+id/txtV_infoQueryResultListItemTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="18sp"
+            android:textColor="@color/black" />
+
+        <TextView
+            android:id="@+id/txtV_infoQueryResultListItemDate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/txtV_infoQueryResultListItemTitle" />
+
+        <TextView
+            android:id="@+id/txtV_infoQueryResultListItemName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/txtV_infoQueryResultListItemTitle"
+            android:layout_marginLeft="15dp"
+            android:layout_toRightOf="@id/txtV_infoQueryResultListItemDate" />
+`
+        <TextView
+            android:id="@+id/txtV_infoQueryResultListItemComments"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_below="@id/txtV_infoQueryResultListItemTitle"
+            android:textColor="@color/lightsalmon" />
+    </RelativeLayout>
+
 </RelativeLayout>

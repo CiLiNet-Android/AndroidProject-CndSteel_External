@@ -199,6 +199,8 @@
     <string name="Issuer">发布人：</string>
     <string name="userName">用户名</string>
     
+    <string name="replyCount">评论</string>
+    
     <!-- 通知详情 -->
     <string name="SysInformDetail">通知详情</string>
  	

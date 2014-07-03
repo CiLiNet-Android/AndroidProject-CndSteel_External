@@ -44,7 +44,7 @@ public class InfoQueryResultListAdapter extends AbsBaseAdapter<InfoBean> {
 		_viewHolder.txtV_infoQueryResultListItemTitle.setText(_infoBean.title);
 		_viewHolder.txtV_infoQueryResultListItemDate.setText(_infoBean.date);
 		_viewHolder.txtV_infoQueryResultListItemName.setText(_infoBean.author);
-		_viewHolder.txtV_infoQueryResultListItemComments.setText(_infoBean.replyCount);
+		_viewHolder.txtV_infoQueryResultListItemComments.setText(_infoBean.replyCount + getContext().getResources().getString(R.string.replyCount));
 		
 		return convertView;
 	}
