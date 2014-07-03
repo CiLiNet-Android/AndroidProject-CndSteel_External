@@ -6,7 +6,11 @@
     <RelativeLayout
         style="@style/CommonDataRowStyle"
         android:layout_centerVertical="true"
-        android:padding="8dp" >
+        android:paddingLeft="15dp"
+        android:paddingRight="15dp"
+  		android:paddingTop="8dp"
+  		android:paddingBottom="8dp"
+  		android:layout_height="75dp">
 
         <TextView
             android:id="@+id/txtV_infoQueryResultListItemTitle"
@@ -26,8 +30,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_below="@id/txtV_infoQueryResultListItemTitle"
-            android:layout_marginLeft="15dp"
-            android:layout_toRightOf="@id/txtV_infoQueryResultListItemDate" />
+            android:layout_centerHorizontal="true" />
 `
         <TextView
             android:id="@+id/txtV_infoQueryResultListItemComments"

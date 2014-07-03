@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/wheel_layout_bg"
+    android:orientation="vertical" >
+
+    <!-- 标题部分 -->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+
+        <TextView
+            android:id="@+id/txtV_textPickerDialogTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="15dp"
+            android:textColor="#33CCFF"
+            android:textSize="14sp" />
+
+        <Button
+            android:id="@+id/btn_textPickerDialogDone"
+            android:layout_width="80dp"
+            android:layout_height="40dp"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="5dp"
+            android:layout_marginTop="5dp"
+            android:text="@string/ButtonTextDone"
+            android:textColor="#000000"
+            android:textSize="14sp" />
+        
+    </RelativeLayout>
+    
+    <!-- 文字选择部分 -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="5dp"
+        android:orientation="horizontal"
+        android:layout_marginBottom="5dp"
+        android:layout_marginLeft="3dp"
+        android:layout_marginRight="3dp">
+
+        <!-- 文字 -->
+        <com.cndsteel.framework.views.dialogs.wheelpicker.WheelView
+            android:id="@+id/wheelV_textPicker"
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:layout_gravity="center"/>
+
+    </LinearLayout>
+
+</LinearLayout>

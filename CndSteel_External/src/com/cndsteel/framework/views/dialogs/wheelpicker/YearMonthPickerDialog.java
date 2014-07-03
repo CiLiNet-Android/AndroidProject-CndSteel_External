@@ -33,7 +33,7 @@ public class YearMonthPickerDialog extends Dialog implements OnWheelScrollListen
 	/** 月选择器 **/
 	private WheelView wheelV_monthPicker;
 	/** 日选择器 **/
-	private WheelView wheelV_dayPicker;
+	//private WheelView wheelV_dayPicker;
 	
 	/** 对话框标题 **/
 	private TextView txtV_datePickerDialogTitle;
