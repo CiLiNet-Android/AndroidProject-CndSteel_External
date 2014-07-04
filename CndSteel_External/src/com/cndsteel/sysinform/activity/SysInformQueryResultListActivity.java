@@ -53,20 +53,14 @@ public class SysInformQueryResultListActivity extends FrameActivity implements O
 	private ImageButton imgBtn_topRight;
 	
 	private SysInformQueryResultListBean sysInformQueryResultListBean;
-	
-	private WebServiceThread _webServiceThread;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-
 		setTopBarTitle(R.string.appModule_sysInform);
-
 		appendFrameworkCenter(R.layout.activity_sysinform_query);
 
 		init();
-		
-		loadDatas(Constants.HANDLER_MSG_DATA_LOAD_SUCCESS);
 
 	}
 
@@ -74,6 +68,7 @@ public class SysInformQueryResultListActivity extends FrameActivity implements O
 
 		initVariables();
 		initViews();
+		loadDatas(Constants.HANDLER_MSG_DATA_LOAD_SUCCESS);
 
 	}
 
@@ -112,11 +107,10 @@ public class SysInformQueryResultListActivity extends FrameActivity implements O
 		
 		LinkedHashMap<String, String> _webServiceRequestParams = new LinkedHashMap<String, String>();		
 		
-		
 		if(msgWhat == HANDLER_LOAD_MSG_CATE){
 			
 			_webServiceRequestParams.put(QueryParams.QUERY_PARAM_SESSION_ID, mQueryParamSessionId);
-			_webServiceThread = new WebServiceThread(new LoadSysMsgCateBean(), _webServiceRequestParams, myHandler, msgWhat);
+			mWebServiceThread = new WebServiceThread(new LoadSysMsgCateBean(), _webServiceRequestParams, myHandler, msgWhat);
 			
 		}else {
 			
@@ -128,10 +122,10 @@ public class SysInformQueryResultListActivity extends FrameActivity implements O
 			_webServiceRequestParams.put(QueryParams.QUERY_PARAM_PAGE_INDEX, String.valueOf(mQueryParamPageIndex));
 			_webServiceRequestParams.put(QueryParams.QUERY_PARAM_PAGE_SIZE, String.valueOf(mQueryParamPageSize));
 			_webServiceRequestParams.put(QueryParams.QUERY_PARAM_SESSION_ID, mQueryParamSessionId);
-			_webServiceThread = new WebServiceThread(new SysInformQueryResultListBean(), _webServiceRequestParams, myHandler, msgWhat);
+			mWebServiceThread = new WebServiceThread(new SysInformQueryResultListBean(), _webServiceRequestParams, myHandler, msgWhat);
 		}
 		
-		_webServiceThread.start();
+		mWebServiceThread.start();
 	
 	}
 
