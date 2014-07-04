@@ -65,7 +65,7 @@
         
         
         <!-- contract(合同) -->
-        <activity android:name="com.cndsteel.contract.activity.ContractActivity" />
+        <activity android:name="com.cndsteel.contract.activity.ContractQueryActivity" />
         <activity android:name="com.cndsteel.contract.activity.ContractQueryResultActivity" />
         <activity android:name="com.cndsteel.contract.activity.ContractDetailActivity" />
         
