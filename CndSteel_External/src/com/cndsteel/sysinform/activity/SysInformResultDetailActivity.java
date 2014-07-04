@@ -2,16 +2,12 @@ package com.cndsteel.sysinform.activity;
 
 import android.os.Bundle;
 import android.widget.TextView;
+
 import com.cndsteel.R;
 import com.cndsteel.framework.activity.FrameActivity;
+import com.cndsteel.sysinform.bean.SysInformBean;
 
 public class SysInformResultDetailActivity extends FrameActivity {	
-	
-	private TextView SysInformDetailTitle;
-	private TextView SysInformDetailCategoryValue;
-	private TextView SysInformDetailTimeValue;
-	private TextView SysInformDetailAuthorValue;
-	private TextView SysInformDetailContentValue;
 	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -33,22 +29,17 @@ public class SysInformResultDetailActivity extends FrameActivity {
 
 	private void initView() {
 		
-		Bundle _result = getIntent().getExtras();
+		SysInformBean _sysInformBean = (SysInformBean) getIntent().getSerializableExtra("sysInformBean");
 
-		SysInformDetailTitle = (TextView) findViewById(R.id.SysInformDetailTitle);
-		SysInformDetailTitle.setText(_result.getString("title"));
+		((TextView) findViewById(R.id.SysInformDetailTitle)).setText(_sysInformBean.title);
 		
-		SysInformDetailCategoryValue = (TextView) findViewById(R.id.SysInformDetailCategoryValue);
-		SysInformDetailCategoryValue.setText(_result.getString("cateName"));
+		((TextView) findViewById(R.id.SysInformDetailCategoryValue)).setText(_sysInformBean.title);
 		
-		SysInformDetailTimeValue = (TextView) findViewById(R.id.SysInformDetailTimeValue);
-		SysInformDetailTimeValue.setText(_result.getString("date"));
+		((TextView) findViewById(R.id.SysInformDetailTimeValue)).setText(_sysInformBean.date);;
 		
-		SysInformDetailAuthorValue = (TextView) findViewById(R.id.SysInformDetailAuthorValue);
-		SysInformDetailAuthorValue.setText(_result.getString("author"));
+		((TextView) findViewById(R.id.SysInformDetailAuthorValue)).setText(_sysInformBean.author);;
 		
-		SysInformDetailContentValue = (TextView) findViewById(R.id.SysInformDetailContentValue);
-		SysInformDetailContentValue.setText(_result.getString("content"));
+		((TextView) findViewById(R.id.SysInformDetailContentValue)).setText(_sysInformBean.content);;
 
 		
 	}

@@ -18,6 +18,7 @@ import android.widget.ListView;
 import com.cndsteel.R;
 import com.cndsteel.framework.activity.FrameActivity;
 import com.cndsteel.framework.bean.LoadMicroMessageCateBean;
+import com.cndsteel.framework.bean.LoadSysMsgCateBean;
 import com.cndsteel.framework.bean.MicroMessageCateBean;
 import com.cndsteel.framework.constant.Constants;
 import com.cndsteel.framework.constant.QueryParams;
@@ -89,9 +90,12 @@ public class InfoQueryResultListActivity extends FrameActivity implements OnItem
 		LinkedHashMap<String, String> _webServiceRequestParams = new LinkedHashMap<String, String>();
 		
 		if(msgWhat == HANDLER_MSG_LOAD_MSG_CATE){
+			
 			_webServiceRequestParams.put(QueryParams.QUERY_PARAM_SESSION_ID, mQueryParamSessionId);
-			mWebServiceThread = new WebServiceThread(new LoadMicroMessageCateBean(), _webServiceRequestParams, mTheHandler, msgWhat);
+			mWebServiceThread = new WebServiceThread(new LoadSysMsgCateBean(), _webServiceRequestParams, mTheHandler, msgWhat);
+			
 		}else {
+			
 			if(msgWhat == Constants.HANDLER_MSG_DATA_LOAD_SUCCESS){
 				showLoadingProgressDialog();
 			}

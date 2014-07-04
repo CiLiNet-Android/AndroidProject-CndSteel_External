@@ -204,6 +204,7 @@
     
     <!-- 通知详情 -->
     <string name="SysInformDetail">通知详情</string>
+    <string name="SysInformCategroy">通知分类</string>
  	
  	<!-- 公用 -->
  	<string name="DialogMsgNoDatas">未找到符合查询条件的%s&#8230;</string>
