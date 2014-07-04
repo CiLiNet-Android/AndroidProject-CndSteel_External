@@ -7,7 +7,7 @@ import com.cndsteel.R;
 import com.cndsteel.framework.activity.FrameActivity;
 import com.cndsteel.sysinform.bean.SysInformBean;
 
-public class SysInformResultDetailActivity extends FrameActivity {	
+public class SysInformQueryResultDetailActivity extends FrameActivity {	
 	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {

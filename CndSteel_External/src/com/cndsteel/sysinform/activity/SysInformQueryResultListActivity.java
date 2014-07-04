@@ -247,7 +247,7 @@ public class SysInformQueryResultListActivity extends FrameActivity implements O
 	@Override
 	public void onItemClick(AdapterView<?> parent, View view, int position,long id) {
 		
-		Intent _intent = new Intent(this, SysInformResultDetailActivity.class);
+		Intent _intent = new Intent(this, SysInformQueryResultDetailActivity.class);
 		
 		SysInformBean _sysInformBean = (SysInformBean)parent.getAdapter().getItem(position);
 		

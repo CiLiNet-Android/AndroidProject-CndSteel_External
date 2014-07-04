@@ -154,10 +154,10 @@
         
         <!-- 票据 -->
         <activity android:name="com.cndsteel.bill.activity.BillActivity">
-           <!--  <intent-filter>
+            <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter> -->
+            </intent-filter>
         </activity>
         <activity android:name="com.cndsteel.bill.activity.BillContractInvoiceQueryResultActivity">
             <!-- <intent-filter>
@@ -200,12 +200,12 @@
         
         <!-- 系统通知 -->
         <activity android:name="com.cndsteel.sysinform.activity.SysInformQueryResultListActivity">
-            <intent-filter>
+           <!--  <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
+            </intent-filter> -->
         </activity>
-        <activity android:name="com.cndsteel.sysinform.activity.SysInformResultDetailActivity">
+        <activity android:name="com.cndsteel.sysinform.activity.SysInformQueryResultDetailActivity">
             <!-- <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
