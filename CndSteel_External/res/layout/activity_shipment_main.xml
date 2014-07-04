@@ -69,10 +69,9 @@
     </LinearLayout>
     
     <android.support.v4.view.ViewPager
-        android:id="@+id/shipmentViewPager"
+        android:id="@+id/vPager_shipmentQuery"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_gravity="center" >
-    </android.support.v4.view.ViewPager>
+        android:layout_gravity="center" />
 
 </LinearLayout>

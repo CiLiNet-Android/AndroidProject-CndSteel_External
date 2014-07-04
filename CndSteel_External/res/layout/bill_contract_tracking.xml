@@ -17,7 +17,7 @@
             android:text="@string/contract_number" />
 
         <EditText
-            android:id="@+id/txtV_contractTrackingNum"
+            android:id="@+id/edTxt_contractTrackingNum"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_alignParentRight="true"
@@ -48,8 +48,7 @@
             style="@style/CommonDataRowContentStyle"
             android:layout_alignParentRight="true"
             android:layout_centerVertical="true"
-            android:layout_marginRight="25dp"
-            android:text="2014/06" />
+            android:layout_marginRight="25dp"/>
 
         <ImageButton
             android:layout_width="15dp"

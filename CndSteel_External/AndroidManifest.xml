@@ -153,7 +153,7 @@
         </activity>
         
         <!-- 票据 -->
-        <activity android:name="com.cndsteel.bill.activity.BillActivity">
+        <activity android:name="com.cndsteel.bill.activity.BillQueryActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
@@ -171,7 +171,7 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter> -->
         </activity>
-        <activity android:name="com.cndsteel.bill.activity.BillContractTrackingQueryResultActivity">
+        <activity android:name="com.cndsteel.bill.activity.BillContractTrackingQueryResultListActivity">
             <!-- <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />

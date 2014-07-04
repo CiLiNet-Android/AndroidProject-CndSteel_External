@@ -41,7 +41,7 @@ public class ShipmentDetailAsInvoiceAdapter extends AbsBaseAdapter<ShipmentAsInv
 		_holder.stock_Standard.setText(_item.standard);
 		_holder.stock_Tonnage.setText(_item.tonnage);
 		_holder.stock_NumberOfPackages.setText(_item.numberOfPackages);
-		_holder.stock_Value.setText(_item.money);
+		//_holder.stock_Value.setText(_item.money);
 		
 		_holder.stock_Value.setVisibility(View.VISIBLE);
 		_holder.title_Hide.setText(getContext().getResources().getString(R.string.Money));

@@ -250,7 +250,7 @@ public class StockQueryActivity extends FrameActivity implements OnClickListener
 					Bundle _queryParams = new Bundle();
 					_queryParams.putString(QueryParams.QUERY_PARAM_STOCK_DATE_FROM, mStockQueryParamStoreDateForm);
 					_queryParams.putString(QueryParams.QUERY_PARAM_STOCK_DATE_TO, mStockQueryParamStoreDateTo);
-					_queryParams.putString(QueryParams.QUERY_PARAM_STOCK_WARE_ID, mStockQueryParamWareHouseId);
+					_queryParams.putString(QueryParams.QUERY_PARAM_WARE_ID, mStockQueryParamWareHouseId);
 					_intent.putExtras(_queryParams);
 					
 					startActivity(_intent);
@@ -329,7 +329,7 @@ public class StockQueryActivity extends FrameActivity implements OnClickListener
 					_queryParams.putString(QueryParams.QUERY_PARAM_STOCK_DATE_FROM, mContractQueryParamStoreDateForm);
 					_queryParams.putString(QueryParams.QUERY_PARAM_STOCK_DATE_TO, mContractQueryParamStoreDateTo);
 					_queryParams.putString(QueryParams.QUERY_PARAM_STOCK_CONCODE, mContractQueryParamContractCode);
-					_queryParams.putString(QueryParams.QUERY_PARAM_STOCK_WARE_ID, mContractQueryParamWareHouseId);
+					_queryParams.putString(QueryParams.QUERY_PARAM_WARE_ID, mContractQueryParamWareHouseId);
 					_intent.putExtras(_queryParams);
 					
 					startActivity(_intent);
@@ -425,7 +425,7 @@ public class StockQueryActivity extends FrameActivity implements OnClickListener
 					_queryParams.putString(QueryParams.QUERY_PARAM_STOCK_DATE_TO, mGoodsQueryParamStoreDateTo);
 					_queryParams.putString(QueryParams.QUERY_PARAM_PNAME_ID, mGoodsQueryParamPNameId);
 					_queryParams.putString(QueryParams.QUERY_PARAM_MATERIAL_ID, mGoodsQueryParamMaterialId);
-					_queryParams.putString(QueryParams.QUERY_PARAM_STOCK_WARE_ID, mGoodsQueryParamWareHouseId);
+					_queryParams.putString(QueryParams.QUERY_PARAM_WARE_ID, mGoodsQueryParamWareHouseId);
 					_intent.putExtras(_queryParams);
 					
 					startActivity(_intent);

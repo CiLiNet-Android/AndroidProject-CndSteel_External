@@ -65,7 +65,7 @@ public class StockAccordingStockQueryResultDetailActivity extends FrameActivity 
 		
 		mQueryParamStoreDateFrom = _intent.getStringExtra(QueryParams.QUERY_PARAM_STOCK_DATE_FROM);
 		mQueryParamStoreDateTo = _intent.getStringExtra(QueryParams.QUERY_PARAM_STOCK_DATE_TO);
-		mQueryParamWareId = _intent.getStringExtra(QueryParams.QUERY_PARAM_STOCK_WARE_ID);
+		mQueryParamWareId = _intent.getStringExtra(QueryParams.QUERY_PARAM_WARE_ID);
 		mQueryParamPNameId = _intent.getStringExtra(QueryParams.QUERY_PARAM_STOCK_PNAME_ID);
 		mQueryParamMaterialId = _intent.getStringExtra(QueryParams.QUERY_PARAM_STOCK_MATERIAL_ID);
 		mQueryParamSpec = _intent.getStringExtra(QueryParams.QUERY_PARAM_STOCK_SPEC);
@@ -108,7 +108,7 @@ public class StockAccordingStockQueryResultDetailActivity extends FrameActivity 
 		LinkedHashMap<String, String> _webServiceRequestParams = new LinkedHashMap<String, String>();
 		_webServiceRequestParams.put(QueryParams.QUERY_PARAM_STOCK_DATE_FROM, mQueryParamStoreDateFrom);
 		_webServiceRequestParams.put(QueryParams.QUERY_PARAM_STOCK_DATE_TO, mQueryParamStoreDateTo);
-		_webServiceRequestParams.put(QueryParams.QUERY_PARAM_STOCK_WARE_ID, mQueryParamWareId);
+		_webServiceRequestParams.put(QueryParams.QUERY_PARAM_WARE_ID, mQueryParamWareId);
 		_webServiceRequestParams.put(QueryParams.QUERY_PARAM_STOCK_PNAME_ID, mQueryParamPNameId);
 		_webServiceRequestParams.put(QueryParams.QUERY_PARAM_STOCK_MATERIAL_ID, mQueryParamMaterialId);
 		_webServiceRequestParams.put(QueryParams.QUERY_PARAM_STOCK_SPEC, mQueryParamSpec);
@@ -139,7 +139,7 @@ public class StockAccordingStockQueryResultDetailActivity extends FrameActivity 
 		StockBean _stockBean = (StockBean)parent.getAdapter().getItem(position);
 		
 		Intent _intent = new Intent(this,StockQueryResultDetailListActivity.class);
-		_intent.putExtra(QueryParams.QUERY_PARAM_STOCK_WARE_ID, mQueryParamWareId);
+		_intent.putExtra(QueryParams.QUERY_PARAM_WARE_ID, mQueryParamWareId);
 		_intent.putExtra(QueryParams.QUERY_PARAM_STOCK_STORE_DATE, _stockBean.storeDate);
 		_intent.putExtra(QueryParams.QUERY_PARAM_STOCK_PNAME_ID, mQueryParamPNameId);
 		_intent.putExtra(QueryParams.QUERY_PARAM_STOCK_MATERIAL_ID, mQueryParamMaterialId);

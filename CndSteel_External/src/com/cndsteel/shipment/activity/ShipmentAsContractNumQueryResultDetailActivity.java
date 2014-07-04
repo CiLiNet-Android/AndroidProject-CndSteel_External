@@ -10,7 +10,7 @@ import com.cndsteel.framework.activity.FrameActivity;
 import com.cndsteel.shipment.adapter.ShipmentDetailAsInvoiceAdapter;
 import com.cndsteel.shipment.bean.ShipmentAsInvoice;
 
-public class ShipmentDetailAsContract extends FrameActivity {
+public class ShipmentAsContractNumQueryResultDetailActivity extends FrameActivity {
 	
 	private ListView shipmentDetailListview;
 

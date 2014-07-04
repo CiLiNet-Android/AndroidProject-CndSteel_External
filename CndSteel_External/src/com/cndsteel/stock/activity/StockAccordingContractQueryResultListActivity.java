@@ -20,8 +20,6 @@ import com.cndsteel.framework.webService.WebServiceThread;
 import com.cndsteel.stock.adapter.StockAccordingContractQueryResultListAdapter;
 import com.cndsteel.stock.bean.StockAccordingContractQueryResultBean;
 import com.cndsteel.stock.bean.StockAccordingContractQueryResultListBean;
-import com.cndsteel.stock.bean.StockAccordingStockQueryResultBean;
-import com.cndsteel.stock.bean.StockAccordingStockQueryResultListBean;
 import com.cndsteel.stock.bean.StockBean;
 import com.handmark.pulltorefresh.library.PullToRefreshBase;
 import com.handmark.pulltorefresh.library.PullToRefreshBase.Mode;
@@ -65,7 +63,7 @@ public class StockAccordingContractQueryResultListActivity extends FrameActivity
 		_webServiceRequestParams.put(QueryParams.QUERY_PARAM_STOCK_DATE_FROM, mQueryParamStoreDateFrom);
 		_webServiceRequestParams.put(QueryParams.QUERY_PARAM_STOCK_DATE_TO, mQueryParamStoreDateTo);
 		_webServiceRequestParams.put(QueryParams.QUERY_PARAM_STOCK_CONCODE, mQueryParamConCode);
-		_webServiceRequestParams.put(QueryParams.QUERY_PARAM_STOCK_WARE_ID, mQueryParamWareId);
+		_webServiceRequestParams.put(QueryParams.QUERY_PARAM_WARE_ID, mQueryParamWareId);
 		_webServiceRequestParams.put(QueryParams.QUERY_PARAM_PAGE_INDEX, String.valueOf(mQueryParamPageIndex));
 		_webServiceRequestParams.put(QueryParams.QUERY_PARAM_PAGE_SIZE, String.valueOf(mQueryParamPageSize));
 		_webServiceRequestParams.put(QueryParams.QUERY_PARAM_SESSION_ID, mQueryParamSessionId);
@@ -80,7 +78,7 @@ public class StockAccordingContractQueryResultListActivity extends FrameActivity
 		mQueryParamStoreDateFrom = _intent.getStringExtra(QueryParams.QUERY_PARAM_STOCK_DATE_FROM);
 		mQueryParamStoreDateTo = _intent.getStringExtra(QueryParams.QUERY_PARAM_STOCK_DATE_TO);
 		mQueryParamConCode = _intent.getStringExtra(QueryParams.QUERY_PARAM_STOCK_CONCODE);
-	    mQueryParamWareId = _intent.getStringExtra(QueryParams.QUERY_PARAM_STOCK_WARE_ID);
+	    mQueryParamWareId = _intent.getStringExtra(QueryParams.QUERY_PARAM_WARE_ID);
 	    
 		mQueryParamPageIndex = 1;
 		mQueryParamPageSize = Constants.DEFAULT_PAGE_SIZE;
@@ -133,7 +131,7 @@ public class StockAccordingContractQueryResultListActivity extends FrameActivity
 		_intent.putExtra(QueryParams.QUERY_PARAM_STOCK_DATE_FROM, mQueryParamStoreDateFrom);
 		_intent.putExtra(QueryParams.QUERY_PARAM_STOCK_DATE_TO, mQueryParamStoreDateTo);
 		_intent.putExtra(QueryParams.QUERY_PARAM_STOCK_CON_ID, _conId);
-		_intent.putExtra(QueryParams.QUERY_PARAM_STOCK_WARE_ID, _stockBean.wareId);
+		_intent.putExtra(QueryParams.QUERY_PARAM_WARE_ID, _stockBean.wareId);
 		_intent.putExtra(QueryParams.QUERY_PARAM_STOCK_PNAME_ID, _stockBean.pnameId);
 		_intent.putExtra(QueryParams.QUERY_PARAM_STOCK_MATERIAL_ID, _stockBean.materialId);
 		_intent.putExtra(QueryParams.QUERY_PARAM_STOCK_SPEC, _stockBean.spec);

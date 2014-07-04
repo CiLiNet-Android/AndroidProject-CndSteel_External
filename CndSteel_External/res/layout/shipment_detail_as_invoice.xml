@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:pullToRefresh="http://schemas.android.com/apk/res/com.cndsteel"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/white_bg"
@@ -25,8 +26,7 @@
                 android:id="@+id/ShipmentDetailAsInvoice_InvoiceNum"
                 style="@style/CommonDataRowTitleStyle"
                 android:layout_marginLeft="15dp"
-                android:layout_weight="1"
-                android:text="1256sd8ewf56addd" />
+                android:layout_weight="1"/>
         </LinearLayout>
         <LinearLayout
             android:layout_width="match_parent"
@@ -42,8 +42,7 @@
                 android:id="@+id/ShipmentDetailAsInvoice_Warehouse"
                 style="@style/CommonDataRowTitleStyle"
                 android:layout_marginLeft="15dp"
-                android:layout_weight="1"
-                android:text="3号仓" />
+                android:layout_weight="1"/>
         </LinearLayout>
         <LinearLayout
             android:layout_width="match_parent"
@@ -58,8 +57,7 @@
                 android:id="@+id/ShipmentDetailAsInvoice_InvoiceDate"
                 style="@style/CommonDataRowTitleStyle"
                 android:layout_marginLeft="15dp"
-                android:layout_weight="1"
-                android:text="2014/06/30" />
+                android:layout_weight="1" />
         </LinearLayout>
         
     </LinearLayout>
@@ -69,35 +67,15 @@
         android:layout_height="3dp"
         android:background="@drawable/wave" />
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_margin="15dp"
-        android:background="@null"
-        android:gravity="center_vertical"
-        android:orientation="horizontal" >
-
-        <TextView
-            style="@style/CommonDataRowTitleStyle"
-            android:layout_width="wrap_content"
-            android:text="@string/contract_num" />
-
-        <TextView
-            android:id="@+id/ShipmentDetailAsInvoice_contractNum"
-            style="@style/CommonDataRowTitleStyle"
-            android:layout_width="match_parent"
-            android:text="322156489" />
-    </LinearLayout>
-
-    <ListView
-        android:id="@+id/shipmentDetailListview"
+    
+    <com.handmark.pulltorefresh.library.PullToRefreshExpandableListView
+        android:id="@+id/listV_shipmentDetailListview"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:background="@color/white"
         android:cacheColorHint="#00000000"
         android:divider="@color/darkgrey"
-        android:dividerHeight="1px"
-        android:scrollbars="none" >
-    </ListView>
+        android:scrollbars="none" 
+        pullToRefresh:ptrHeaderTextColor="@color/grey"/>
 
 </LinearLayout>

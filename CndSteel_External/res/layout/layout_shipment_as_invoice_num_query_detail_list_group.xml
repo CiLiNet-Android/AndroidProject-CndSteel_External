@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+   	style="@style/CommonDataRowStyle"
+    android:background="#eaeaea"
+    android:gravity="center_vertical"
+    android:orientation="horizontal" >
+
+    <TextView
+        style="@style/CommonDataRowTitleStyle"
+        android:layout_width="wrap_content"
+        android:text="@string/contract_num" />
+
+    <TextView
+        android:id="@+id/ShipmentDetailAsInvoice_contractNum"
+        style="@style/CommonDataRowTitleStyle"
+        android:layout_width="match_parent"
+        android:text="322156489" />
+
+</LinearLayout>

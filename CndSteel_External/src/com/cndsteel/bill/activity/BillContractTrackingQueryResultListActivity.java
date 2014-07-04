@@ -13,7 +13,7 @@ import com.cndsteel.bill.adapter.BillContractTrackingQueryResultAdapter;
 import com.cndsteel.bill.bean.Bill;
 import com.cndsteel.framework.activity.FrameActivity;
 
-public class BillContractTrackingQueryResultActivity extends FrameActivity implements OnItemClickListener {
+public class BillContractTrackingQueryResultListActivity extends FrameActivity implements OnItemClickListener {
 	
 	private ListView viewList;
 	

@@ -73,12 +73,17 @@
             android:layout_centerVertical="true"
             android:text="@string/shipment_invoiceNum"/>
         
-        <TextView 
-            android:id="@+id/txtV_shipment_invoiceNum"
+        <EditText 
+            android:id="@+id/edTxt_shipment_invoiceNum"
             style="@style/CommonDataRowContentStyle"
+            android:textSize="18sp"
+            android:textColor="@color/grey"
+            android:layout_marginLeft="20dp"
+            android:background="@null"
+            android:gravity="right"
             android:layout_alignParentRight="true"
             android:layout_centerVertical="true"
-            android:text="25478965420325" />
+            android:hint="@string/please_input_shipment_NO"/>
 
         
     </RelativeLayout>

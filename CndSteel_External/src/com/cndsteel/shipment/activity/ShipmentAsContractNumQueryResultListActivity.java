@@ -13,7 +13,7 @@ import com.cndsteel.framework.activity.FrameActivity;
 import com.cndsteel.shipment.adapter.AsContractNumQueryResultAdapter;
 import com.cndsteel.shipment.bean.QueryResultItem;
 
-public class ShipmentAsContractNumQueryResultActivity extends FrameActivity implements OnItemClickListener{
+public class ShipmentAsContractNumQueryResultListActivity extends FrameActivity implements OnItemClickListener{
 	
 	private ListView ViewListView;
 
@@ -67,7 +67,7 @@ public class ShipmentAsContractNumQueryResultActivity extends FrameActivity impl
 	@Override
 	public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
 		
-		startActivity(ShipmentDetailAsContract.class);
+		startActivity(ShipmentAsContractNumQueryResultDetailActivity.class);
 		
 	}
 }

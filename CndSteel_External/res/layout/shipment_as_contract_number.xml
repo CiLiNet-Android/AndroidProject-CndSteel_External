@@ -73,12 +73,17 @@
             android:layout_centerVertical="true"
             android:text="@string/contract_number"/>
         
-        <TextView 
-            android:id="@+id/txtV_shipmentAsContractNum_contractNum"
+        <EditText 
+            android:id="@+id/edTxt_shipmentAsContractNum_contractNum"
             style="@style/CommonDataRowContentStyle"
+            android:textSize="18sp"
+            android:textColor="@color/grey"
+            android:layout_marginLeft="20dp"
+            android:background="@null"
+            android:gravity="right"
             android:layout_alignParentRight="true"
-            android:layout_centerVertical="true"
-            android:text="254789325" />
+            android:layout_centerVertical="true" 
+            android:hint="@string/contract_input_contractNum"/>
 
         
     </RelativeLayout>

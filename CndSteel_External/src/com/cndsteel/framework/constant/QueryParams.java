@@ -23,6 +23,8 @@ public interface QueryParams {
 	public static final String QUERY_PARAM_CON_MONTH = "conMonth";
 	public static final String QUERY_PARAM_CON_CODE = "conCode";
 	public static final String QUERY_PARAM_CON_ID = "conId";
+	public static final String QUERY_PARAM_WARE_ID = "wareId";
+	public static final String QUERY_PARAM_SPEC = "spec";
 
 	/**
 	 * 计划模块
@@ -36,7 +38,6 @@ public interface QueryParams {
 	 */
 	public static final String QUERY_PARAM_STOCK_DATE_FROM = "storeDateFrom";
 	public static final String QUERY_PARAM_STOCK_DATE_TO = "storeDateTo";
-	public static final String QUERY_PARAM_STOCK_WARE_ID = "wareId";
 	public static final String QUERY_PARAM_STOCK_CONCODE = "conCode";
 	public static final String QUERY_PARAM_STOCK_MATERIAL_ID = "materialId";
 	public static final String QUERY_PARAM_STOCK_PNAME_ID = "pnameId";
@@ -53,6 +54,19 @@ public interface QueryParams {
 	public static final String QUERY_PARAM_PAYMENT_BILL_NO = "billNO";
 	public static final String QUERY_PARAM_PAYMENT_PAY_ID = "payId";
 	
+	/**
+	 * 出仓
+	 */
+	public static final String QUERY_PARAM_SHIPMENT_SHIP_DATE_FROM = "shipDateFrom";
+	public static final String QUERY_PARAM_SHIPMENT_SHIP_DATE_TO = "shipDateTo";
+	public static final String QUERY_PARAM_SHIPMENT_SHIP_NO = "shipNO";
+	public static final String QUERY_PARAM_SHIPMENT_SHIP_ID = "shipId";
+	
+	/**
+	 * 票据
+	 */
+	public static final String QUERY_PARAM_BILL_CUSTOMER_STATUS = "customerStatus";
+	public static final String QUERY_PARAM_BILL_WZ_STATUS = "wzStatus";
 	
 	/**
 	 * 资讯

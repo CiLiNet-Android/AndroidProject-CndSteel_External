@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:pullToRefresh="http://schemas.android.com/apk/res/com.cndsteel"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical" >
+    
+    <com.handmark.pulltorefresh.library.PullToRefreshListView 
+        android:id="@+id/listV_shipmentAsInvoiceNumQueryResultList"
+       	android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:cacheColorHint="#00000000"
+        android:divider="#f5f5f5"
+        android:dividerHeight="1dp"  
+        pullToRefresh:ptrHeaderTextColor="@color/grey"/>
+    
+
+</LinearLayout>

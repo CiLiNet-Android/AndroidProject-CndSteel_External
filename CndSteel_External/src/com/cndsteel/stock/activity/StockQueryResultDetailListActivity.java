@@ -61,7 +61,7 @@ public class StockQueryResultDetailListActivity extends FrameActivity {
 		showLoadingProgressDialog();
 		
 		LinkedHashMap<String, String> _webServiceRequestParams = new LinkedHashMap<String, String>();
-		_webServiceRequestParams.put(QueryParams.QUERY_PARAM_STOCK_WARE_ID, mQueryParamWareId);
+		_webServiceRequestParams.put(QueryParams.QUERY_PARAM_WARE_ID, mQueryParamWareId);
 		_webServiceRequestParams.put(QueryParams.QUERY_PARAM_STOCK_STORE_DATE, DateUtils.getFormatDateTime(DateUtils.getDateFromString(mQueryParamStoreDate, "yyyy/MM/dd"), "yyyy-MM-dd"));
 		_webServiceRequestParams.put(QueryParams.QUERY_PARAM_STOCK_PNAME_ID, mQueryParamPNameId);
 		_webServiceRequestParams.put(QueryParams.QUERY_PARAM_STOCK_MATERIAL_ID, mQueryParamMaterialId);
@@ -87,7 +87,7 @@ public class StockQueryResultDetailListActivity extends FrameActivity {
 	private void initVariables(){
 		Intent _intent = getIntent();
 		
-		mQueryParamWareId = _intent.getStringExtra(QueryParams.QUERY_PARAM_STOCK_WARE_ID);
+		mQueryParamWareId = _intent.getStringExtra(QueryParams.QUERY_PARAM_WARE_ID);
 		mQueryParamStoreDate = _intent.getStringExtra(QueryParams.QUERY_PARAM_STOCK_STORE_DATE);
 		mQueryParamPNameId = _intent.getStringExtra(QueryParams.QUERY_PARAM_STOCK_PNAME_ID);
 		mQueryParamMaterialId = _intent.getStringExtra(QueryParams.QUERY_PARAM_STOCK_MATERIAL_ID);
