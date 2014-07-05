@@ -1,6 +1,7 @@
 package com.cndsteel.bill.activity;
 
 import java.util.ArrayList;
+import java.util.Calendar;
 import java.util.Date;
 
 import android.content.Intent;
@@ -21,6 +22,7 @@ import com.cndsteel.bill.enums.WzStatus;
 import com.cndsteel.framework.activity.FrameActivity;
 import com.cndsteel.framework.constant.QueryParams;
 import com.cndsteel.framework.utils.DateUtils;
+import com.cndsteel.framework.views.dialogs.wheelpicker.YearMonthPickerDialog;
 import com.cndsteel.framework.views.spinner.AbsSpinner;
 import com.cndsteel.framework.views.spinner.CndSteelSpinner;
 
@@ -31,9 +33,22 @@ public class BillQueryActivity extends FrameActivity implements OnClickListener,
 	
 	private static final String QUERY_PARAM_DATE_FORMAT = "yyyy-MM";
 	
+	private int mMinPickableYear = Calendar.getInstance().get(Calendar.YEAR) - 6;  //当前的年份-6
+	private int mMaxPickableYear = Calendar.getInstance().get(Calendar.YEAR) + 1;  //当前的年份+1
+	
 	private ViewPager vPager_billQuery;
 	
-	
+	/**
+	 * 合同开票页面
+	 */
+	private TextView txtV_contractDateStart;
+	private TextView txtV_contractDateEnd;
+	private EditText edTxt_contractNum;
+	private RelativeLayout lyot_contractDateStart;
+	private RelativeLayout lyot_contractDateEnd;
+	/**
+	 * 合同开票查询请求参数
+	 */
 	private String mContractInvoiceQueryParamConYearMontFrom;
 	private String mContractInvoiceQueryParamConYearMontTo;
 	private String mContractInvoiceQueryParamConCode;
@@ -105,13 +120,88 @@ public class BillQueryActivity extends FrameActivity implements OnClickListener,
 		vPager_billQuery.setAdapter(_billQueryViewPagerAdapter);
 	}
 	
+	/** 初使化ViewPager的合同开票页面 **/
 	private View initContractInvoiceViewPage(){
 		View _viewPage = inflateView(R.layout.bill_contract_invoice);
 		
+		//合同年月从
+		txtV_contractDateStart = (TextView) _viewPage.findViewById(R.id.txtV_contractDateStart);
+		txtV_contractDateStart.setText(mContractInvoiceQueryParamConYearMontFrom);
+		
+		lyot_contractDateStart = (RelativeLayout) _viewPage.findViewById(R.id.lyot_contractDateStart);
+		lyot_contractDateStart.setOnClickListener(new View.OnClickListener() {
+			@Override
+			public void onClick(View view) {
+				
+				YearMonthPickerDialog.Builder _builder = new YearMonthPickerDialog.Builder(BillQueryActivity.this);
+				_builder.setTitle(R.string.contract_date_start);
+				_builder.setMinPickableYear(mMinPickableYear);  //设置时间选择器上可选年份的最小值
+				_builder.setMaxPickableYear(mMaxPickableYear);  //设置时间选择器上可选年份的最大值
+				_builder.setOnDateSelectedListener(new YearMonthPickerDialog.OnDateSelectedListener() {
+					@Override
+					public void onDateSelected(Date selectedDate) {
+						txtV_contractDateStart.setText(DateUtils.getFormatDateTime(selectedDate, QUERY_PARAM_DATE_FORMAT));
+						mContractInvoiceQueryParamConYearMontFrom = DateUtils.getFormatDateTime(selectedDate, QUERY_PARAM_DATE_FORMAT);
+					}
+				});
+				
+				YearMonthPickerDialog _datePickerDialog = _builder.create();					
+				_datePickerDialog.show();
+				
+			}
+		});
+		
+		//合同年月至
+		txtV_contractDateEnd = (TextView) _viewPage.findViewById(R.id.txtV_contractDateEnd);
+		txtV_contractDateEnd.setText(mContractInvoiceQueryParamConYearMontTo);
+		
+		lyot_contractDateEnd = (RelativeLayout) _viewPage.findViewById(R.id.lyot_contractDateEnd);
+		lyot_contractDateEnd.setOnClickListener(new View.OnClickListener() {
+			@Override
+			public void onClick(View view) {
+				
+				YearMonthPickerDialog.Builder _builder = new YearMonthPickerDialog.Builder(BillQueryActivity.this);
+				_builder.setTitle(R.string.contract_date_end);
+				_builder.setMinPickableYear(mMinPickableYear);
+				_builder.setMaxPickableYear(mMaxPickableYear);
+				_builder.setOnDateSelectedListener(new YearMonthPickerDialog.OnDateSelectedListener() {
+					@Override
+					public void onDateSelected(Date selectedDate) {
+						txtV_contractDateEnd.setText(DateUtils.getFormatDateTime(selectedDate, QUERY_PARAM_DATE_FORMAT));
+						mContractInvoiceQueryParamConYearMontTo = DateUtils.getFormatDateTime(selectedDate, QUERY_PARAM_DATE_FORMAT);
+					}
+				});
+				
+				YearMonthPickerDialog _datePickerDialog = _builder.create();					
+				_datePickerDialog.show();
+				
+				
+			}
+		});
+		
+		//合同号
+		edTxt_contractNum = (EditText) _viewPage.findViewById(R.id.edTxt_contractNum);
+		
+		//查询按钮
+		_viewPage.findViewById(R.id.btn_contractInvoiceQuery).setOnClickListener(new View.OnClickListener() {
+			@Override
+			public void onClick(View view) {
+				mContractInvoiceQueryParamConCode = edTxt_contractNum.getText().toString().trim();
+				
+				Intent _intent = new Intent(BillQueryActivity.this,BillContractInvoiceQueryResultActivity.class);
+				_intent.putExtra(QueryParams.QUERY_PARAM_BILL_CON_YEAR_MONT_FROM, mContractInvoiceQueryParamConYearMontFrom);
+				_intent.putExtra(QueryParams.QUERY_PARAM_BILL_CON_YEAR_MONT_TO, mContractInvoiceQueryParamConYearMontTo);
+				_intent.putExtra(QueryParams.QUERY_PARAM_CON_CODE, mContractInvoiceQueryParamConCode);
+				
+				startActivity(_intent);
+				
+			}
+		});
 		
 		return _viewPage;
 	}
 	
+	/** 初使化ViewPager的合同正本跟踪页面 **/
 	private View initContractTrackingViewPage(){
 		View _viewPage = inflateView(R.layout.bill_contract_tracking);
 		
@@ -192,7 +282,7 @@ public class BillQueryActivity extends FrameActivity implements OnClickListener,
 		_viewPage.findViewById(R.id.btn_contractTrackingQuery).setOnClickListener(new View.OnClickListener() {
 			@Override
 			public void onClick(View view) {
-				mContractTrackingQueryParamConCode = edTxt_contractTrackingNum.getText().toString();
+				mContractTrackingQueryParamConCode = edTxt_contractTrackingNum.getText().toString().trim();
 				
 				Intent _intent = new Intent(BillQueryActivity.this,BillContractTrackingQueryResultListActivity.class);
 				_intent.putExtra(QueryParams.QUERY_PARAM_CON_CODE, mContractTrackingQueryParamConCode);
