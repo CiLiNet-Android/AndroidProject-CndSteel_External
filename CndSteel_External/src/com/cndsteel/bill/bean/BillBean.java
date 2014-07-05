@@ -18,4 +18,13 @@ public class BillBean extends BaseBean{
 	/** 物资收发状态 **/
 	public String wzStatus;
 	
+	/** 合同金额 **/
+	public String conAmt;
+	
+	/** 已开票金额 **/
+	public String invedAmt;
+	
+	/** 未开票金额 **/
+	public String uninvAmt;
+	
 }
