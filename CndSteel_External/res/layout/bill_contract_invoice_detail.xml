@@ -26,11 +26,10 @@
                 android:text="@string/contract_num" />
 
             <TextView
-                android:id="@+id/billContract_num"
+                android:id="@+id/txtV_contractInvoiceDetailConCode"
                 style="@style/CommonDataRowTitleStyle"
                 android:layout_marginLeft="15dp"
-                android:layout_weight="1"
-                android:text="1256sd8ewf56addd" />
+                android:layout_weight="1" />
         </LinearLayout>
 
         <!-- 已开发票金额 -->
@@ -48,11 +47,10 @@
                 android:text="@string/AlreadyMakeOutAnInvoiceAmount" />
 
             <TextView
-                android:id="@+id/billAlreadyMakeOutAnInvoiceAmount"
+                android:id="@+id/txtV_contractInvoiceDetailInvedAmt"
                 style="@style/CommonDataRowTitleStyle"
                 android:layout_marginLeft="15dp"
-                android:layout_weight="1"
-                android:text="1000" />
+                android:layout_weight="1" />
         </LinearLayout>
     </LinearLayout>
 
@@ -71,11 +69,10 @@
             android:lineSpacingMultiplier="1.1"
             android:text="@string/BillNumber" />
         <TextView
-            android:id="@+id/BillNumber"
+            android:id="@+id/txtV_contractInvoiceDetailInvNO"
             style="@style/CommonDataRowTitleStyle"
             android:layout_toRightOf="@id/titleBillNumber"
-            android:layout_marginLeft="15dp"
-            android:text="100吨" />
+            android:layout_marginLeft="15dp" />
     </RelativeLayout>
     
     <!-- 开票日期 -->
@@ -86,11 +83,10 @@
             android:lineSpacingMultiplier="1.1"
             android:text="@string/invoiceDate" />
         <TextView
-            android:id="@+id/invoiceDate"
+            android:id="@+id/txtV_contractInvoiceDetailInvDate"
             style="@style/CommonDataRowTitleStyle"
             android:layout_alignParentRight="true"
-            android:layout_marginLeft="15dp"
-            android:text="2014/06/01" />
+            android:layout_marginLeft="15dp" />
     </RelativeLayout>
     
     <!-- 发票金额 -->
@@ -101,11 +97,10 @@
             android:lineSpacingMultiplier="1.1"
             android:text="@string/invoiceAmount" />
         <TextView
-            android:id="@+id/invoiceAmount"
+            android:id="@+id/txtV_contractInvoiceDetailAmount"
             style="@style/CommonDataRowTitleStyle"
             android:layout_alignParentRight="true"
-            android:layout_marginLeft="15dp"
-            android:text="100吨" />
+            android:layout_marginLeft="15dp" />
     </RelativeLayout>
     
     <!-- 签收状态 -->
@@ -116,10 +111,9 @@
             android:lineSpacingMultiplier="1.1"
             android:text="@string/signForStatus" />
         <TextView
-            android:id="@+id/signForStatus"
+            android:id="@+id/txtV_contractInvoiceDetailSignStatus"
             style="@style/CommonDataRowTitleStyle"
             android:layout_alignParentRight="true"
-            android:layout_marginLeft="15dp"
-            android:text="已签收" />
+            android:layout_marginLeft="15dp" />
     </RelativeLayout>
 </LinearLayout>

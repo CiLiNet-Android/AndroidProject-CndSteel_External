@@ -17,7 +17,7 @@
             android:textColor="@color/black"
             android:text="@string/contract_num" />
         <TextView
-            android:id="@+id/title_contract_Num"
+            android:id="@+id/txtV_contractTrackingConCode"
             style="@style/CommonDataRowContentStyle"
             android:layout_toRightOf="@id/contract_item_Num_title"
             android:layout_centerVertical="true"
@@ -34,7 +34,7 @@
             android:text="@string/JianFaGetState" />
 
         <TextView
-            android:id="@+id/JianFaGetState"
+            android:id="@+id/txtV_contractTrackingWzStatus"
             style="@style/CommonDataRowContentStyle"
             android:layout_alignParentRight="true"
             android:layout_centerVertical="true"/>
@@ -50,7 +50,7 @@
             android:text="@string/ourCompanyGetState" />
 
         <TextView
-            android:id="@+id/ourCompanyGetState"
+            android:id="@+id/txtV_contractTrackingCustomerStatus"
             style="@style/CommonDataRowContentStyle"
             android:layout_alignParentRight="true"
             android:layout_centerVertical="true" />

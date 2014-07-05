@@ -188,7 +188,7 @@ public class BillQueryActivity extends FrameActivity implements OnClickListener,
 			public void onClick(View view) {
 				mContractInvoiceQueryParamConCode = edTxt_contractNum.getText().toString().trim();
 				
-				Intent _intent = new Intent(BillQueryActivity.this,BillContractInvoiceQueryResultActivity.class);
+				Intent _intent = new Intent(BillQueryActivity.this,BillContractInvoiceQueryResultListActivity.class);
 				_intent.putExtra(QueryParams.QUERY_PARAM_BILL_CON_YEAR_MONT_FROM, mContractInvoiceQueryParamConYearMontFrom);
 				_intent.putExtra(QueryParams.QUERY_PARAM_BILL_CON_YEAR_MONT_TO, mContractInvoiceQueryParamConYearMontTo);
 				_intent.putExtra(QueryParams.QUERY_PARAM_CON_CODE, mContractInvoiceQueryParamConCode);

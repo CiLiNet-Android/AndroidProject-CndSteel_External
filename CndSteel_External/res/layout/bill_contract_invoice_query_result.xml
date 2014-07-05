@@ -17,19 +17,12 @@
             android:textColor="@color/black"
             android:text="@string/contract_num" />
         <TextView
-            android:id="@+id/title_contract_Num"
+            android:id="@+id/txtV_contractInvoiceConCode"
             style="@style/CommonDataRowContentStyle"
             android:layout_toRightOf="@id/contract_item_Num_title"
             android:layout_centerVertical="true"
             android:textColor="@color/black" />
 
-        <TextView
-            android:id="@+id/contract_item_thEnd"
-            style="@style/CommonDataRowTitleStyle"
-            android:layout_alignParentRight="true"
-            android:layout_centerVertical="true"
-            android:textColor="@color/red"
-            android:textSize="13sp" />
     </RelativeLayout>
 
     <!-- 合同金额 -->
@@ -42,7 +35,7 @@
             android:text="@string/contract_amountOfMoney" />
 
         <TextView
-            android:id="@+id/contract_amountOfMoney"
+            android:id="@+id/txtV_contractInvoiceConAmt"
             style="@style/CommonDataRowContentStyle"
             android:layout_alignParentRight="true"
             android:layout_centerVertical="true"/>
@@ -58,7 +51,7 @@
             android:text="@string/alreadyMakeOutAnInvoiceAmount" />
 
         <TextView
-            android:id="@+id/alreadyMakeOutAnInvoiceAmount"
+            android:id="@+id/txtV_contractInvoiceInvedAmt"
             style="@style/CommonDataRowContentStyle"
             android:layout_alignParentRight="true"
             android:layout_centerVertical="true" />
@@ -74,7 +67,7 @@
             android:text="@string/HaveNotMakeOutAnInvoiceAmount" />
 
         <TextView
-            android:id="@+id/HaveNotMakeOutAnInvoiceAmount"
+            android:id="@+id/txtV_contractInvoiceUninvAmt"
             style="@style/CommonDataRowContentStyle"
             android:layout_alignParentRight="true"
             android:layout_centerVertical="true" />

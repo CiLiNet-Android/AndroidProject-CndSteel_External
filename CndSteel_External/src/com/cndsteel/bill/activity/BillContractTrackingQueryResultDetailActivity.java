@@ -11,7 +11,7 @@ import com.cndsteel.bill.adapter.BillContractTrackingDetailAdapter;
 import com.cndsteel.bill.bean.BillContractTrackingDetailItem;
 import com.cndsteel.framework.activity.FrameActivity;
 
-public class BillContractTrackingDetailActivity extends FrameActivity {
+public class BillContractTrackingQueryResultDetailActivity extends FrameActivity {
 	
 	private ListView contract_listView;
 	
@@ -38,7 +38,7 @@ public class BillContractTrackingDetailActivity extends FrameActivity {
 
 	private void initView() {
 		
-		billContract_num = (TextView) findViewById(R.id.billContract_num);
+		billContract_num = (TextView) findViewById(R.id.txtV_contractTrackingDetailConCode);
 		billContract_num.setText("DSFDFWER@#%$#%$%^%$#F");
 		
 		initListView();

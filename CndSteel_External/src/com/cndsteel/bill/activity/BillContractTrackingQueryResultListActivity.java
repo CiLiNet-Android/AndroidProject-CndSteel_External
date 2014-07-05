@@ -9,15 +9,15 @@ import android.widget.AdapterView.OnItemClickListener;
 import android.widget.ListView;
 
 import com.cndsteel.R;
-import com.cndsteel.bill.adapter.BillContractTrackingQueryResultAdapter;
-import com.cndsteel.bill.bean.Bill;
+import com.cndsteel.bill.adapter.BillContractTrackingQueryResultListAdapter;
+import com.cndsteel.bill.bean.BillBean;
 import com.cndsteel.framework.activity.FrameActivity;
 
 public class BillContractTrackingQueryResultListActivity extends FrameActivity implements OnItemClickListener {
 	
 	private ListView viewList;
 	
-	private ArrayList<Bill> itemList;
+	private ArrayList<BillBean> itemList;
 	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -40,23 +40,23 @@ public class BillContractTrackingQueryResultListActivity extends FrameActivity i
 
 	private void initListView() {
 		
-		itemList = new ArrayList<Bill>();
-		itemList.add(new Bill("SC664dcas56S", "已收取", "已收取"));
-		itemList.add(new Bill("SC664dcas56S", "未收取", "未收取"));
-		itemList.add(new Bill("SC664dcas56S", "已收取", "已收取"));
-		itemList.add(new Bill("SC664dcas56S", "未收取", "未收取"));
-		itemList.add(new Bill("SC664dcas56S", "已收取", "已收取"));
-		itemList.add(new Bill("SC664dcas56S", "未收取", "未收取"));
+		itemList = new ArrayList<BillBean>();
+		itemList.add(new BillBean("SC664dcas56S", "已收取", "已收取"));
+		itemList.add(new BillBean("SC664dcas56S", "未收取", "未收取"));
+		itemList.add(new BillBean("SC664dcas56S", "已收取", "已收取"));
+		itemList.add(new BillBean("SC664dcas56S", "未收取", "未收取"));
+		itemList.add(new BillBean("SC664dcas56S", "已收取", "已收取"));
+		itemList.add(new BillBean("SC664dcas56S", "未收取", "未收取"));
 		
 		viewList = (ListView) findViewById(R.id.contract_listView);
-		viewList.setAdapter(new BillContractTrackingQueryResultAdapter(this, itemList));
+		viewList.setAdapter(new BillContractTrackingQueryResultListAdapter(this, itemList));
 		viewList.setOnItemClickListener(this);
 		
 	}
 
 	@Override
 	public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-		startActivity(BillContractTrackingDetailActivity.class);
+		startActivity(BillContractTrackingQueryResultDetailActivity.class);
 	}
 
 }

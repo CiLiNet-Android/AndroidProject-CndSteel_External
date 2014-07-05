@@ -159,13 +159,13 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name="com.cndsteel.bill.activity.BillContractInvoiceQueryResultActivity">
+        <activity android:name="com.cndsteel.bill.activity.BillContractInvoiceQueryResultListActivity">
             <!-- <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter> -->
         </activity>
-        <activity android:name="com.cndsteel.bill.activity.BillContractInvoiceDetailActivity">
+        <activity android:name="com.cndsteel.bill.activity.BillContractInvoiceQueryResulltDetailActivity">
             <!-- <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
@@ -177,7 +177,7 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter> -->
         </activity>
-        <activity android:name="com.cndsteel.bill.activity.BillContractTrackingDetailActivity">
+        <activity android:name="com.cndsteel.bill.activity.BillContractTrackingQueryResultDetailActivity">
             <!-- <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
