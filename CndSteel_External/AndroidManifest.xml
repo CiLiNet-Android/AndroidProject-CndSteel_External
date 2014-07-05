@@ -27,28 +27,20 @@
          <!-- 单元测试配置之二 -->
         <uses-library android:name="android.test.runner"/>
         
-        <activity android:name="com.cndsteel.main.activity.MainActivity">
-            <!-- <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter> -->
-        </activity>
-        
         <!-- loading -->
-        <activity android:name="com.cndsteel.main.activity.LoadingActivity">
+        <activity android:name="com.cndsteel.main.activities.LoadingActivity">
             <!-- <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter> -->
         </activity>
         
+        <!-- welcome -->
+        <activity android:name="com.cndsteel.main.activities.WelcomeActivity"/>
         <!-- login -->
-        <activity android:name="com.cndsteel.main.activity.LoginActivity">
-            <!-- <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter> -->
-        </activity>
+        <activity android:name="com.cndsteel.main.activities.LoginActivity"/>
+     	<!-- main -->
+        <activity android:name="com.cndsteel.main.activity.MainActivity"/>
         
         <!-- settings -->
         <activity android:name="com.cndsteel.settings.activity.SettingsActivity">

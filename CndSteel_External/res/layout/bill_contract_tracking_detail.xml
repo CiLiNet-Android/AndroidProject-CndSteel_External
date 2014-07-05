@@ -9,16 +9,15 @@
         style="@style/CommonDataRowStyle"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        android:padding="10dp" >
+        android:padding="10dp">
 
         <!-- 合同号 -->
-
         <LinearLayout
             style="@style/CommonDataRowStyle"
             android:layout_height="wrap_content"
-            android:padding="5dp"
             android:gravity="center_vertical"
-            android:orientation="horizontal" >
+            android:orientation="horizontal"
+            android:padding="5dp" >
 
             <TextView
                 style="@style/CommonDataRowTitleStyle"
@@ -32,7 +31,6 @@
                 android:layout_weight="1"
                 android:text="1256sd8ewf56addd" />
         </LinearLayout>
-       
     </LinearLayout>
 
     <ImageView
@@ -40,6 +38,279 @@
         android:layout_height="3dp"
         android:background="@drawable/wave" />
 
-    <include layout="@layout/activity_listview"
-        android:layout_marginTop="10dp"/>
+    <ScrollView
+        android:id="@+id/scrollV_billContractTrackingDetail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" 
+        android:visibility="invisible">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <!-- 寄出方 -->
+
+            <RelativeLayout
+                style="@style/CommonDataRowStyle"
+                android:background="@color/white_bg" >
+
+                <TextView
+                    style="@style/CommonDataRowContentStyle"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:text="@string/JianFaJiChu"
+                    android:textColor="@color/black" />
+                
+            </RelativeLayout>
+
+            <!-- 快递公司 -->
+            <RelativeLayout style="@style/CommonDataRowStyle" >
+
+                <TextView
+                    style="@style/CommonDataRowTitleStyle"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:text="@string/expressCompany" />
+
+                <TextView
+                    android:id="@+id/txtV_wzDelivcom"
+                    style="@style/CommonDataRowContentStyle"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true" />
+            </RelativeLayout>
+
+            <!-- 快递单号 -->
+            <RelativeLayout style="@style/CommonDataRowStyle" >
+
+                <TextView
+                    style="@style/CommonDataRowTitleStyle"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:text="@string/expressNumber" />
+
+                <TextView
+                    android:id="@+id/txtV_wzDelivNO"
+                    style="@style/CommonDataRowContentStyle"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true" />
+            </RelativeLayout>
+
+            <!-- 快递时间 -->
+            <RelativeLayout style="@style/CommonDataRowStyle" >
+
+                <TextView
+                    style="@style/CommonDataRowTitleStyle"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:text="@string/expressTime" />
+
+                <TextView
+                    android:id="@+id/txtV_wzDelivDate"
+                    style="@style/CommonDataRowContentStyle"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true" />
+            </RelativeLayout>
+
+            <!-- 收件人 -->
+            <RelativeLayout style="@style/CommonDataRowStyle" >
+
+                <TextView
+                    style="@style/CommonDataRowTitleStyle"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:text="@string/addressee" />
+
+                <TextView
+                    android:id="@+id/txtV_wzDelivReceiver"
+                    style="@style/CommonDataRowContentStyle"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true" />
+            </RelativeLayout>
+
+            <!-- 签收人 -->
+            <RelativeLayout style="@style/CommonDataRowStyle" >
+
+                <TextView
+                    style="@style/CommonDataRowTitleStyle"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:text="@string/signForPeople" />
+
+                <TextView
+                    android:id="@+id/txtV_wzDelivSigner"
+                    style="@style/CommonDataRowContentStyle"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true" />
+                
+            </RelativeLayout>
+
+            <!-- 签收时间 -->
+            <RelativeLayout style="@style/CommonDataRowStyle" >
+
+                <TextView
+                    style="@style/CommonDataRowTitleStyle"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:text="@string/signForTime" />
+
+                <TextView
+                    android:id="@+id/txtV_wzDelivSignDate"
+                    style="@style/CommonDataRowContentStyle"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true" />
+            </RelativeLayout>
+
+            <!-- 备注 -->
+            <RelativeLayout style="@style/CommonDataRowStyle" >
+
+                <TextView
+                    style="@style/CommonDataRowTitleStyle"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:text="@string/Comment" />
+
+                <TextView
+                    android:id="@+id/txtV_wzRemark"
+                    style="@style/CommonDataRowContentStyle"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true" />
+            </RelativeLayout>
+            
+             <!-- 寄出方 -->
+            <RelativeLayout
+                style="@style/CommonDataRowStyle"
+                android:background="@color/white_bg" >
+
+                <TextView
+                    style="@style/CommonDataRowContentStyle"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:text="@string/WoSiJiChu"
+                    android:textColor="@color/black" />
+            </RelativeLayout>
+
+            <!-- 快递公司 -->
+            <RelativeLayout style="@style/CommonDataRowStyle" >
+
+                <TextView
+                    style="@style/CommonDataRowTitleStyle"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:text="@string/expressCompany" />
+
+                <TextView
+                    android:id="@+id/txtV_cuDelivcom"
+                    style="@style/CommonDataRowContentStyle"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true" />
+            </RelativeLayout>
+
+            <!-- 快递单号 -->
+
+            <RelativeLayout style="@style/CommonDataRowStyle" >
+
+                <TextView
+                    style="@style/CommonDataRowTitleStyle"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:text="@string/expressNumber" />
+
+                <TextView
+                    android:id="@+id/txtV_cuDelivNO"
+                    style="@style/CommonDataRowContentStyle"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true" />
+            </RelativeLayout>
+
+            <!-- 快递时间 -->
+            <RelativeLayout style="@style/CommonDataRowStyle" >
+
+                <TextView
+                    style="@style/CommonDataRowTitleStyle"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:text="@string/expressTime" />
+
+                <TextView
+                    android:id="@+id/txtV_cuDelivDate"
+                    style="@style/CommonDataRowContentStyle"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true" />
+            </RelativeLayout>
+
+            <!-- 收件人 -->
+
+            <RelativeLayout style="@style/CommonDataRowStyle" >
+
+                <TextView
+                    style="@style/CommonDataRowTitleStyle"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:text="@string/addressee" />
+
+                <TextView
+                    android:id="@+id/txtV_cuDelivReceiver"
+                    style="@style/CommonDataRowContentStyle"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true" />
+            </RelativeLayout>
+
+            <!-- 签收人 -->
+
+            <RelativeLayout style="@style/CommonDataRowStyle" >
+
+                <TextView
+                    style="@style/CommonDataRowTitleStyle"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:text="@string/signForPeople" />
+
+                <TextView
+                    android:id="@+id/txtV_cuDelivSigner"
+                    style="@style/CommonDataRowContentStyle"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true" />
+            </RelativeLayout>
+
+            <!-- 签收时间 -->
+
+            <RelativeLayout style="@style/CommonDataRowStyle" >
+
+                <TextView
+                    style="@style/CommonDataRowTitleStyle"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:text="@string/signForTime" />
+
+                <TextView
+                    android:id="@+id/txtV_cuDelivSignDate"
+                    style="@style/CommonDataRowContentStyle"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true" />
+            </RelativeLayout>
+
+            <!-- 备注 -->
+
+            <RelativeLayout style="@style/CommonDataRowStyle" >
+
+                <TextView
+                    style="@style/CommonDataRowTitleStyle"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:text="@string/Comment" />
+
+                <TextView
+                    android:id="@+id/txtV_cuRemark"
+                    style="@style/CommonDataRowContentStyle"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true" />
+                
+            </RelativeLayout>
+            
+            
+        </LinearLayout>
+
+    </ScrollView>
+
 </LinearLayout>

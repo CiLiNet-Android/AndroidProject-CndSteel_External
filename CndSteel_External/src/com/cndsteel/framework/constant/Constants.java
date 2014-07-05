@@ -48,6 +48,7 @@ public interface Constants {
 	/**
 	 * 缓存变量
 	 */
+	public static final String SETTINGS_PARAM_FIRSTLOADING = "FIRSTLOADING";
 	public static final String SETTINGS_PARAM_AUTOLOGIN = "AUTOLOGIN";
 	public static final String SETTINGS_PARAM_USERNAME = "USERNAME";
 	public static final String SETTINGS_PARAM_PASSWORD = "PASSWORD";

@@ -157,7 +157,13 @@ public class BillContractTrackingQueryResultListActivity extends FrameActivity i
 
 	@Override
 	public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-		startActivity(BillContractTrackingQueryResultDetailActivity.class);
+		BillBean _billBean = (BillBean)parent.getAdapter().getItem(position);
+		
+		Intent _intent = new Intent(this,BillContractTrackingQueryResultDetailActivity.class);
+		_intent.putExtra(QueryParams.QUERY_PARAM_CON_CODE, _billBean.conCode);
+		_intent.putExtra(QueryParams.QUERY_PARAM_CON_ID, _billBean.conId);
+		
+		startActivity(_intent);
 	}
 
 	@Override

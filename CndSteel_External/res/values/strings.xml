@@ -191,6 +191,8 @@
     <string name="addressee">收件人</string>
     <string name="signForPeople">签收人</string>
     <string name="signForTime">签收时间</string>
+    <string name="JianFaJiChu">建发寄出</string>
+    <string name="WoSiJiChu">我司寄出</string>
     
     <!-- 资讯详情 -->
     <string name="InfoDetail">资讯详情</string>
