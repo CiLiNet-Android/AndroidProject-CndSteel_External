@@ -44,11 +44,11 @@ public class BillContractInvoiceQueryResultListActivity extends FrameActivity im
 	private void initListView() {
 		
 		ArrayList<BillBean> itemList = new ArrayList<BillBean>();
-		itemList.add(new BillBean("21365487954263", "10,000,000", "5,000,000", "5,000,000"));
-		itemList.add(new BillBean("21365487954263", "10,000,000", "5,000,000", "5,000,000"));
-		itemList.add(new BillBean("21365487954263", "10,000,000", "5,000,000", "5,000,000"));
-		itemList.add(new BillBean("21365487954263", "10,000,000", "5,000,000", "5,000,000"));
-		itemList.add(new BillBean("21365487954263", "10,000,000", "5,000,000", "5,000,000"));
+//		itemList.add(new BillBean("21365487954263", "10,000,000", "5,000,000", "5,000,000"));
+//		itemList.add(new BillBean("21365487954263", "10,000,000", "5,000,000", "5,000,000"));
+//		itemList.add(new BillBean("21365487954263", "10,000,000", "5,000,000", "5,000,000"));
+//		itemList.add(new BillBean("21365487954263", "10,000,000", "5,000,000", "5,000,000"));
+//		itemList.add(new BillBean("21365487954263", "10,000,000", "5,000,000", "5,000,000"));
 		
 		viewList = (ListView) findViewById(R.id.contract_listView);
 		viewList.setAdapter(new BillContractInvoiceQueryResultListAdapter(this, itemList));

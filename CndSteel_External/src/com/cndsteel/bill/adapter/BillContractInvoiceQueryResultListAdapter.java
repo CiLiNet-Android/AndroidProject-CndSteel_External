@@ -34,10 +34,10 @@ public class BillContractInvoiceQueryResultListAdapter extends AbsBaseAdapter<Bi
 			_holder = (ViewHolder) view.getTag();
 		}
 		BillBean _bill = (BillBean) getItem(position);
-		_holder.txtV_contractInvoiceConCode.setText(_bill.txtV_contractInvoiceConCode);
-		_holder.txtV_contractInvoiceConAmt.setText(_bill.txtV_contractInvoiceConAmt);
-		_holder.txtV_contractInvoiceInvedAmt.setText(_bill.txtV_contractInvoiceInvedAmt);
-		_holder.txtV_contractInvoiceUninvAmt.setText(_bill.txtV_contractInvoiceUninvAmt);
+//		_holder.txtV_contractInvoiceConCode.setText(_bill.txtV_contractInvoiceConCode);
+//		_holder.txtV_contractInvoiceConAmt.setText(_bill.txtV_contractInvoiceConAmt);
+//		_holder.txtV_contractInvoiceInvedAmt.setText(_bill.txtV_contractInvoiceInvedAmt);
+//		_holder.txtV_contractInvoiceUninvAmt.setText(_bill.txtV_contractInvoiceUninvAmt);
 		
 		return view;
 	}
