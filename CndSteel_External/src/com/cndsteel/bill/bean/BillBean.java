@@ -27,4 +27,15 @@ public class BillBean extends BaseBean{
 	/** 未开票金额 **/
 	public String uninvAmt;
 	
+	/** 发票号 **/
+	public String invNO;
+	
+	/** 开票日期 **/
+	public String invDate;
+	
+	/** 发票金额 **/
+	public String amount;
+	
+	/** 签收状态 **/
+	public String signStatus;
 }

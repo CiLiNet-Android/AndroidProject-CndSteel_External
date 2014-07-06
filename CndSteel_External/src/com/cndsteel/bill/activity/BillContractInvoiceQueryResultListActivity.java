@@ -180,7 +180,9 @@ public class BillContractInvoiceQueryResultListActivity extends FrameActivity im
 		Intent _intent = new Intent(this,BillContractInvoiceQueryResulltDetailActivity.class);
 		
 		BillBean _billBean = (BillBean) parent.getAdapter().getItem(position);
-		_intent.putExtra("conId", _billBean.conId);
+		_intent.putExtra(QueryParams.QUERY_PARAM_CON_ID, _billBean.conId);
+		_intent.putExtra(QueryParams.QUERY_PARAM_CON_CODE, _billBean.conCode);
+		_intent.putExtra(QueryParams.QUERY_PARAM_BILL_INVEDAMT, _billBean.invedAmt);
 		
 		startActivity(_intent);
 	}

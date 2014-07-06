@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:pullToRefresh="http://schemas.android.com/apk/res/com.cndsteel"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/white_bg"
@@ -13,28 +14,45 @@
 
         <!-- 合同号 -->
 
-        <LinearLayout
+        <RelativeLayout
             style="@style/CommonDataRowStyle"
             android:layout_height="wrap_content"
             android:padding="5dp"
-            android:gravity="center_vertical"
-            android:orientation="horizontal" >
+            android:background="@color/white"
+            android:gravity="center_vertical" >
 
             <TextView
+                android:id="@+id/left_conCode"
                 style="@style/CommonDataRowTitleStyle"
-                android:lineSpacingMultiplier="1.1"
+                android:lineSpacingMultiplier="1.5"
                 android:text="@string/contract_num" />
 
             <TextView
                 android:id="@+id/txtV_contractInvoiceDetailConCode"
                 style="@style/CommonDataRowTitleStyle"
+                android:layout_toRightOf="@id/left_conCode"
+                android:layout_marginLeft="15dp" />
+            
+            <TextView
+                android:id="@+id/left_AlreadyMakeOutAnInvoiceAmount"
+                style="@style/CommonDataRowTitleStyle"
+                android:lineSpacingMultiplier="1.1"
+                android:layout_below="@id/left_conCode"
+                android:text="@string/AlreadyMakeOutAnInvoiceAmount" />
+
+            <TextView
+                android:id="@+id/txtV_contractInvoiceDetailInvedAmt"
+                style="@style/CommonDataRowTitleStyle"
+                android:layout_below="@id/left_conCode"
+                android:layout_toRightOf="@id/left_AlreadyMakeOutAnInvoiceAmount"
                 android:layout_marginLeft="15dp"
                 android:layout_weight="1" />
-        </LinearLayout>
+            
+        </RelativeLayout>>
 
         <!-- 已开发票金额 -->
 
-        <LinearLayout
+        <!-- <LinearLayout
             style="@style/CommonDataRowStyle"
             android:layout_height="wrap_content"
             android:padding="5dp"
@@ -51,7 +69,7 @@
                 style="@style/CommonDataRowTitleStyle"
                 android:layout_marginLeft="15dp"
                 android:layout_weight="1" />
-        </LinearLayout>
+        </LinearLayout> -->
     </LinearLayout>
 
     <ImageView
@@ -59,61 +77,15 @@
         android:layout_height="3dp"
         android:background="@drawable/wave" />
 
-    <!-- 发票号 -->
-    <RelativeLayout style="@style/CommonDataRowStyle"
-        android:gravity="center_vertical"
-        android:background="@null" >
-        <TextView
-            android:id="@+id/titleBillNumber"
-            style="@style/CommonDataRowTitleStyle"
-            android:lineSpacingMultiplier="1.1"
-            android:text="@string/BillNumber" />
-        <TextView
-            android:id="@+id/txtV_contractInvoiceDetailInvNO"
-            style="@style/CommonDataRowTitleStyle"
-            android:layout_toRightOf="@id/titleBillNumber"
-            android:layout_marginLeft="15dp" />
-    </RelativeLayout>
-    
-    <!-- 开票日期 -->
-    <RelativeLayout style="@style/CommonDataRowStyle"
-        android:gravity="center_vertical" >
-        <TextView
-            style="@style/CommonDataRowTitleStyle"
-            android:lineSpacingMultiplier="1.1"
-            android:text="@string/invoiceDate" />
-        <TextView
-            android:id="@+id/txtV_contractInvoiceDetailInvDate"
-            style="@style/CommonDataRowTitleStyle"
-            android:layout_alignParentRight="true"
-            android:layout_marginLeft="15dp" />
-    </RelativeLayout>
-    
-    <!-- 发票金额 -->
-    <RelativeLayout style="@style/CommonDataRowStyle"
-        android:gravity="center_vertical" >
-        <TextView
-            style="@style/CommonDataRowTitleStyle"
-            android:lineSpacingMultiplier="1.1"
-            android:text="@string/invoiceAmount" />
-        <TextView
-            android:id="@+id/txtV_contractInvoiceDetailAmount"
-            style="@style/CommonDataRowTitleStyle"
-            android:layout_alignParentRight="true"
-            android:layout_marginLeft="15dp" />
-    </RelativeLayout>
-    
-    <!-- 签收状态 -->
-    <RelativeLayout style="@style/CommonDataRowStyle"
-        android:gravity="center_vertical" >
-        <TextView
-            style="@style/CommonDataRowTitleStyle"
-            android:lineSpacingMultiplier="1.1"
-            android:text="@string/signForStatus" />
-        <TextView
-            android:id="@+id/txtV_contractInvoiceDetailSignStatus"
-            style="@style/CommonDataRowTitleStyle"
-            android:layout_alignParentRight="true"
-            android:layout_marginLeft="15dp" />
-    </RelativeLayout>
+  <com.handmark.pulltorefresh.library.PullToRefreshListView  
+        android:id="@+id/listV_billContractInvoiceQueryResulDetailList"  
+        android:layout_width="match_parent"  
+        android:layout_height="match_parent"  
+        android:cacheColorHint="#00000000"   
+        android:fadingEdge="horizontal"  
+        android:fastScrollEnabled="false"  
+        android:footerDividersEnabled="false"  
+        android:headerDividersEnabled="false"  
+        android:smoothScrollbar="true"
+        pullToRefresh:ptrHeaderBackground="@color/grey" />
 </LinearLayout>

@@ -71,6 +71,8 @@ public interface QueryParams {
 	public static final String QUERY_PARAM_BILL_CON_YEAR_MONT_FROM = "conYearMontFrom";
 	public static final String QUERY_PARAM_BILL_CON_YEAR_MONT_TO = "conYearMontTo";
 	
+	public static final String QUERY_PARAM_BILL_INVEDAMT = "invedAmt";
+	
 	/**
 	 * 资讯
 	 */
