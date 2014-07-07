@@ -24,7 +24,16 @@ public interface QueryParams {
 	public static final String QUERY_PARAM_CON_CODE = "conCode";
 	public static final String QUERY_PARAM_CON_ID = "conId";
 	public static final String QUERY_PARAM_WARE_ID = "wareId";
+	public static final String QUERY_PARAM_WEIGHT = "weight";
+	public static final String QUERY_PARAM_PIECE = "piece";
 	public static final String QUERY_PARAM_SPEC = "spec";
+	
+	/**
+	 * 登录
+	 */
+	public static final String QUERY_PARAM_USERNAME = "username";
+	public static final String QUERY_PARAM_PASSWORD = "password";
+	public static final String QUERY_PARAM_DEVICE_TOKEN = "deviceToken";
 
 	/**
 	 * 计划模块
@@ -72,7 +81,6 @@ public interface QueryParams {
 	public static final String QUERY_PARAM_BILL_CON_YEAR_MONT_TO = "conYearMontTo";
 	
 	public static final String QUERY_PARAM_BILL_INVEDAMT = "invedAmt";
-	
 	/**
 	 * 资讯
 	 */

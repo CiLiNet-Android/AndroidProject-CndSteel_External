@@ -18,8 +18,8 @@ import com.cndsteel.framework.constant.QueryParams;
 import com.cndsteel.framework.webService.WebServiceThread;
 import com.cndsteel.payment.adapter.PaymentAsContractQueryResultDetailAdapter;
 import com.cndsteel.payment.bean.PaymentAsContractQueryResultDetailBean;
-import com.cndsteel.payment.bean.PaymentAsInformetionQueryResultDetailBean;
 import com.cndsteel.payment.bean.PaymentBean;
+import com.cndsteel.settings.beans.SettingsBean;
 
 public class PaymentAsContractQueryResultDetailActivity extends FrameActivity {
 
@@ -47,7 +47,7 @@ public class PaymentAsContractQueryResultDetailActivity extends FrameActivity {
 
 	private void initVariables() {
 		mQueryParamConId = getIntent().getStringExtra(QueryParams.QUERY_PARAM_CON_ID);
-		mQueryParamSessionId = "20C5DA37D9CF5C8FDE3DD19E858D5614";
+		mQueryParamSessionId = SettingsBean.getInstance().getStringSettingValueByName(Constants.SETTINGS_PARAM_SESSIONID);
 	}
 	
 	private void initViews(){

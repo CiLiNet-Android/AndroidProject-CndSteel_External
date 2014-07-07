@@ -1,14 +1,15 @@
 package com.cndsteel.plan;
 
-import java.util.HashMap;
 import java.util.LinkedHashMap;
 
 import org.ksoap2.serialization.SoapObject;
 
 import android.test.AndroidTestCase;
 
+import com.cndsteel.framework.constant.Constants;
 import com.cndsteel.framework.log.GlobalLog;
 import com.cndsteel.framework.webService.WebServiceRequest;
+import com.cndsteel.settings.beans.SettingsBean;
 
 public class WebServiceTest extends AndroidTestCase {
 
@@ -21,7 +22,7 @@ public class WebServiceTest extends AndroidTestCase {
 		_requestParams.put("status", "DONE");
 		_requestParams.put("pageindex", "1");
 		_requestParams.put("pagesize", "5");
-		_requestParams.put("sessionId", "20C5DA37D9CF5C8FDE3DD19E858D5614");
+		_requestParams.put("sessionId", SettingsBean.getInstance().getStringSettingValueByName(Constants.SETTINGS_PARAM_SESSIONID));
 		
 		String _serverUrl = "http://vip.cndsteel.com/services/BookingService";
 		String _namespace = "http://impl.remote.webservice.steel.chinacnd.com";

@@ -67,7 +67,7 @@ public class LoginBean extends WebServiceBean {
 					cellphone = _text;
 				}else if("email".equals(currentElementName)){
 					email = _text;
-				}else if("sessionId".equals(currentElementName)){
+				}else if("sessionid".equals(currentElementName)){
 					sessionId = _text;
 				}
 			}

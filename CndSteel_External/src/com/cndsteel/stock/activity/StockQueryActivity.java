@@ -28,12 +28,14 @@ import com.cndsteel.framework.bean.LoadWareHouseBean;
 import com.cndsteel.framework.bean.MaterialBean;
 import com.cndsteel.framework.bean.PNameBean;
 import com.cndsteel.framework.bean.WareHouseBean;
+import com.cndsteel.framework.constant.Constants;
 import com.cndsteel.framework.constant.QueryParams;
 import com.cndsteel.framework.utils.DateUtils;
 import com.cndsteel.framework.views.dialogs.wheelpicker.YearMonthDayPickerDialog;
 import com.cndsteel.framework.views.spinner.AbsSpinner;
 import com.cndsteel.framework.views.spinner.CndSteelSpinner;
 import com.cndsteel.framework.webService.WebServiceThread;
+import com.cndsteel.settings.beans.SettingsBean;
 import com.cndsteel.stock.adapter.StockQueryViewPagerAdapter;
 
 public class StockQueryActivity extends FrameActivity implements OnClickListener,
@@ -136,7 +138,7 @@ public class StockQueryActivity extends FrameActivity implements OnClickListener
 	}
 
 	private void initVariables() {
-		mQueryParamSessionId = "20C5DA37D9CF5C8FDE3DD19E858D5614";
+		mQueryParamSessionId = SettingsBean.getInstance().getStringSettingValueByName(Constants.SETTINGS_PARAM_SESSIONID);
 		
 		//按仓库
 		mStockQueryParamStoreDateForm = DateUtils.getFormatDateTime(new Date(), QueryParams.DEFAULT_QUERY_PARAM_DATE_FORMAT);

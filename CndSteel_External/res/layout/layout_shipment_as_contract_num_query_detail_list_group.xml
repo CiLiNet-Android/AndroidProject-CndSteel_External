@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    style="@style/CommonDataRowStyle"
+    android:background="#eaeaea"
+    android:layout_height="90dp"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="8dp"
+        android:background="@null"
+        android:gravity="center_vertical"
+        android:orientation="horizontal" >
+
+        <TextView
+            style="@style/CommonDataRowTitleStyle"
+            android:layout_width="wrap_content"
+            android:text="@string/shipment_InvoiceNum" />
+
+        <TextView
+            android:id="@+id/txtV_shipmentAsContractNumQueryDetailListGroupShipNO"
+            style="@style/CommonDataRowTitleStyle"
+            android:layout_width="match_parent" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:layout_marginLeft="15dp"
+        android:background="@null"
+        android:gravity="center_vertical"
+        android:orientation="horizontal" >
+
+        <TextView
+            style="@style/CommonDataRowContentStyle"
+            android:layout_width="wrap_content"
+            android:text="@string/Warehouse"
+            android:textSize="13sp" />
+
+        <TextView
+            android:id="@+id/txtV_shipmentAsContractNumQueryDetailListGroupStoreName"
+            style="@style/CommonDataRowContentStyle"
+            android:layout_width="wrap_content"
+            android:layout_weight="1"
+            android:textSize="13sp" />
+
+        <TextView
+            style="@style/CommonDataRowContentStyle"
+            android:layout_width="wrap_content"
+            android:text="@string/shipment_InvoiceDate"
+            android:textSize="13sp" />
+
+        <TextView
+            android:id="@+id/txtV_shipmentAsContractNumQueryDetailListGroupShipDate"
+            style="@style/CommonDataRowContentStyle"
+            android:layout_width="wrap_content"
+            android:layout_weight="1"
+            android:textSize="13sp" />
+    </LinearLayout>
+
+</LinearLayout>

@@ -12,7 +12,7 @@ import android.widget.EditText;
 import com.cndsteel.R;
 import com.cndsteel.framework.activity.FrameActivity;
 import com.cndsteel.framework.constant.Constants;
-import com.cndsteel.framework.constant.ErrorMsg;
+import com.cndsteel.framework.constant.QueryParams;
 import com.cndsteel.framework.handler.AbsActivityHandler;
 import com.cndsteel.framework.views.dialogs.loadingprogress.LoadingProgressDialog;
 import com.cndsteel.framework.webService.WebServiceThread;
@@ -24,6 +24,9 @@ import com.cndsteel.settings.beans.SettingsBean;
  * @author zhxl
  */
 public class LoginActivity extends FrameActivity implements View.OnClickListener,DialogInterface.OnCancelListener {
+	
+	private String mQueryParamUserName;
+	private String mQueryParamPassword;
 	
 	/** 用户名 **/
 	private EditText edTxt_loginUsername;
@@ -39,7 +42,6 @@ public class LoginActivity extends FrameActivity implements View.OnClickListener
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-		
 		appendFrameworkCenter(R.layout.activity_login);
 		hideFrameworkTop();
 		
@@ -47,31 +49,26 @@ public class LoginActivity extends FrameActivity implements View.OnClickListener
 	}
 
 	private void init() {
+		initVariables();
 		initViews();
-		
-		readCacheValue();
+	}
+
+	private void initVariables() {
+		mQueryParamUserName = SettingsBean.getInstance().getStringSettingValueByName(Constants.SETTINGS_PARAM_USERNAME);
+		mQueryParamPassword = SettingsBean.getInstance().getStringSettingValueByName(Constants.SETTINGS_PARAM_PASSWORD);
 	}
 
 	private void initViews() {
 		edTxt_loginUsername = (EditText)findViewById(R.id.edTxt_loginUsername);
+		edTxt_loginUsername.setText(mQueryParamUserName);
 		
 		edTxt_loginPassword = (EditText)findViewById(R.id.edTxt_loginPassword);
+		edTxt_loginPassword.setText(mQueryParamPassword);
 		
 		findViewById(R.id.btn_login).setOnClickListener(this);
 		
 		mLoadingProgressDialog = new LoadingProgressDialog(this);
 		mLoadingProgressDialog.setOnCancelListener(this);
-	}
-	
-	private void readCacheValue() {
-		boolean _autoLogin  = SettingsBean.getInstance().getBooleanSettingValueByName(Constants.SETTINGS_PARAM_AUTOLOGIN, false);
-		if(_autoLogin){
-			String _username = SettingsBean.getInstance().getStringSettingValueByName(Constants.SETTINGS_PARAM_USERNAME);
-			edTxt_loginUsername.setText(_username);
-			
-			String _password = SettingsBean.getInstance().getStringSettingValueByName(Constants.SETTINGS_PARAM_PASSWORD);
-			edTxt_loginPassword.setText(_password);
-		}
 	}
 	
 	private AbsActivityHandler<LoginActivity> mActivityHandler = new AbsActivityHandler<LoginActivity>(this) {
@@ -102,11 +99,9 @@ public class LoginActivity extends FrameActivity implements View.OnClickListener
 	 * @param _loginBean
 	 */
 	private void onLoginSuccess(LoginBean _loginBean) {
-		showToast(getString(R.string.login_successed_msg, _loginBean.fullname));
-		
 		//缓存参数
-		SettingsBean.getInstance().putSettingValue(Constants.SETTINGS_PARAM_USERNAME,_loginBean.username);
-		SettingsBean.getInstance().putSettingValue(Constants.SETTINGS_PARAM_PASSWORD, edTxt_loginPassword.getText().toString());
+		SettingsBean.getInstance().putSettingValue(Constants.SETTINGS_PARAM_USERNAME,mQueryParamUserName);
+		SettingsBean.getInstance().putSettingValue(Constants.SETTINGS_PARAM_PASSWORD, mQueryParamPassword);
 		SettingsBean.getInstance().putSettingValue(Constants.SETTINGS_PARAM_SESSIONID, _loginBean.sessionId);
 		//将数据写入文件
 		SettingsBean.save();
@@ -114,28 +109,28 @@ public class LoginActivity extends FrameActivity implements View.OnClickListener
 		//启动Activity
 		startActivity(MainActivity.class);
 		
-		finish();
+		//finish();
 	}
 
 	@Override
 	public void onClick(View view) {
 		if(view.getId() == R.id.btn_login){
-			String _username = edTxt_loginUsername.getText().toString().trim();
-			if(TextUtils.isEmpty(_username)){
+			mQueryParamUserName = edTxt_loginUsername.getText().toString().trim();
+			if(TextUtils.isEmpty(mQueryParamUserName)){
 				showToast(R.string.login_please_input_username);
 				return;
 			}
 			
-			String _password = edTxt_loginPassword.getText().toString();
-			if(TextUtils.isEmpty(_password)){
+			mQueryParamPassword = edTxt_loginPassword.getText().toString();
+			if(TextUtils.isEmpty(mQueryParamPassword)){
 				showToast(R.string.login_please_input_password);
 				return;
 			}
 			
 			LinkedHashMap<String, String> _requestParams = new LinkedHashMap<String, String>();
-			_requestParams.put("username", _username);
-			_requestParams.put("password", _password);
-			_requestParams.put("deviceToken", "deviceToken");
+			_requestParams.put(QueryParams.QUERY_PARAM_USERNAME, mQueryParamUserName);
+			_requestParams.put(QueryParams.QUERY_PARAM_PASSWORD, mQueryParamPassword);
+			_requestParams.put(QueryParams.QUERY_PARAM_DEVICE_TOKEN, "deviceToken");
 			
 			mLoadingProgressDialog.show();
 			

@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    style="@style/CommonDataRowStyle"
+    android:layout_height="wrap_content" >
+
+    <TableRow>
+
+        <TextView
+            style="@style/CommonDataRowContentStyle"
+           	android:lineSpacingMultiplier="1.5"
+            android:text="@string/contract_GoodsName" />
+
+        <TextView
+            android:id="@+id/txtV_contractNumQueryDetailListChildPName"
+            style="@style/CommonDataRowContentStyle"
+            android:layout_marginLeft="15dp"
+            android:layout_weight="1" />
+
+        <TextView
+            style="@style/CommonDataRowContentStyle"
+            android:text="@string/Material" />
+
+        <TextView
+            android:id="@+id/txtV_contractNumQueryDetailListChildMaterial"
+            style="@style/CommonDataRowContentStyle"
+            android:layout_marginLeft="15dp"
+            android:layout_weight="1" />
+    </TableRow>
+
+    <TableRow>
+        
+        <TextView
+            style="@style/CommonDataRowContentStyle"
+            android:text="@string/Tonnage" />
+
+        <TextView
+            android:id="@+id/txtV_contractNumQueryDetailListChildWeight"
+            style="@style/CommonDataRowContentStyle"
+            android:layout_marginLeft="15dp"
+            android:layout_weight="1" />
+
+        <TextView
+            style="@style/CommonDataRowContentStyle"
+            android:lineSpacingMultiplier="1.5"
+            android:text="@string/stock_NumberOfPackages" />
+
+        <TextView
+            android:id="@+id/txtV_contractNumQueryDetailListChildPiece"
+            style="@style/CommonDataRowContentStyle"
+            android:layout_marginLeft="15dp"
+            android:layout_weight="1" />
+
+        
+    </TableRow>
+
+    <TableRow>
+
+        <TextView
+            style="@style/CommonDataRowContentStyle"
+            android:lineSpacingMultiplier="1.5"
+            android:text="@string/stock_Standard" />
+
+        <TextView
+            android:id="@+id/txtV_contractNumQueryDetailListChildSpec"
+            style="@style/CommonDataRowContentStyle"
+            android:layout_marginLeft="15dp"
+            android:layout_span="3"
+            android:layout_weight="1" />
+    </TableRow>
+    
+    <TableRow>
+
+        <TextView
+            style="@style/CommonDataRowContentStyle"
+            android:text="@string/Money" />
+
+        <TextView
+            android:id="@+id/txtV_contractNumQueryDetailListChildAmount"
+            style="@style/CommonDataRowContentStyle"
+            android:layout_marginLeft="15dp"
+            android:layout_span="3"
+            android:layout_weight="1" />
+    </TableRow>
+
+</TableLayout>

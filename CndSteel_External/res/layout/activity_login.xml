@@ -43,10 +43,12 @@
                android:layout_width="0dp"
                android:layout_weight="3"
                android:layout_height="match_parent"
+               android:paddingRight="15dp"
                android:background="@color/transparent"
                android:hint="@string/login_please_input_username"
                android:gravity="right|center_vertical"
-               android:textColorHint="@color/transparentivory"/>
+               android:textColorHint="@color/transparentivory"
+               android:textColor="@color/white"/>
         </TableRow>
         
         <!-- 密码 -->
@@ -69,11 +71,13 @@
                android:layout_width="0dp"
                android:layout_weight="3"
                android:layout_height="match_parent"
+    		   android:paddingRight="15dp"
                android:background="@color/transparent"
                android:hint="@string/login_please_input_password"
                android:gravity="right|center_vertical"
                android:textColorHint="@color/transparentivory"
-               android:inputType="textPassword"/>
+               android:inputType="textPassword"
+               android:textColor="@color/white"/>
         </TableRow>
         
     </TableLayout>

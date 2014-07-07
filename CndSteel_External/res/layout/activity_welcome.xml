@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    
+    <com.cndsteel.framework.views.layout.HorizontalScrollLayout 
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/lyot_horizontalScroll">
+        
+        <!-- 第一面 -->
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/welcome_01"/>
+        
+        <!-- 第二面 -->
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/welcome_02"/>
+        
+        <!-- 第三面 -->
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/welcome_03">
+            
+            <Button 
+                android:id="@+id/btn_startPlay"
+                style="@style/CommonButtonStyle"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="50dp"
+                android:text="@string/welcome_startPlay"/>
+            
+        </RelativeLayout>
+        
+    </com.cndsteel.framework.views.layout.HorizontalScrollLayout>
+    
+    <LinearLayout 
+    	android:orientation="horizontal" 
+    	android:id="@+id/lyot_pageIndicator" 
+    	android:layout_width="wrap_content" 
+    	android:layout_height="wrap_content" 
+    	android:layout_marginBottom="24dip" 
+    	android:layout_alignParentBottom="true" 
+    	android:layout_centerHorizontal="true"
+    	android:visibility="visible">
+    	
+        <ImageView
+            android:layout_width="wrap_content" 
+            android:layout_height="wrap_content"
+            android:clickable="true"  
+            android:padding="5dp" 
+            android:layout_gravity="center_vertical" 
+            android:src="@drawable/page_indicator_bg" />
+        <ImageView 
+            android:layout_width="wrap_content" 
+            android:layout_height="wrap_content"
+            android:clickable="true"  
+            android:padding="5.0dip"  
+            android:layout_gravity="center_vertical" 
+            android:src="@drawable/page_indicator_bg" />
+        
+        <ImageView 
+            android:clickable="true"  
+            android:padding="5.0dip"  
+            android:layout_gravity="center_vertical" 
+            android:layout_width="wrap_content" 
+            android:layout_height="wrap_content" 
+            android:src="@drawable/page_indicator_bg" />
+        
+    </LinearLayout>
+    
+</RelativeLayout>

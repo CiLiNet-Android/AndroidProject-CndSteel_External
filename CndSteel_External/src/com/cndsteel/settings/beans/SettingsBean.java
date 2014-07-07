@@ -70,6 +70,6 @@ public class SettingsBean extends BaseBean {
 	}
 	
 	public static void save(){
-		ObjectCacheUtils.cacheObject(Constants.CACHE_DIR + SettingsBean.class.getName().hashCode(), mSettingsBean);
+		ObjectCacheUtils.cacheObject(Constants.CACHE_DIR + SettingsBean.class.getSimpleName().hashCode(), mSettingsBean);
 	}
 }

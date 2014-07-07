@@ -19,7 +19,7 @@
             android:textColor="@color/black"
             android:textSize="18sp"/>
         
-        <com.cndsteel.framework.views.Toggle
+        <com.cndsteel.framework.views.toggle.Toggle
             android:id="@+id/toggle_settingsAutoLogin"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"

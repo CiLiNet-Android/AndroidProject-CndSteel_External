@@ -7,7 +7,6 @@ import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
 import android.view.View;
-import android.webkit.WebView.FindListener;
 import android.widget.ScrollView;
 import android.widget.TextView;
 
@@ -17,6 +16,7 @@ import com.cndsteel.framework.activity.FrameActivity;
 import com.cndsteel.framework.constant.Constants;
 import com.cndsteel.framework.constant.QueryParams;
 import com.cndsteel.framework.webService.WebServiceThread;
+import com.cndsteel.settings.beans.SettingsBean;
 
 public class BillContractTrackingQueryResultDetailActivity extends FrameActivity {
 	
@@ -44,7 +44,7 @@ public class BillContractTrackingQueryResultDetailActivity extends FrameActivity
 	
 	private void initVariables(){
 		mQueryParamConId = getIntent().getStringExtra(QueryParams.QUERY_PARAM_CON_ID);
-		mQueryParamSessionId = "20C5DA37D9CF5C8FDE3DD19E858D5614";
+		mQueryParamSessionId = SettingsBean.getInstance().getStringSettingValueByName(Constants.SETTINGS_PARAM_SESSIONID);
 	}
 
 	private void initViews() {

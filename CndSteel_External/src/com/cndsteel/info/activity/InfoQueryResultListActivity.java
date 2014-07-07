@@ -27,6 +27,7 @@ import com.cndsteel.framework.webService.WebServiceThread;
 import com.cndsteel.info.adapter.InfoQueryResultListAdapter;
 import com.cndsteel.info.bean.InfoBean;
 import com.cndsteel.info.bean.InfoQueryResultListBean;
+import com.cndsteel.settings.beans.SettingsBean;
 import com.handmark.pulltorefresh.library.PullToRefreshBase;
 import com.handmark.pulltorefresh.library.PullToRefreshBase.Mode;
 import com.handmark.pulltorefresh.library.PullToRefreshBase.OnRefreshListener;
@@ -67,7 +68,7 @@ public class InfoQueryResultListActivity extends FrameActivity implements OnItem
 		mQueryParamMsgCate = "";
 		mQueryParamPageIndex = 1;
 		mQueryParamPageSize = DEFAULT_PAGE_SIZE;
-		mQueryParamSessionId = "20C5DA37D9CF5C8FDE3DD19E858D5614";
+		mQueryParamSessionId = SettingsBean.getInstance().getStringSettingValueByName(Constants.SETTINGS_PARAM_SESSIONID);
 	}
 
 	private void initViews() {

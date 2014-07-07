@@ -18,8 +18,8 @@ import com.cndsteel.framework.activity.FrameActivity;
 import com.cndsteel.framework.constant.Constants;
 import com.cndsteel.framework.constant.QueryParams;
 import com.cndsteel.framework.webService.WebServiceThread;
+import com.cndsteel.settings.beans.SettingsBean;
 import com.cndsteel.stock.adapter.StockAccordingGoodsQueryResultDetailAdapter;
-import com.cndsteel.stock.bean.StockAccordingContractQueryResultDetailBean;
 import com.cndsteel.stock.bean.StockAccordingGoodsQueryResultDetailBean;
 import com.cndsteel.stock.bean.StockBean;
 import com.handmark.pulltorefresh.library.PullToRefreshBase;
@@ -71,7 +71,7 @@ public class StockAccordingGoodsQueryResultDetailActivity extends FrameActivity 
 		mQueryParamSpec = _intent.getStringExtra(QueryParams.QUERY_PARAM_STOCK_SPEC);
 		mQueryParamPageIndex = 1;
 		mQueryParamPageSize = Constants.DEFAULT_PAGE_SIZE;
-		mQueryParamSessionId = "20C5DA37D9CF5C8FDE3DD19E858D5614";
+		mQueryParamSessionId = SettingsBean.getInstance().getStringSettingValueByName(Constants.SETTINGS_PARAM_SESSIONID);
 	}
 	
 	private void initViews(){

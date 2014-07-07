@@ -1,6 +1,7 @@
 package com.cndsteel.settings.activities;
 
 import android.content.DialogInterface;
+import android.content.Intent;
 import android.os.Bundle;
 import android.os.Message;
 import android.view.View;
@@ -77,7 +78,11 @@ public class SettingsActivity extends FrameActivity implements Toggle.OnToggleSt
 				break;
 			case HANDLE_MSG_LOG_OUT:
 				SettingsBean.getInstance().deleteSettingValue(Constants.SETTINGS_PARAM_SESSIONID);
-				startActivity(LoginActivity.class);
+				
+				Intent _intent = new Intent(theActivity,LoginActivity.class);
+				_intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+				startActivity(_intent);
+				
 				break;
 			default: 
 				break;

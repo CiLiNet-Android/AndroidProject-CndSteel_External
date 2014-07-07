@@ -78,7 +78,6 @@ public class BaseApplication extends Application {
 	/**
 	 * 应用是否退出
 	 */
-	public boolean isProgramExit = false;
 	private static Toast mToast;
 	
 	public static void showToast(final String text){

@@ -42,5 +42,13 @@ public class ShipmentBean extends BaseBean {
 	/** 金额 **/
 	public String amount;
 
-
+	/** 捆包号 **/
+	public String pkgNo;
+	
+	/** 合同ID **/
+	public String conId;
+	
+	/** 合同号 **/
+	public String conCode;
+	
 }

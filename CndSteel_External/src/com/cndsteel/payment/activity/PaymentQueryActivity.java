@@ -24,6 +24,7 @@ import com.cndsteel.R;
 import com.cndsteel.framework.activity.FrameActivity;
 import com.cndsteel.framework.bean.LoadPayModeBean;
 import com.cndsteel.framework.bean.PayModeBean;
+import com.cndsteel.framework.constant.Constants;
 import com.cndsteel.framework.constant.QueryParams;
 import com.cndsteel.framework.utils.DateUtils;
 import com.cndsteel.framework.views.dialogs.wheelpicker.YearMonthDayPickerDialog;
@@ -32,6 +33,7 @@ import com.cndsteel.framework.views.spinner.AbsSpinner;
 import com.cndsteel.framework.views.spinner.CndSteelSpinner;
 import com.cndsteel.framework.webService.WebServiceThread;
 import com.cndsteel.payment.adapter.PaymentQueryViewPagerAdapter;
+import com.cndsteel.settings.beans.SettingsBean;
 
 public class PaymentQueryActivity extends FrameActivity implements OnClickListener, OnPageChangeListener {
 	
@@ -106,7 +108,7 @@ public class PaymentQueryActivity extends FrameActivity implements OnClickListen
 	private void initVariables(){
 		Calendar _nowCalendar = Calendar.getInstance();
 		
-		mQueryParamSessionId = "20C5DA37D9CF5C8FDE3DD19E858D5614";
+		mQueryParamSessionId = SettingsBean.getInstance().getStringSettingValueByName(Constants.SETTINGS_PARAM_SESSIONID);
 		
 		//付款信息
 		String _nowDate = DateUtils.getFormatDateTime(_nowCalendar.getTime(), "yyyy-MM-dd");

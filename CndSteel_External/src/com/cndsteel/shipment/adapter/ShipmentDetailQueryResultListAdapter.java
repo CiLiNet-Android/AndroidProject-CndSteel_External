@@ -8,7 +8,6 @@ import android.widget.TextView;
 import com.cndsteel.R;
 import com.cndsteel.framework.adapter.AbsBaseAdapter;
 import com.cndsteel.shipment.bean.ShipmentBean;
-import com.cndsteel.stock.bean.StockBean;
 
 public class ShipmentDetailQueryResultListAdapter extends AbsBaseAdapter<ShipmentBean> {
 
@@ -17,9 +16,9 @@ public class ShipmentDetailQueryResultListAdapter extends AbsBaseAdapter<Shipmen
 	}
 
 	private class ViewHolder {
-		private TextView stock_detail_list_packages_no;
-		private TextView stock_detail_list_tonnage;
-		private TextView stock_detail_list_numberOfPackages;
+		private TextView txtV_shipmentDetailQueryResultListItemPkgNo;
+		private TextView txtV_shipmentDetailQueryResultListItemWeight;
+		private TextView txtV_shipmentDetailQueryResultListItemPiece;
 	}
 	
 	@Override
@@ -27,19 +26,19 @@ public class ShipmentDetailQueryResultListAdapter extends AbsBaseAdapter<Shipmen
 		ViewHolder _viewHolder;
 		if(null == convertView){
 			_viewHolder = new ViewHolder();
-			convertView = getLayoutInflater().inflate(R.layout.layout_stock_query_result_detail_list_item, null);
-			_viewHolder.stock_detail_list_packages_no = (TextView) convertView.findViewById(R.id.stock_detail_list_packages_no);
-			_viewHolder.stock_detail_list_tonnage = (TextView) convertView.findViewById(R.id.stock_detail_list_tonnage);
-			_viewHolder.stock_detail_list_numberOfPackages = (TextView) convertView.findViewById(R.id.stock_detail_list_numberOfPackages);
+			convertView = getLayoutInflater().inflate(R.layout.layout_shipment_detail_query_result_detail_list_item, null);
+			_viewHolder.txtV_shipmentDetailQueryResultListItemPkgNo = (TextView) convertView.findViewById(R.id.txtV_shipmentDetailQueryResultListItemPkgNo);
+			_viewHolder.txtV_shipmentDetailQueryResultListItemWeight = (TextView) convertView.findViewById(R.id.txtV_shipmentDetailQueryResultListItemWeight);
+			_viewHolder.txtV_shipmentDetailQueryResultListItemPiece = (TextView) convertView.findViewById(R.id.txtV_shipmentDetailQueryResultListItemPiece);
 			convertView.setTag(_viewHolder);
 		}else{
 			_viewHolder = (ViewHolder) convertView.getTag();
 		}
 		
-		StockBean _stockBean = (StockBean) getItem(position);
-		_viewHolder.stock_detail_list_packages_no.setText(_stockBean.pkgNo);
-		_viewHolder.stock_detail_list_tonnage.setText(_stockBean.weight);
-		_viewHolder.stock_detail_list_numberOfPackages.setText(_stockBean.piece);
+		ShipmentBean _shipBean = (ShipmentBean) getItem(position);
+		_viewHolder.txtV_shipmentDetailQueryResultListItemPkgNo.setText(_shipBean.pkgNo);
+		_viewHolder.txtV_shipmentDetailQueryResultListItemWeight.setText(_shipBean.weight);
+		_viewHolder.txtV_shipmentDetailQueryResultListItemPiece.setText(_shipBean.piece);
 		
 		return convertView;
 	}

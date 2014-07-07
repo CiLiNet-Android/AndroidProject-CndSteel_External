@@ -3,6 +3,7 @@
    	style="@style/CommonDataRowStyle"
     android:background="#eaeaea"
     android:gravity="center_vertical"
+    android:layout_height="75dp"
     android:orientation="horizontal" >
 
     <TextView

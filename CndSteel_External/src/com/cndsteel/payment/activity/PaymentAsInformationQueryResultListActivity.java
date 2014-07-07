@@ -11,8 +11,8 @@ import android.os.Handler;
 import android.os.Message;
 import android.view.View;
 import android.widget.AdapterView;
-import android.widget.ListView;
 import android.widget.AdapterView.OnItemClickListener;
+import android.widget.ListView;
 
 import com.cndsteel.R;
 import com.cndsteel.framework.activity.FrameActivity;
@@ -22,9 +22,10 @@ import com.cndsteel.framework.webService.WebServiceThread;
 import com.cndsteel.payment.adapter.PaymentAsInformationQueryResultListAdapter;
 import com.cndsteel.payment.bean.PaymentAsInformationQueryResultListBean;
 import com.cndsteel.payment.bean.PaymentBean;
+import com.cndsteel.settings.beans.SettingsBean;
+import com.handmark.pulltorefresh.library.PullToRefreshBase;
 import com.handmark.pulltorefresh.library.PullToRefreshBase.Mode;
 import com.handmark.pulltorefresh.library.PullToRefreshBase.OnRefreshListener;
-import com.handmark.pulltorefresh.library.PullToRefreshBase;
 import com.handmark.pulltorefresh.library.PullToRefreshListView;
 
 public class PaymentAsInformationQueryResultListActivity extends FrameActivity implements OnItemClickListener,OnRefreshListener<ListView> {
@@ -67,7 +68,7 @@ public class PaymentAsInformationQueryResultListActivity extends FrameActivity i
 		mQueryParamBillNO = _intent.getStringExtra(QueryParams.QUERY_PARAM_PAYMENT_BILL_NO);
 		mQueryParamPageIndex = 1;
 		mQueryParamPageSize = Constants.DEFAULT_PAGE_SIZE;
-		mQueryParamSessionId = "20C5DA37D9CF5C8FDE3DD19E858D5614";
+		mQueryParamSessionId = SettingsBean.getInstance().getStringSettingValueByName(Constants.SETTINGS_PARAM_SESSIONID);
 	}
 
 	private void initViews() {

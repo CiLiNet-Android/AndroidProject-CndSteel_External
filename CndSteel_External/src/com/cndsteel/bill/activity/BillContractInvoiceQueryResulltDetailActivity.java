@@ -19,6 +19,7 @@ import com.cndsteel.framework.activity.FrameActivity;
 import com.cndsteel.framework.constant.Constants;
 import com.cndsteel.framework.constant.QueryParams;
 import com.cndsteel.framework.webService.WebServiceThread;
+import com.cndsteel.settings.beans.SettingsBean;
 import com.handmark.pulltorefresh.library.PullToRefreshBase;
 import com.handmark.pulltorefresh.library.PullToRefreshBase.Mode;
 import com.handmark.pulltorefresh.library.PullToRefreshBase.OnRefreshListener;
@@ -132,7 +133,7 @@ public class BillContractInvoiceQueryResulltDetailActivity extends FrameActivity
 		mContractInvoiceQueryParamConId = getIntent().getStringExtra(QueryParams.QUERY_PARAM_CON_ID);
 		mContractInvoiceQueryParamPageIndex = 1;
 		mContractInvoiceQueryParamPageSize = Constants.DEFAULT_PAGE_SIZE;
-		mContractInvoiceQueryParamSessionId = "20C5DA37D9CF5C8FDE3DD19E858D5614";
+		mContractInvoiceQueryParamSessionId = SettingsBean.getInstance().getStringSettingValueByName(Constants.SETTINGS_PARAM_SESSIONID);
 		
 	}
 	private void initView() {

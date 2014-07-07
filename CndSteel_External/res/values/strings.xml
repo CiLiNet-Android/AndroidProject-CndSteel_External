@@ -1,6 +1,6 @@
 <resources>
 
-    <string name="app_name">CndSteel_External</string>
+    <string name="app_name">建发物资</string>
     
     <!-- 功能模块名称 -->
     <string name="appModule_plan">计划</string>
@@ -18,8 +18,8 @@
     <string name="login_successed_msg">%s,登录成功.</string>
     <string name="login_account">账号</string>
     <string name="login_passowrd">密码</string>
-    <string name="login_please_input_username">请输入账号...</string>
-    <string name="login_please_input_password">请输入密码...</string>
+    <string name="login_please_input_username">请输入账号</string>
+    <string name="login_please_input_password">请输入密码</string>
     <string name="login">登录</string>
     <string name="DialogTitleLogout">注销提示</string>
     <string name="DialogMessageLogout">您确定要注销吗？</string>
@@ -29,6 +29,9 @@
  	<string name="settings_logOff">注销登录</string>
  	<string name="settings_autoLogin_on">自动登录已开启</string>
  	<string name="settings_autoLogin_off">自动登录已关闭</string>
+ 	
+ 	<!-- 欢迎向导 -->
+ 	<string name="welcome_startPlay">开始体验</string>
  	
  	<!-- 订货计划 -->
  	<string name="topBarTitle_planQuery">订货计划查询</string>
@@ -230,6 +233,7 @@
     <string name="ButtonTextOk">好</string>
     <string name="ButtonTextNo">否</string>
     <string name="ButtonTextDone">完成</string>
+    <string name="TipInfo">提示信息</string>
     
     
 </resources>

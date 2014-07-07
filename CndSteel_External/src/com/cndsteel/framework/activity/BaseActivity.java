@@ -31,9 +31,9 @@ public abstract class BaseActivity extends Activity {
 		super.onResume();
 		
 		BaseApplication _baseApplication = getBaseApplication();
-		if(_baseApplication.isProgramExit){
-			finish();
-		}
+//		if(_baseApplication.isProgramExit){
+//			finish();
+//		}
 	}
 	
 	protected void showProgressDialog(String dialogTitle,String dialogMessage){
@@ -86,10 +86,10 @@ public abstract class BaseActivity extends Activity {
 	protected void onStart() {
 		super.onStart();
 		
-		BaseApplication _baseApplication = getBaseApplication();
-		if(_baseApplication.isProgramExit){
-			finish();
-		}
+//		BaseApplication _baseApplication = getBaseApplication();
+//		if(_baseApplication.isProgramExit){
+//			finish();
+//		}
 	}
 	
 	protected BaseApplication getBaseApplication() {

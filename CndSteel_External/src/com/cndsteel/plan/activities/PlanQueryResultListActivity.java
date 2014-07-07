@@ -23,6 +23,7 @@ import com.cndsteel.framework.webService.WebServiceThread;
 import com.cndsteel.plan.adapters.PlanQueryResultListAdapter;
 import com.cndsteel.plan.beans.PlanBean;
 import com.cndsteel.plan.beans.PlanQueryResultListBean;
+import com.cndsteel.settings.beans.SettingsBean;
 import com.handmark.pulltorefresh.library.PullToRefreshBase;
 import com.handmark.pulltorefresh.library.PullToRefreshBase.Mode;
 import com.handmark.pulltorefresh.library.PullToRefreshBase.OnRefreshListener;
@@ -36,7 +37,7 @@ public class PlanQueryResultListActivity extends FrameActivity implements OnItem
 	private String mQueryParamStatus;
 	private int mQueryParamPageIndex = 1;
 	private int mQueryParamPageSize = Constants.DEFAULT_PAGE_SIZE;
-	private String mQueryParamSessionId = "20C5DA37D9CF5C8FDE3DD19E858D5614";
+	private String mQueryParamSessionId;
 	
 	/** 视图 **/
 	private PullToRefreshListView listV_planList;
@@ -50,10 +51,12 @@ public class PlanQueryResultListActivity extends FrameActivity implements OnItem
 		super.onCreate(savedInstanceState);
 		appendFrameworkCenter(R.layout.activity_plan_query_result_list);
 		
-		initViews();
-		
+		init();
+	}
+	
+	private void init(){
 		initVariables();
-		
+		initViews();
 		loadDatas(Constants.HANDLER_MSG_DATA_LOAD_SUCCESS);
 	}
 	
@@ -65,6 +68,8 @@ public class PlanQueryResultListActivity extends FrameActivity implements OnItem
 		mQueryParamYear = _queryParams.getString(QueryParams.QUERY_PARAM_PLAN_DATE_YEAR);
 		mQueryParamMonth = _queryParams.getString(QueryParams.QUERY_PARAM_PLAN_DATE_MONTH);
 		mQueryParamStatus = _queryParams.getString(QueryParams.QUERY_PARAM_STATUS);
+		
+		mQueryParamSessionId = SettingsBean.getInstance().getStringSettingValueByName(Constants.SETTINGS_PARAM_SESSIONID);
 	}
 
 	private void loadDatas(int datasMsgWhat){

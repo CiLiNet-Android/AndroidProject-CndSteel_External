@@ -8,8 +8,6 @@ import org.xml.sax.helpers.DefaultHandler;
 
 import com.cndsteel.framework.bean.WebServiceBean;
 import com.cndsteel.framework.constant.Constants;
-import com.cndsteel.stock.bean.StockAccordingStockQueryResultBean;
-import com.cndsteel.stock.bean.StockBean;
 
 public class ShipmentAsInvoiceNumQueryResultListBean extends WebServiceBean {
 
