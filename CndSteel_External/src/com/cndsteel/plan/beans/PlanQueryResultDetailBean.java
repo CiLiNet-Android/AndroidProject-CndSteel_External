@@ -15,7 +15,7 @@ public class PlanQueryResultDetailBean extends WebServiceBean {
 
 	@Override
 	public String getServiceUrl() {
-		return Constants.WEB_SERVICE_BASE_URL;
+		return Constants.WEB_SERVICE_BASE_URL + "/BookingService";
 	}
 
 	@Override
